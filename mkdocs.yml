@@ -1,0 +1,36 @@
+# Project information
+site_name: edf2bids
+site_author: Greydon Gilmore
+
+# Repository
+repo_name: greydongilmore/edf2bids-site
+repo_url: https://github.com/greydongilmore/edf2bids-site
+edit_uri: https://github.com/greydongilmore/edf2bids-site
+
+# Copyright
+copyright: Copyright &copy; 2016 - 2020 Martin Donath
+
+# Configuration
+theme:
+  name: material
+  custom_dir: material
+  features:
+    - tabs
+  palette:
+    primary: blue grey
+    accent: blue
+  logo: img/edf2bids_icon.svg
+  favicon: img/favicon.ico
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+  
+# Plugins
+plugins:
+  - search
