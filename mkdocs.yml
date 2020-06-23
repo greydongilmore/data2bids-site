@@ -5,7 +5,7 @@ site_author: Greydon Gilmore
 # Repository
 repo_name: greydongilmore/edf2bids-site
 repo_url: https://github.com/greydongilmore/edf2bids-site
-edit_uri: https://github.com/greydongilmore/edf2bids-site
+edit_uri: https://github.com/greydongilmore/edf2bids-site/blob/master/docs
 
 # Copyright
 copyright: Copyright &copy; 2016 - 2020 Martin Donath
