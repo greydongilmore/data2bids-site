@@ -307,6 +307,10 @@
                   </a>
                 {% endif %}
 
+                {% if page.edit_url %}
+                  <a href="{{ page.issues_url }}" target="_blank"><i class="fab fa-github fa-fw"></i> {{ T "post_create_issue" }}</a>
+                {% endif %}
+
                 <!-- Link to source file -->
                 {% block source %}
                   {% if page and page.meta and page.meta.source %}
