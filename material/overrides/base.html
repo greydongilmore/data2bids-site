@@ -1,83 +1,36 @@
-<!--
-  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
+{#-
+  This file was automatically generated - do not edit
+-#}
 {% import "partials/language.html" as lang with context %}
-
-<!-- Theme options -->
 {% set palette = config.theme.palette %}
 {% set font = config.theme.font %}
-
 <!doctype html>
 <html lang="{{ lang.t('language') }}" class="no-js">
   <head>
-
-    <!-- Metatags -->
     {% block site_meta %}
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-      <!-- Page description -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
       {% if page and page.meta and page.meta.description %}
-        <meta name="description" content="{{ page.meta.description }}" />
+        <meta name="description" content="{{ page.meta.description }}">
       {% elif config.site_description %}
-        <meta name="description" content="{{ config.site_description }}" />
+        <meta name="description" content="{{ config.site_description }}">
       {% endif %}
-
-      <!-- Redirect -->
       {% if page and page.meta and page.meta.redirect %}
-        <script>
-          var anchor = window.location.hash.substr(1)
-          location.href = '{{ page.meta.redirect }}' +
-            (anchor ? '#' + anchor : '')
-        </script>
-
-        <!-- Fallback in case JavaScript is not available -->
-        <meta http-equiv="refresh" content="0; url={{ page.meta.redirect }}" />
-        <meta name="robots" content="noindex" />
-        <link rel="canonical" href="{{ page.meta.redirect }}" />
-
-      <!-- Canonical -->
+        <script>var anchor=window.location.hash.substr(1);location.href="{{ page.meta.redirect }}"+(anchor?"#"+anchor:"")</script>
+        <meta http-equiv="refresh" content="0; url={{ page.meta.redirect }}">
+        <meta name="robots" content="noindex">
+        <link rel="canonical" href="{{ page.meta.redirect }}">
       {% elif page.canonical_url %}
-        <link rel="canonical" href="{{ page.canonical_url }}" />
+        <link rel="canonical" href="{{ page.canonical_url }}">
       {% endif %}
-
-      <!-- Page author -->
       {% if page and page.meta and page.meta.author %}
-        <meta name="author" content="{{ page.meta.author }}" />
+        <meta name="author" content="{{ page.meta.author }}">
       {% elif config.site_author %}
-        <meta name="author" content="{{ config.site_author }}" />
+        <meta name="author" content="{{ config.site_author }}">
       {% endif %}
-
-      <!-- Favicon -->
-      <link rel="shortcut icon" href="{{ config.theme.favicon | url }}" />
-
-      <!-- Generator banner -->
-      <meta
-        name="generator"
-        content="mkdocs-{{ mkdocs_version }}, $md-name$-$md-version$"
-      />
+      <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-5.3.2">
     {% endblock %}
-
-    <!-- Site title -->
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
         <title>{{ page.meta.title }}</title>
@@ -87,130 +40,58 @@
         <title>{{ config.site_name }}</title>
       {% endif %}
     {% endblock %}
-
-    <!-- Theme-related stylesheets -->
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.css' | url }}" />
-
-      <!-- Extra color palette -->
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.545621a7.min.css' | url }}">
       {% if palette.scheme or palette.primary or palette.accent %}
-        <link
-          rel="stylesheet"
-          href="{{ 'assets/stylesheets/palette.css' | url }}"
-        />
+        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.36d1b78f.min.css' | url }}">
       {% endif %}
-
-      <!-- Theme-color meta tag for Android -->
       {% if palette.primary %}
         {% import "partials/palette.html" as map %}
         {% set primary = map.primary(
           palette.primary | replace(" ", "-") | lower
         ) %}
-        <meta name="theme-color" content="{{ primary }}" />
+        <meta name="theme-color" content="{{ primary }}">
       {% endif %}
     {% endblock %}
-
-    <!-- JavaScript libraries -->
     {% block libs %}{% endblock %}
-
-    <!-- Webfonts -->
     {% block fonts %}
-
-      <!-- Load fonts from Google -->
       {% if font != false %}
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family={{
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{
             font.text | replace(' ', '+') + ':300,400,400i,700%7C' +
             font.code | replace(' ', '+')
-          }}&display=fallback"
-        />
-        <style>
-          body, input {
-            font-family: "{{ font.text }}",
-              -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-          }
-          pre, code, kbd {
-            font-family: "{{ font.code }}",
-              SFMono-Regular, Consolas, Menlo, monospace;
-          }
-        </style>
+          }}&display=fallback">
+        <style>body,input{font-family:"{{ font.text }}",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"{{ font.code }}",SFMono-Regular,Consolas,Menlo,monospace}</style>
       {% endif %}
     {% endblock %}
-
-    <!-- Progressive Web App Manifest -->
     {% if config.extra.manifest %}
-      <link
-        rel="manifest"
-        href="{{ config.extra.manifest | url }}"
-        crossorigin="use-credentials"
-      />
+      <link rel="manifest" href="{{ config.extra.manifest | url }}" crossorigin="use-credentials">
     {% endif %}
-
-    <!-- Custom stylesheets, might contain media query after URL -->
     {% for path in config["extra_css"] %}
-      <link rel="stylesheet" href="{{ path | url }}" />
+      <link rel="stylesheet" href="{{ path | url }}">
     {% endfor %}
-
-    <!-- Analytics -->
     {% block analytics %}
       {% if config.google_analytics %}
         {% include "partials/integrations/analytics.html" %}
       {% endif %}
     {% endblock %}
-
-    <!-- Custom front matter -->
     {% block extrahead %}{% endblock %}
   </head>
-
-  <!-- Text direction and color palette, if defined -->
   {% set direction = config.theme.direction or lang.t('direction') %}
   {% if palette.scheme or palette.primary or palette.accent %}
     {% set scheme  = palette.scheme | lower %}
     {% set primary = palette.primary | replace(" ", "-") | lower %}
     {% set accent  = palette.accent  | replace(" ", "-") | lower %}
-    <body
-      dir="{{ direction }}"
-      data-md-color-scheme="{{ scheme }}"
-      data-md-color-primary="{{ primary }}"
-      data-md-color-accent="{{ accent }}"
-    >
+    <body dir="{{ direction }}" data-md-color-scheme="{{ scheme }}" data-md-color-primary="{{ primary }}" data-md-color-accent="{{ accent }}">
   {% else %}
     <body dir="{{ direction }}">
   {% endif %}
-
-    <!-- Experimental: set color scheme based on preference -->
     {% if "preference" == palette.scheme %}
-      <script>
-        if (matchMedia("(prefers-color-scheme: dark)").matches)
-          document.body.setAttribute("data-md-color-scheme", "slate")
-      </script>
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     {% endif %}
-
-    <!--
-      State toggles - we need to set autocomplete="off" in order to reset the
-      drawer on back button invocation in some browsers
-    -->
-    <input
-      class="md-toggle"
-      data-md-toggle="drawer"
-      type="checkbox"
-      id="__drawer"
-      autocomplete="off"
-    />
-    <input
-      class="md-toggle"
-      data-md-toggle="search"
-      type="checkbox"
-      id="__search"
-      autocomplete="off"
-    />
-
-    <!-- Overlay for expanded drawer -->
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
-
-    <!-- Link to skip to content -->
     <div data-md-component="skip">
       {% if page.toc | first is defined %}
         {% set skip = page.toc | first %}
@@ -219,8 +100,6 @@
         </a>
       {% endif %}
     </div>
-
-    <!-- Announcement bar -->
     <div data-md-component="announce">
       {% if self.announce() %}
         <aside class="md-announce">
@@ -230,42 +109,25 @@
         </aside>
       {% endif %}
     </div>
-
-    <!-- Application header -->
     {% block header %}
       {% include "partials/header.html" %}
     {% endblock %}
-
-    <!-- Container, necessary for web-application context -->
     <div class="md-container" data-md-component="container">
-
-      <!-- Hero teaser -->
       {% block hero %}
         {% if page and page.meta and page.meta.hero %}
           {% include "partials/hero.html" with context %}
         {% endif %}
       {% endblock %}
-
-      <!-- Tabs with outline -->
       {% block tabs %}
         {% if "tabs" in config.theme.features %}
           {% include "partials/tabs.html" %}
         {% endif %}
       {% endblock %}
-
-      <!-- Main area -->
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
-
-          <!-- Navigation -->
           {% block site_nav %}
-
-            <!-- Main navigation -->
             {% if nav %}
-              <div
-                class="md-sidebar md-sidebar--primary"
-                data-md-component="navigation"
-              >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     {% include "partials/nav.html" %}
@@ -273,13 +135,8 @@
                 </div>
               </div>
             {% endif %}
-
-            <!-- Table of contents -->
             {% if page.toc %}
-              <div
-                class="md-sidebar md-sidebar--secondary"
-                data-md-component="toc"
-              >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     {% include "partials/toc.html" %}
@@ -288,55 +145,28 @@
               </div>
             {% endif %}
           {% endblock %}
-
-          <!-- Article -->
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-
-              <!-- Content -->
               {% block content %}
-
-                <!-- Edit button -->
                 {% if page.edit_url %}
-                  <a
-                    href="{{ page.edit_url }}"
-                    title="{{ lang.t('edit.link.title') }}"
-                    class="md-content__button md-icon"
-                  >
+                  <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
                     {% include ".icons/material/pencil.svg" %}
                   </a>
                 {% endif %}
-
-                {% if page.issues_url %}
-                  <a
-                    href="{{ page.issues_url }}"
-                    title="{{ lang.t('post_create_issue') }}"
-                    class="md-content__button md-icon"
-                  >
+                {% if page.edit_url %}
+                  <a href="{{ page.issues_url }}" title="" class="md-content__button md-icon">
                     {% include ".icons/material/github.svg" %}
                   </a>
                 {% endif %}
-
-                <!-- Link to source file -->
                 {% block source %}
                   {% if page and page.meta and page.meta.source %}
                     {% include "partials/source-link.html" %}
                   {% endif %}
                 {% endblock %}
-
-                <!--
-                  Hack: check whether the content contains a h1 headline. If it
-                  doesn't, the page title (or respectively site name) is used
-                  as the main headline.
-                -->
                 {% if not "\x3ch1" in page.content %}
                   <h1>{{ page.title | default(config.site_name, true)}}</h1>
                 {% endif %}
-
-                <!-- Content -->
                 {{ page.content }}
-
-                <!-- Last update of source file -->
                 {% if page and page.meta %}
                   {% if page.meta.git_revision_date_localized or
                         page.meta.revision_date
@@ -345,8 +175,6 @@
                   {% endif %}
                 {% endif %}
               {% endblock %}
-
-              <!-- Disqus integration -->
               {% block disqus %}
                 {% include "partials/integrations/disqus.html" %}
               {% endblock %}
@@ -354,19 +182,13 @@
           </div>
         </div>
       </main>
-
-      <!-- Application footer -->
       {% block footer %}
         {% include "partials/footer.html" %}
       {% endblock %}
     </div>
-
-    <!-- Theme-related JavaScript -->
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/vendor.js' | url }}"></script>
-      <script src="{{ 'assets/javascripts/bundle.js' | url }}"></script>
-
-      <!-- Translations -->
+      <script src="{{ 'assets/javascripts/vendor.de50e36d.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.dd72b84b.min.js' | url }}"></script>
       {%- set translations = {} -%}
       {%- for key in [
         "clipboard.copy",
@@ -384,22 +206,16 @@
       <script id="__lang" type="application/json">
         {{- translations | tojson -}}
       </script>
-
-      <!-- Application configuration -->
       {% block config %}{% endblock %}
-
-      <!-- Application initialization -->
       <script>
         app = initialize({
           base: "{{ base_url }}",
           features: {{ config.theme.features | tojson }},
           search: Object.assign({
-            worker: "{{ 'assets/javascripts/worker/search.js' | url }}"
+            worker: "{{ 'assets/javascripts/worker/search.9b3611bd.min.js' | url }}"
           }, typeof search !== "undefined" && search)
         })
       </script>
-
-      <!-- Custom JavaScript -->
       {% for path in config["extra_javascript"] %}
         <script src="{{ path | url }}"></script>
       {% endfor %}
