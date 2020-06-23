@@ -3,12 +3,12 @@ site_name: edf2bids
 site_author: Greydon Gilmore
 
 # Repository
-repo_name: greydongilmore/edf2bids-site
+repo_name: GitHub
 repo_url: https://github.com/greydongilmore/edf2bids-site
-edit_uri: https://github.com/greydongilmore/edf2bids-site/blob/master/docs
+edit_uri: https://github.com/greydongilmore/edf2bids-site/issues/new
 
 # Copyright
-copyright: Copyright &copy; 2016 - 2020 Martin Donath
+copyright: Copyright &copy; 2020 Greydon Gilmore
 
 # Configuration
 dev_addr: 127.0.0.1:7000
