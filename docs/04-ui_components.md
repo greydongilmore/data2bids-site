@@ -1,5 +1,7 @@
+---
 title: UI Components
-
+template: overrides/base.html
+---
 This section describes steps taken within the EDF conversion software developed by Greydon Gilmore. Ensure the [**input data directory is organized**](03-input_dir_setup.md#organize-input-directory) prior to running the software.
 
 ## Adjusting metadata settings
