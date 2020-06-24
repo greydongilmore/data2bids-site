@@ -8,7 +8,7 @@ This section describes steps taken within the EDF conversion software developed 
 
 1. In the software, select **File** then **Settings**.
 
-<p align="center"><img src="/docs/img/metadata_01.png" alt="drawing" width="50%"/></p>
+<p align="center"><img src="./img/metadata_01.png" alt="drawing" width="50%"/></p>
 
 2. A settings panel will appear with two tabs: Json Metadata and Electrode Info.
 
@@ -18,7 +18,7 @@ This section describes steps taken within the EDF conversion software developed 
   	  * **Dataset Name:** overall name for the dataset.
   	  * **Institution Name/Address:** name and address of the institution at which  this dataset was collected
 
-<p align="center"><img src="../img/metadata_02.png" alt="drawing" width="50%"/></p>
+<p align="center"><img src="./img/metadata_02.png" alt="drawing" width="50%"/></p>
 
 	* **Electrode info** contains information about the specific electrodes used at the center:
   	  * **Manufacturer:** who produces the electrodes.
@@ -34,7 +34,7 @@ This section describes steps taken within the EDF conversion software developed 
 
 1. The settings panel is located at the bottom left of the main window.
 
-  <p align="center"><img src="/docs/img/main_settings_panel.png" alt="drawing" width="20%"/></p>
+  <p align="center"><img src="./img/main_settings_panel.png" alt="drawing" width="20%"/></p>
 
   * **De-identify input directory**: if this is selected the input EDF files will be de-identified first prior to being copied. If left unchecked, then only the output directory EDF files will be de-identified. Default is unchecked.
   * **Offset dates**: if selected all dates in the EDF files will be offset by a random number of days (~1000 days). The offset value can be determined but is securely stored.
@@ -46,7 +46,7 @@ The input directory selected here should be organized according to the first sec
 
 1. In the software, select **Input Directory** and choose the directory that contains the data to be converted (select the main/root directory that contains all subject directories). Click **Select Folder** in the window and the data will load into the **Input Directory** window.
 
-    <p align="center"><img src="/docs/img/input_dir_01.png" alt="drawing" width="100%"/></p>
+    <p align="center"><img src="./img/input_dir_01.png" alt="drawing" width="100%"/></p>
 
 2. You will now be able to review the information that was detected about the input files. Each subject is expandable by clicking the box beside the subject name. The columns displayed are:
 
@@ -65,7 +65,7 @@ The input directory selected here should be organized according to the first sec
 
 3. Once you have confirmed the input data is correct, click **Output Directory** and select the directory you want the BIDS dataset to appear. The **Output Directory** window will now present the final output file information (prior to conversion). This is the final check to ensure that any changes have been updated.
 
-    <p align="center"><img src="/docs/img/output_dir_01.png" alt="drawing" width="80%"/></p>
+    <p align="center"><img src="./img/output_dir_01.png" alt="drawing" width="80%"/></p>
 
 
     !!! note 
@@ -80,13 +80,13 @@ The input directory selected here should be organized according to the first sec
 
 7. You will receive updates in the **Conversion Status** window. The final notice, once the conversion is complete, will show **Your data has been BIDsified!**. 
 
-  <p align="center"><img src="/docs/img/final_message.png" alt="drawing" width="90%"/></p>
+  <p align="center"><img src="./img/final_message.png" alt="drawing" width="90%"/></p>
 
 ## BIDs output folder structure
 
 The output folder will look like the following:
 
-  <p align="center"><img src="/docs/img/dir_structure_01.png" alt="drawing" width="60%"/></p>
+  <p align="center"><img src="./img/dir_structure_01.png" alt="drawing" width="60%"/></p>
 
   * Each patient will have their own folder
   * **code:** this folder will contain the code used to convert the EDF data for each EDF file for the subjects.
@@ -95,13 +95,13 @@ The output folder will look like the following:
 
 Within each subject directory there will be a different session folder for each EDF file.
 
-  <p align="center"><img src="/docs/img/sub_dir_structure_01.png" alt="drawing" width="60%"/></p>
+  <p align="center"><img src="./img/sub_dir_structure_01.png" alt="drawing" width="60%"/></p>
 
   * **\*_scans.tsv:** this file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF type etc.).
 
 Within each session folder there will be a modality folder (either eeg or ieeg), inside that will be five files, containing different information associated with the specific EDF file. This file can also be used to store additional metadata information that varies from one recording to the next.
 
-  <p align="center"><img src="/docs/img/ses_dir_structure_01.png" alt="drawing" width="60%"/></p>
+  <p align="center"><img src="./img/ses_dir_structure_01.png" alt="drawing" width="60%"/></p>
 
   * **\*_electrodes.tsv:** contains information associated with the electrodes used to collect the data.
   * **\*_annotations.tsv:** contains all annotations present in the EDF file, identifiers have been scrubbed.
