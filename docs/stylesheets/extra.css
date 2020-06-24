@@ -102,3 +102,19 @@
     text-overflow: ellipsis;
   }
 }
+
+
+.md-interact-contain {
+  display: flex;
+  padding: 0 px2rem(4px);
+  // Repository containing source
+  &__source {
+    display: none;
+
+    // [screen +]: Increase spacing of search bar
+    @include break-from-device(screen) {
+      margin-right: px2rem(28px);
+
+    }
+  }
+}
