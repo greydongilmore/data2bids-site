@@ -65,7 +65,6 @@
 }
 
 .md-interact {
-  display: inline;
   font-size: px2rem(13px);
   line-height: 1.2;
   white-space: nowrap;
@@ -80,7 +79,8 @@
 
   // Repository platform icon
   &__icon {
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
     width: px2rem(48px);
     height: px2rem(48px);
     vertical-align: top;
@@ -95,6 +95,8 @@
 
   // Repository name
   &__repository {
+    display: flex;
+    justify-content: flex-end;
     margin-right: px2rem(12px);
     overflow: hidden;
     font-weight: 700;
