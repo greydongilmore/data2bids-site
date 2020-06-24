@@ -148,12 +148,22 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               {% block content %}
-                {% if page.edit_url %}
-                  <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
-                    {% include ".icons/material/pencil.svg" %}
-                  </a>
+                {% if page.edit_url and config.issues_url %}
+                  <div>
+                      <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
+                        {% include ".icons/material/pencil.svg" %}
+                      </a>
+                      <a href="{{ config.issues_url }}" title="Open An Issue" class="md-content__button md-icon">
+                        {% include ".icons/material/github.svg" %}
+                      </a>
+                </div>
                 {% endif %}
-                {% if config.issues_url %}
+                {% if page.edit_url and not config.issues_url %}
+                    <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
+                      {% include ".icons/material/pencil.svg" %}
+                    </a>
+                {% endif %}
+                {% if config.issues_url and not page.edit_url%}
                   <a href="{{ config.issues_url }}" title="Open An Issue" class="md-content__button md-icon">
                     {% include ".icons/material/github.svg" %}
                   </a>
