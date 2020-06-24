@@ -160,17 +160,33 @@
             <article class="md-content__inner md-typeset">
               {% block content %}
                 {% if page.edit_url and config.issues_url %}
-                  <div>
-                    <div>
-                      <ul>
-                        <li>
-                          <a href="{{ page.edit_url }}" target="_blank"><i class="md-content__button md-icon">{% include ".icons/material/pencil.svg" %}</i>{{ lang.t('edit.link.title') }}</a>
-                        </li>
-                        <li>
-                          <a href="{{ config.issues_url }}" target="_blank"><i class="md-content__button md-icon">{% include ".icons/material/github.svg" %}</i>Open An Issue</a>
-                        </li>
-                      </ul>
-                    </div>
+                  <div class="md-header-nav__source">
+                    <a
+                      href="{{ page.edit_url }}"
+                      title="{{ lang.t('edit.link.title') }}"
+                      class="md-source"
+                    >
+                      <div class="md-source__icon md-icon">
+                        {% include ".icons/material/pencil.svg" %}
+                      </div>
+                      <div class="md-source__repository">
+                        {{ lang.t('edit.link.title') }}
+                      </div>
+                    </a>
+                  </div>
+                  <div class="md-header-nav__source">
+                    <a
+                      href="{{ config.issues_url }}"
+                      title="Open An Issue"
+                      class="md-source"
+                    >
+                      <div class="md-source__icon md-icon">
+                        {% include ".icons/material/github.svg" %}
+                      </div>
+                      <div class="md-source__repository">
+                        Open An Issue
+                      </div>
+                    </a>
                   </div>
                 {% endif %}
                 {% if page.edit_url and not config.issues_url %}
