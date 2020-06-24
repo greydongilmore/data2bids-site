@@ -90,6 +90,8 @@
     + .md-interact__repository {
       margin-right: px2rem(-40px);
       padding-right: px2rem(40px);
+      float:right;
+      vertical-align: top;
     }
   }
 
