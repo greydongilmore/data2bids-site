@@ -64,3 +64,62 @@
 
 }
 
+.md-interact {
+  display: block;
+  font-size: px2rem(13px);
+  line-height: 1.2;
+  white-space: nowrap;
+  // Hack: reduce jitter
+  backface-visibility: hidden;
+  transition: opacity 250ms;
+
+  // Hovered source container
+  &:hover {
+    opacity: 0.7;
+  }
+
+  // Repository platform icon
+  &__icon {
+    display: inline-block;
+    width: px2rem(48px);
+    height: px2rem(48px);
+    vertical-align: middle;
+
+    // Align with margin only (as opposed to normal button alignment)
+    svg {
+      margin-top: px2rem(12px);
+      margin-left: px2rem(12px);
+
+      // Adjust for right-to-left languages
+      [dir="rtl"] & {
+        margin-right: px2rem(12px);
+        margin-left: initial;
+      }
+    }
+
+    // Correct alignment, if icon is present
+    + .md-interact__repository {
+      margin-left: px2rem(-40px);
+      padding-left: px2rem(40px);
+
+      // Adjust for right-to-left languages
+      [dir="rtl"] & {
+        margin-right: px2rem(-40px);
+        margin-left: initial;
+        padding-right: px2rem(40px);
+        padding-left: initial;
+      }
+    }
+  }
+
+  // Repository name
+  &__repository {
+    display: inline-block;
+    max-width: calc(100% - #{px2rem(24px)});
+    margin-left: px2rem(12px);
+    overflow: hidden;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
+}
