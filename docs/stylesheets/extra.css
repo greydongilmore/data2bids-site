@@ -65,7 +65,7 @@
 }
 
 .md-interact {
-  display: block;
+  display: inline;
   font-size: px2rem(13px);
   line-height: 1.2;
   white-space: nowrap;
@@ -115,7 +115,7 @@
   // Repository containing source
   &__source {
     float:right;
-    display: none;
+    display: inline;
     vertical-align: top;
 
     // [screen +]: Increase spacing of search bar
