@@ -83,7 +83,6 @@
     justify-content: flex-end;
     width: px2rem(48px);
     height: px2rem(48px);
-    vertical-align: top;
 
     // Correct alignment, if icon is present
     + .md-interact__repository {
@@ -97,24 +96,19 @@
   &__repository {
     display: flex;
     justify-content: flex-end;
-    margin-right: px2rem(12px);
-    overflow: hidden;
     font-weight: 700;
     text-overflow: ellipsis;
-    vertical-align: top;
   }
 }
 
 
 .md-interact-contain {
-  display: flex;
   padding: 0 px2rem(4px);
-  justify-content: flex-end;
   // Repository containing source
   &__source {
-    display: flex;
     padding: 0 px2rem(4px);
-    justify-content: flex-end;
+    display: flex; 
+    justify-content: flex-end; 
     margin-top: 20px;
   }
 }
