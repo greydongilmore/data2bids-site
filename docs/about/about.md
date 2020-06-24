@@ -1,4 +1,8 @@
+---
 hide: true
+title: About
+template: overrides/base.html
+---
 
 # Admonita in pollue omnia currebam
 

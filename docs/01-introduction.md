@@ -1,7 +1,5 @@
 ---
-layout: page
-title:  "Introduction"
-date:   2020-06-15 16:46:20 -0400
-nav_order: 1
+title: Introduction
+template: overrides/base.html
 ---
 

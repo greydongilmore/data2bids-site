@@ -160,34 +160,52 @@
             <article class="md-content__inner md-typeset">
               {% block content %}
                 {% if page.edit_url and config.issues_url %}
-                  <div>
+                  <div class="md-interact-contain__source">
                     <a
                       href="{{ page.edit_url }}"
                       title="{{ lang.t('edit.link.title') }}"
-                      class="md-interact-contain__source"
+                      class="md-interact"
                     >
-                    <div class="md-interact__icon md-icon">
-                      {% include ".icons/material/pencil.svg" %}
-                    </div>
-                    <div class="md-interact__repository">
-                      {{ lang.t('edit.link.title') }}
-                    </div>
-
-                    <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
-                      <a href="{{ page.edit_url }}" target="_blank"><i class="fa fa-edit md-icon"></i> Edit Link</a>
-                    </div>
+                      <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon" >
+                        {% include ".icons/fontawesome/regular/edit.svg" %} Edit this page
+                      </a>
+                    </a>
+                    <a
+                      href="{{ config.issues_url }}"
+                      title="Open an issue"
+                      class="md-interact"
+                    >
+                        <a href="{{ config.issues_url }}" title="Open an issue" class="md-content__button md-icon">
+                          {% include ".icons/fontawesome/brands/github.svg" %} Open an issue
+                        </a>
+                    </a>
                   </div>
-                  
                 {% endif %}
                 {% if page.edit_url and not config.issues_url %}
-                    <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
-                      {% include ".icons/material/pencil.svg" %}
-                    </a>
+                    <div class="md-interact-contain__source">
+                      <a
+                        href="{{ page.edit_url }}"
+                        title="{{ lang.t('edit.link.title') }}"
+                        class="md-interact"
+                      >
+                        <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon" >
+                          {% include ".icons/fontawesome/regular/edit.svg" %} Edit Link
+                        </a>
+                      </a>
+                    </div>
                 {% endif %}
                 {% if config.issues_url and not page.edit_url%}
-                  <a href="{{ config.issues_url }}" title="Open An Issue" class="md-content__button md-icon">
-                    {% include ".icons/material/github.svg" %}
-                  </a>
+                  <div class="md-interact-contain__source">
+                    <a
+                      href="{{ config.issues_url }}"
+                      title="Open an issue"
+                      class="md-interact"
+                    >
+                        <a href="{{ config.issues_url }}" title="Open an issue" class="md-content__button md-icon">
+                          {% include ".icons/fontawesome/brands/github.svg" %} Open an issue
+                        </a>
+                    </a>
+                  </div>
                 {% endif %}
                 {% block source %}
                   {% if page and page.meta and page.meta.source %}

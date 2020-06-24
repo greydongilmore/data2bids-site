@@ -112,3 +112,29 @@
     margin-top: 20px;
   }
 }
+
+// Content container
+.md-interact-content {
+  display: flex; 
+  justify-content: flex-end;
+  max-width: 100%;
+
+  // Button next to the title
+  &__button {
+    float: right;
+    margin: px2rem(8px) 0;
+    margin-left: px2rem(8px);
+    padding: 0;
+
+    // Align text with icon
+    svg {
+      display: inline;
+      vertical-align: top;
+    }
+
+    // Hide for print
+    @media print {
+      display: none;
+    }
+  }
+}

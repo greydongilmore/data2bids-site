@@ -1,5 +1,6 @@
 ---
 title: Home
+template: overrides/base.html
 ---
 
 # Welcome to edf2bids
