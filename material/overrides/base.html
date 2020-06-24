@@ -150,13 +150,9 @@
               {% block content %}
                 {% if page.edit_url and config.issues_url %}
                   <div>
-                      <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
-                        {% include ".icons/material/pencil.svg" %}
-                      </a>
-                      <a href="{{ config.issues_url }}" title="Open An Issue" class="md-content__button md-icon">
-                        {% include ".icons/material/github.svg" %}
-                      </a>
-                </div>
+                      <a href="{{ page.edit_url }}" target="_blank"><i class="fa fa-edit fa-fw"></i> {{ lang.t('edit.link.title') }}</a>
+                      <a href="{{ config.issues_url }}" target="_blank"><i class="fab fa-github fa-fw"></i> Open An Issue</a>
+                  </div>
                 {% endif %}
                 {% if page.edit_url and not config.issues_url %}
                     <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
