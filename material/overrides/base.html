@@ -165,8 +165,9 @@
                       href="{{ page.edit_url }}"
                       title="{{ lang.t('edit.link.title') }}"
                       class="md-interact"
+                      target=”_blank”
                     >
-                      <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon" >
+                      <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon" target=”_blank”>
                         {% include ".icons/fontawesome/regular/edit.svg" %} Edit this page
                       </a>
                     </a>
@@ -174,8 +175,9 @@
                       href="{{ config.issues_url }}"
                       title="Open an issue"
                       class="md-interact"
+                      target=”_blank”
                     >
-                        <a href="{{ config.issues_url }}" title="Open an issue" class="md-content__button md-icon">
+                        <a href="{{ config.issues_url }}" title="Open an issue" class="md-content__button md-icon" target=”_blank”>
                           {% include ".icons/fontawesome/brands/github.svg" %} Open an issue
                         </a>
                     </a>
