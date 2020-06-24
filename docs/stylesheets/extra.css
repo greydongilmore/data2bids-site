@@ -85,18 +85,6 @@
     height: px2rem(48px);
     vertical-align: middle;
 
-    // Align with margin only (as opposed to normal button alignment)
-    svg {
-      margin-top: px2rem(12px);
-      margin-left: px2rem(12px);
-
-      // Adjust for right-to-left languages
-      [dir="rtl"] & {
-        margin-right: px2rem(12px);
-        margin-left: initial;
-      }
-    }
-
     // Correct alignment, if icon is present
     + .md-interact__repository {
       margin-left: px2rem(-40px);
