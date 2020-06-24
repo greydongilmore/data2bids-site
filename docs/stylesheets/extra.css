@@ -110,6 +110,9 @@
   justify-content: flex-end;
   // Repository containing source
   &__source {
+    display: flex;
+    padding: 0 px2rem(4px);
+    justify-content: flex-end;
     margin-top: 20px;
   }
 }
