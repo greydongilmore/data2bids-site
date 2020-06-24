@@ -76,6 +76,17 @@
       {% endif %}
     {% endblock %}
     {% block extrahead %}{% endblock %}
+  <style type="text/css">
+    .social-menu {
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+    .social-menu ul li {
+      margin-top: 20px;
+    }
+  </style>
+
   </head>
   {% set direction = config.theme.direction or lang.t('direction') %}
   {% if palette.scheme or palette.primary or palette.accent %}
@@ -150,8 +161,16 @@
               {% block content %}
                 {% if page.edit_url and config.issues_url %}
                   <div>
-                      <a href="{{ page.edit_url }}" target="_blank"><i class="md-content__button md-icon">{% include ".icons/material/pencil.svg" %}</i> {{ lang.t('edit.link.title') }}</a>
-                      <a href="{{ config.issues_url }}" target="_blank"><i class="md-content__button md-icon">{% include ".icons/material/github.svg" %}</i> Open An Issue</a>
+                    <div class="social-menu">
+                      <ul>
+                        <li>
+                          <a href="{{ page.edit_url }}" target="_blank"><i class="md-content__button md-icon">{% include ".icons/material/pencil.svg" %}</i>{{ lang.t('edit.link.title') }}</a>
+                        </li>
+                        <li>
+                          <a href="{{ config.issues_url }}" target="_blank"><i class="md-content__button md-icon">{% include ".icons/material/github.svg" %}</i>Open An Issue</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 {% endif %}
                 {% if page.edit_url and not config.issues_url %}
