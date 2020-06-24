@@ -153,8 +153,8 @@
                     {% include ".icons/material/pencil.svg" %}
                   </a>
                 {% endif %}
-                {% if page.issues_url %}
-                  <a href="{{ page.issues_url }}" title="{{ lang.t('issues.link.title') }}" class="md-content__button md-icon">
+                {% if config.issues_url %}
+                  <a href="{{ config.issues_url }}" title="{{ lang.t('issues.link.title') }}" class="md-content__button md-icon">
                     {% include ".icons/material/github.svg" %}
                   </a>
                 {% endif %}
