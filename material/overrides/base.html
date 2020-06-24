@@ -166,8 +166,8 @@
                       title="{{ lang.t('edit.link.title') }}"
                       class="md-interact"
                     >
-                      <div class="md-interact__repository">
-                        {{ lang.t('edit.link.title') }}
+                      <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+                        <a href="{{ page.edit_url }}" target="_blank"><i class="fa fa-edit"></i>{{ lang.t('edit.link.title') }}</a>
                       </div>
                       <div class="md-interact__icon md-icon">
                         {% include ".icons/material/pencil.svg" %}
