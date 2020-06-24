@@ -80,28 +80,16 @@
 
   // Repository platform icon
   &__icon {
-    float:right;
-    display: inline;
     width: px2rem(48px);
     height: px2rem(48px);
     vertical-align: top;
-
-    // Correct alignment, if icon is present
-    + .md-interact__repository {
-      margin-right: px2rem(-40px);
-      padding-right: px2rem(40px);
-      float:right;
-      vertical-align: top;
-    }
+    margin-right: px2rem(-40px);
+    padding-right: px2rem(40px);
   }
 
   // Repository name
   &__repository {
-    float:right;
-    display: inline;
-    max-width: calc(100% - #{px2rem(24px)});
     margin-right: px2rem(12px);
-    overflow: hidden;
     font-weight: 700;
     text-overflow: ellipsis;
     vertical-align: top;
@@ -110,18 +98,9 @@
 
 
 .md-interact-contain {
-  display: flex;
   padding: 0 px2rem(4px);
   // Repository containing source
   &__source {
-    float:right;
-    display: inline;
     vertical-align: top;
-
-    // [screen +]: Increase spacing of search bar
-    @include break-from-device(screen) {
-      margin-right: px2rem(28px);
-
-    }
   }
 }
