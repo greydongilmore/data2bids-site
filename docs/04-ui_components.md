@@ -8,7 +8,7 @@ This section describes steps taken within the EDF conversion software developed 
 
 1. In the software, select **File** then **Settings**.
 
-	<p align="center"><img src="/img/metadata_01.png" alt="drawing" width="80%"/></p>
+	<p align="center"><img src="/docs/img/metadata_01.png" alt="drawing" width="80%"/></p>
 
 2. A settings panel will appear with two tabs: Json Metadata and Electrode Info.
 
