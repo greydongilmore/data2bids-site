@@ -80,10 +80,11 @@
 
   // Repository platform icon
   &__icon {
+    float:right;
     display: inline-block;
     width: px2rem(48px);
     height: px2rem(48px);
-    vertical-align: middle;
+    vertical-align: top;
 
     // Correct alignment, if icon is present
     + .md-interact__repository {
@@ -94,12 +95,14 @@
 
   // Repository name
   &__repository {
+    float:right;
     display: inline-block;
     max-width: calc(100% - #{px2rem(24px)});
     margin-right: px2rem(12px);
     overflow: hidden;
     font-weight: 700;
     text-overflow: ellipsis;
+    vertical-align: top;
   }
 }
 
