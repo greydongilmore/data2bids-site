@@ -166,29 +166,14 @@
                       title="{{ lang.t('edit.link.title') }}"
                       class="md-interact"
                     >
-                      <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
-                        <a class="md-interact__icon md-icon">
-                          {% include ".icons/material/pencil.svg" %}
-                        </a>
-                        <a class="md-interact__repository">{{ lang.t('edit.link.title') }}</a>
-                      </div>
-                      
-                    </a>
+                    <div class="md-source__icon">
+                      {% include ".icons/material/pencil.svg" %}
+                    </div>
+                    <div class="md-source__repository">
+                      {{ lang.t('edit.link.title') }}
+                    </div>
                   </div>
-                  <div class="md-interact-contain__source">
-                    <a
-                      href="{{ config.issues_url }}"
-                      title="Open An Issue"
-                      class="md-interact"
-                    >
-                      <div class="md-interact__icon md-icon">
-                        {% include ".icons/material/github.svg" %}
-                      </div>
-                      <div class="md-interact__repository">
-                        Open An Issue
-                      </div>
-                    </a>
-                  </div>
+                  
                 {% endif %}
                 {% if page.edit_url and not config.issues_url %}
                     <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">

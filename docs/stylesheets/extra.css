@@ -80,16 +80,23 @@
 
   // Repository platform icon
   &__icon {
+    display: inline-block;
     width: px2rem(48px);
     height: px2rem(48px);
     vertical-align: top;
-    margin-right: px2rem(-40px);
-    padding-right: px2rem(40px);
+
+    // Correct alignment, if icon is present
+    + .md-interact__repository {
+      margin-left: px2rem(-40px);
+      padding-left: px2rem(40px);
+
+    }
   }
 
   // Repository name
   &__repository {
     margin-right: px2rem(12px);
+    overflow: hidden;
     font-weight: 700;
     text-overflow: ellipsis;
     vertical-align: top;
@@ -98,9 +105,11 @@
 
 
 .md-interact-contain {
+  display: flex;
   padding: 0 px2rem(4px);
+  justify-content: flex-end;
   // Repository containing source
   &__source {
-    vertical-align: top;
+    margin-top: 20px;
   }
 }
