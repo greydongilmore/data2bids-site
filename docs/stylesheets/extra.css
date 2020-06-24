@@ -114,7 +114,9 @@
   padding: 0 px2rem(4px);
   // Repository containing source
   &__source {
+    float:right;
     display: none;
+    vertical-align: top;
 
     // [screen +]: Increase spacing of search bar
     @include break-from-device(screen) {
