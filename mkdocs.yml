@@ -13,6 +13,7 @@ copyright: Copyright &copy; 2020 Greydon Gilmore
 
 # Configuration
 dev_addr: 127.0.0.1:7000
+use_directory_urls: true
 theme:
   name: material
   custom_dir: material
