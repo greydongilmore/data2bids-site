@@ -1,7 +1,7 @@
 ---
-title: Organize Input Directory
 template: overrides/base.html
 ---
+
 # Organize Input Directory
 
 This section outlines how the data should be organized prior to running the EDF conversion software. The data files should be in EDF/EDF+ format following the [specifications](https://www.edfplus.info/specs/edf.html) provided by the EDF developers. There are two ways to organize the directory structure  prior to running the software. The root directory should contain a sub-directory for each of the  subjects you want to have converted. Note that at this moment the names of the EDF/EDF+ files are not yet BIDS compliant, but they do contain some metadata in the filename that will be used later.

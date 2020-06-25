@@ -17,19 +17,20 @@ use_directory_urls: false
 theme:
   name: material
   custom_dir: material
-  features:
-    - tabs
   palette:
-    primary: blue grey
-    accent: blue
+    primary: red
+    accent: red
   logo: img/edf2bids_icon.svg
   favicon: img/favicon.ico
 
 markdown_extensions:
   - admonition
   - codehilite
-  - toc:
-      permalink: true
+  - toc(permalink=true)
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra_css:
   - stylesheets/extra.css
@@ -37,3 +38,17 @@ extra_css:
 # Plugins
 plugins:
   - search
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js
+
+nav:
+  - Home: index.md
+  - Introduction: introduction.md
+  - Installation: installation.md
+  - Getting Started:
+    - Overview: ui_components/overview.md
+    - Input Directory Setup: ui_components/input_dir_setup.md
+    - Adjust User Settings: ui_components/user_settings.md
+    - Input/Output Directories: ui_components/directory_selection.md
+    - BIDS Output Folder Structure: ui_components/bids_output.md

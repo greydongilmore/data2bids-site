@@ -23,12 +23,6 @@
     fill: currentColor;
 }
 
-.md-nav__title {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 0;
-}
-
 .md-typeset h2:after {
     content:' ';
     display:block;
@@ -42,99 +36,15 @@
 }
 
 .md-grid {
-    max-width: 75rem;
+    max-width: 70rem;
     margin-right: auto;
     margin-left: auto;
 }
 
 .md-content {
-  flex: 1;
-  max-width: 100%;
   text-align: justify;
-
-  // [tablet landscape]: Decrease horizontal width
-  @include break-at-device(tablet landscape) {
-    max-width: calc(100% - #{px2rem(242px)});
-  }
-
-  // [screen +]: Decrease horizontal width
-  @include break-from-device(screen) {
-    max-width: calc(100% - #{px2rem(242px)} * 2);
-  }
-
 }
 
-.md-interact {
-  font-size: px2rem(13px);
-  line-height: 1.2;
-  white-space: nowrap;
-  // Hack: reduce jitter
-  backface-visibility: hidden;
-  transition: opacity 250ms;
-
-  // Hovered source container
-  &:hover {
-    opacity: 0.7;
-  }
-
-  // Repository platform icon
-  &__icon {
-    display: flex;
-    justify-content: flex-end;
-    width: px2rem(48px);
-    height: px2rem(48px);
-
-    // Correct alignment, if icon is present
-    + .md-interact__repository {
-      margin-left: px2rem(-40px);
-      padding-left: px2rem(40px);
-
-    }
-  }
-
-  // Repository name
-  &__repository {
-    display: flex;
-    justify-content: flex-end;
-    font-weight: 700;
-    text-overflow: ellipsis;
-  }
-}
-
-
-.md-interact-contain {
-  padding: 0 px2rem(4px);
-  // Repository containing source
-  &__source {
-    padding: 0 px2rem(4px);
-    display: flex; 
-    justify-content: flex-end; 
-    margin-top: 20px;
-  }
-}
-
-// Content container
-.md-interact-content {
-  display: flex; 
-  justify-content: flex-end;
-  max-width: 100%;
-
-  // Button next to the title
-  &__button {
-    float: right;
-    margin: px2rem(8px) 0;
-    margin-left: px2rem(8px);
-    padding: 0;
-
-    // Align text with icon
-    svg {
-      display: inline;
-      vertical-align: top;
-    }
-
-    // Hide for print
-    @media print {
-      display: none;
-    }
-  }
+.md-typeset {
+  line-height: 1.4em;
 }
