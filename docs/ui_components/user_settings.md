@@ -8,9 +8,7 @@ template: overrides/base.html
 
 1. In the software, select **File** then **Settings**.
 
-    <center><table style="width:80%"><tr><td>
-      <img src="../img/metadata_01.png" alt="drawing"/>
-    </td></tr></table></center>
+	<center><img src="../img/metadata_01.png" alt="drawing"/></center>
 
 2. A settings panel will appear with two tabs: Json Metadata and Electrode Info.
 
@@ -20,9 +18,7 @@ template: overrides/base.html
   	  * **Dataset Name:** overall name for the dataset.
   	  * **Institution Name/Address:** name and address of the institution at which  this dataset was collected
 
-    <center><table style="width:80%"><tr><td>
-      <img src="../img/metadata_02.png" alt="drawing"/>
-    </td></tr></table></center>
+	<center><img src="../img/metadata_02.png" alt="drawing"/></center>
 
 	* **Electrode info** contains information about the specific electrodes used at the center:
   	  * **Manufacturer:** who produces the electrodes.
@@ -30,20 +26,16 @@ template: overrides/base.html
   	  * **Material:** what material are the electrodes made from (i.e. platinum)
   	  * **Diameter:** what is the diameter of the electrode
 
-    <center><table style="width:80%"><tr><td>
-      <img src="../img/metadata_03.png" alt="drawing"/>
-    </td></tr></table></center>
+	<center><img src="../img/metadata_03.png" alt="drawing"/></center>
 
 3. Once you have modified the information click Save and the information will be stored and used for every subsequent dataset processed in the Conversion software. You will not need to re-define these values, unless they change at your site.
 
 ## Main window settings panel
 
 1. The settings panel is located at the bottom left of the main window.
-    
-    <center><table style="width:100%"><tr><td>
-      <img src="../img/main_settings_panel.png" alt="drawing"/>
-    </td></tr></table></center>
 
-  * **De-identify input directory**: if this is selected the input EDF files will be de-identified first prior to being copied. If left unchecked, then only the output directory EDF files will be de-identified. Default is unchecked.
-  * **Offset dates**: if selected all dates in the EDF files will be offset by a random number of days (~1000 days). The offset value can be determined but is securely stored.
-  * **Test conversion**: this should only be selected if testing the software on new data. This option will not copy the EDF files or read the annotations. This means it will quickly run through the data and output a BIDS structure without the EDF file.
+	<center><img src="../img/main_settings_panel.png" alt="drawing"/></center>
+
+	* **De-identify input directory**: if this is selected the input EDF files will be de-identified first prior to being copied. If left unchecked, then only the output directory EDF files will be de-identified. Default is unchecked.
+	* **Offset dates**: if selected all dates in the EDF files will be offset by a random number of days (~1000 days). The offset value can be determined but is securely stored.
+	* **Test conversion**: this should only be selected if testing the software on new data. This option will not copy the EDF files or read the annotations. This means it will quickly run through the data and output a BIDS structure without the EDF file.

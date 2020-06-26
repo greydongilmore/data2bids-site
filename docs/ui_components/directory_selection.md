@@ -9,10 +9,8 @@ template: overrides/base.html
 The input directory selected here should be organized according to the first section in this documentation. Prior to loading the data, make sure all the settings in the settings panel have been configured to your specification (found at the bottom left of the main window).
 
 1. In the software, select **Input Directory** and choose the directory that contains the data to be converted (select the main/root directory that contains all subject directories). Click **Select Folder** in the window and the data will load into the **Input Directory** window.
-    
-    <center><table style="width:100%"><tr><td>
-      <img src="../img/input_dir_01.png" alt="drawing"/>
-    </td></tr></table></center>
+
+    <img src="../img/input_dir_01.png"/>
 
 2. You will now be able to review the information that was detected about the input files. Each subject is expandable by clicking the box beside the subject name. The columns displayed are:
 
@@ -32,10 +30,8 @@ The input directory selected here should be organized according to the first sec
 ## Output directory selection
 
 1. Once you have confirmed the input data is correct, click **Output Directory** and select the directory you want the BIDS dataset to appear. The **Output Directory** window will now present the final output file information (prior to conversion). This is the final check to ensure that any changes have been updated.
-    
-    <center><table style="width:100%"><tr><td>
-      <img src="../img/output_dir_01.png" alt="drawing"/>
-    </td></tr></table></center>
+
+    <img src="../img/output_dir_01.png" alt="drawing"/>
 
     !!! note 
         EDF files in the Input Directory will be **COPIED** to the new location and will be renamed to be BIDS compliant. Thus, you will have two copies of the EDF files. This is a safety measure in case an error occurs in the conversion, the source data will remain intact.
@@ -48,7 +44,6 @@ The input directory selected here should be organized according to the first sec
 4. During the conversion process you can cancel the conversion at any time by pressing the **Cancel** button. However, if you cancel the conversion you will need to delete the contents of the output directory and start over.
 
 5. You will receive updates in the **Conversion Status** window. The final notice, once the conversion is complete, will show **Your data has been BIDsified!**. 
-  
-  <center><table style="width:100%"><tr><td>
-     <img src="../img/final_message.png" alt="drawing"/>
-  </td></tr></table></center>
+
+  <img src="../img/final_message.png" alt="drawing"/>
+

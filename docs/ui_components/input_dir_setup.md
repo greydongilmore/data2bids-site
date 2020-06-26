@@ -2,11 +2,11 @@
 template: overrides/base.html
 ---
 
-# Organize Input Directory
+# Input Directory Setup
 
 This section outlines how the data should be organized prior to running the EDF conversion software. The data files should be in EDF/EDF+ format following the [specifications](https://www.edfplus.info/specs/edf.html) provided by the EDF developers. There are two ways to organize the directory structure  prior to running the software. The root directory should contain a sub-directory for each of the  subjects you want to have converted. Note that at this moment the names of the EDF/EDF+ files are not yet BIDS compliant, but they do contain some metadata in the filename that will be used later.
 
-## Option 01: not specifying the visit or session number
+## Option 01: Specify visit/session number
 
 If you do not need to specify the visit or session number for each EDF file for the subjects, then this option will assign session numbers based on the Date timestamp within the EDF files. So the earliest EDF file will be given `ses-001` while the latest EDF file will be given `ses-###` (will be equal to the amount of EDF files for that subject).
 
@@ -18,7 +18,7 @@ If you do not need to specify the visit or session number for each EDF file for 
 
 ```
 
-## Option 02: specifying the visit or session number
+## Option 02: Do not specify visit/session number
 
 In some instances you may want to manually assign the specific visit or session numbers for the EDF files. In this scenario you would need to place each EDF file into a directory with the following naming scheme:
 

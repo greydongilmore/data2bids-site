@@ -5,10 +5,8 @@ template: overrides/base.html
 # BIDS Output Folder Structure
 
 The output folder will look like the following:
-  
-  <center><table style="width:100%"><tr><td>
-     <img src="../img/dir_structure_01.png" alt="drawing"/>
-  </td></tr></table></center>
+
+  <center><img src="../img/dir_structure_01.png" alt="drawing"/></center>
 
   * Each patient will have their own folder
   * **code:** this folder will contain the code used to convert the EDF data for each EDF file for the subjects.
@@ -17,17 +15,13 @@ The output folder will look like the following:
 
 Within each subject directory there will be a different session folder for each EDF file.
   
-  <center><table style="width:100%"><tr><td>
-     <img src="../img/sub_dir_structure_01.png" alt="drawing"/>
-  </td></tr></table></center>
+   <center><img src="../img/sub_dir_structure_01.png" alt="drawing"/></center>
 
   * **\*_scans.tsv:** this file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF type etc.).
 
 Within each session folder there will be a modality folder (either eeg or ieeg), inside that will be five files, containing different information associated with the specific EDF file. This file can also be used to store additional metadata information that varies from one recording to the next.
-  
-  <center><table style="width:100%"><tr><td>
-     <img src="../img/ses_dir_structure_01.png" alt="drawing"/>
-  </td></tr></table></center>
+
+   <center><img src="../img/ses_dir_structure_01.png" alt="drawing"/></center>
 
   * **\*_electrodes.tsv:** contains information associated with the electrodes used to collect the data.
   * **\*_annotations.tsv:** contains all annotations present in the EDF file, identifiers have been scrubbed.

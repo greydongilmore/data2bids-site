@@ -26,7 +26,8 @@ theme:
 markdown_extensions:
   - admonition
   - codehilite
-  - toc(permalink=true)
+  - toc:
+      permalink: true
   - pymdownx.superfences
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
