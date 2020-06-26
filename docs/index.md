@@ -1,9 +1,10 @@
 ---
-title: Home
 template: overrides/base_noedit.html
 ---
 
-# Welcome to edf2bids
+<center><img src="./img/edf2bids_icon_full.svg" alt="drawing"/></center>
+
+<br>
 
 <center><img src="./img/main_gui.png" alt="drawing"/></center>
 

@@ -20,8 +20,16 @@ theme:
   palette:
     primary: red
     accent: red
-  logo: img/edf2bids_icon.svg
-  favicon: img/favicon.ico
+  logo: img/edf2bids_icon_white.svg
+  favicon: img/edf2bids_icon.svg
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
 
 markdown_extensions:
   - admonition
