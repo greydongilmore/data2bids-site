@@ -17,6 +17,7 @@ theme:
   name: material
   custom_dir: material
   palette:
+    scheme: preference
     primary: red
     accent: red
   logo: img/edf2bids_white_icon.svg
@@ -58,4 +59,5 @@ nav:
     - Input Directory Setup: ui_components/input_dir_setup.md
     - Adjust User Settings: ui_components/user_settings.md
     - Input/Output Directories: ui_components/directory_selection.md
-    - BIDS Output Folder Structure: ui_components/bids_output.md
+    - Output Folder Structure: ui_components/bids_output.md
+    - SPReD Data Upload: ui_components/spred_upload.md
