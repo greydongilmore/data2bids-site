@@ -1,5 +1,5 @@
 ---
-template: overrides/base_noedit.html
+template: overrides/main_noedit.html
 ---
 
 # Installation

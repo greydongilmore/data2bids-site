@@ -1,5 +1,5 @@
 ---
-template: overrides/base.html
+template: overrides/main.html
 ---
 
 # Input/Output Directories

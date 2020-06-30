@@ -20,7 +20,7 @@ theme:
   palette:
     primary: red
     accent: red
-  logo: img/edf2bids_icon_white.svg
+  logo: img/edf2bids_white_icon.svg
   favicon: img/edf2bids_icon.svg
 
   # 404 page
@@ -47,6 +47,8 @@ extra_css:
 # Plugins
 plugins:
   - search
+  - mkdocs-versioning:
+      version: 3.0.0
 
 extra_javascript:
   - https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js

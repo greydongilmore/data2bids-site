@@ -1,25 +1,25 @@
-.md-header {
+/*.md-header {
     height: 3.5rem;
     padding-top: .5rem;
-}
+}*/
 
 
 .md-header-nav__button {
-    z-index: 1;
+    z-index: 10;
     display: block;
     cursor: pointer;
     transition: opacity 250ms;
 }
 
 .md-header-nav__button.md-logo {
-    margin: -1rem .1rem .1rem .1rem;
-    padding: .05rem;
+    margin: .1rem 0rem .1rem .1rem;
+    padding: 0rem;
 }
 
 .md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg {
     display: block;
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
     fill: currentColor;
 }
 

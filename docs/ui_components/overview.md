@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 # Overview
 
 This section describes steps required to use **edf2bids**. If you have not installed **edf2bids** you have two options:

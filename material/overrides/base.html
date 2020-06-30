@@ -29,7 +29,7 @@
         <meta name="author" content="{{ config.site_author }}">
       {% endif %}
       <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-5.3.3">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -148,12 +148,9 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               {% block content %}
-                {% if page.edit_url and config.issues_url %}
-                  <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
-                    {% include ".icons/material/pencil.svg" %} <p style="margin-top:2px;">Edit this page</p>
-                  </a>
-                  <a href="{{ config.issues_url }}" title="Open an issue" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
-                    {% include ".icons/fontawesome/brands/github.svg" %} <p style="margin-top:2px;">Open and issue</p>
+                {% if page.edit_url %}
+                  <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
+                    {% include ".icons/material/pencil.svg" %}
                   </a>
                 {% endif %}
                 {% block source %}
@@ -186,7 +183,7 @@
     </div>
     {% block scripts %}
       <script src="{{ 'assets/javascripts/vendor.de50e36d.min.js' | url }}"></script>
-      <script src="{{ 'assets/javascripts/bundle.dd72b84b.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.38f5c9b5.min.js' | url }}"></script>
       {%- set translations = {} -%}
       {%- for key in [
         "clipboard.copy",

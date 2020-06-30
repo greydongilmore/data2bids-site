@@ -1,5 +1,5 @@
 ---
-template: overrides/base.html
+template: overrides/main.html
 ---
 
 # BIDS Output Folder Structure
