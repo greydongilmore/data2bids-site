@@ -46,8 +46,6 @@ extra_css:
 # Plugins
 plugins:
   - search
-  - mkdocs-versioning:
-      version: 3.0.0
 
 extra_javascript:
   - https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js
