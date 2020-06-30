@@ -6,7 +6,6 @@ site_author: Greydon Gilmore
 repo_name: GitHub
 repo_url: https://github.com/greydongilmore/edf2bids-site
 edit_uri: https://github.com/greydongilmore/edf2bids-site/blob/master/docs
-issues_url: https://github.com/greydongilmore/edf2bids-site/issues/new/choose
 
 # Copyright
 copyright: Copyright &copy; 2020 Greydon Gilmore
