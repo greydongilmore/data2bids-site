@@ -48,3 +48,39 @@ sudo apt install python3-pip
 
 ### Compiling
 
+## Other Usful Software
+
+### EDFBrowser
+
+<a href="https://www.teuniz.net/edfbrowser/" target="_blank">EDFBrowser</a> (developed by Teunis van Beelen) is a free, open-source, viewer/toolbox for EEG/IEEG data. It is a great tool to use when attempting to organize your input directory for **edf2bids**.
+
+#### Windows
+
+For 64-bit windows download <a href="https://www.teuniz.net/edfbrowser/setup_edfbrowser_177_64bit.zip" target="_blank">this file</a>.
+
+For 32-bit Windows download <a href="https://www.teuniz.net/edfbrowser/setup_edfbrowser_177_32bit.zip" target="_blank">this file</a>.
+
+#### Mac
+
+You can download the latests `.dmg` file from <a href="https://gitlab.com/whitone/EDFbrowser/-/releases" target="_blank">this website</a>.
+
+#### Linux
+
+To install on Linux, you must first have the dependencies installed (`g++`, `Qt5`):
+
+```sh
+sudo apt-get update
+sudo apt-get install g++ make git qtbase5-dev-tools qtbase5-dev qt5-default
+```
+
+Then enter the following commands to download and install:
+
+```sh
+git clone https://gitlab.com/Teuniz/EDFbrowser.git
+cd EDFbrowser
+qmake
+make -j4
+sudo make install
+edfbrowser
+```
+

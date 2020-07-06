@@ -35,6 +35,19 @@
     -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
 }
 
+.md-typeset h3 {
+    overflow:hidden;
+}
+
+.md-typeset h3:after {
+    content:'';
+    display:inline-block;
+    width:100%; height:100%;
+    margin-right:-100%;
+    border-bottom:1px solid #d0d0d0;
+    vertical-align: middle;
+}
+
 /*.md-grid {
     max-width: 70rem;
     margin-right: auto;

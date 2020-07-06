@@ -62,12 +62,25 @@ In some instances you may want to manually assign the specific visit or session 
   * **task:** format of the edf data (should be _CLIP/_FULL/_CS)
   * **RET (optional):** indicates the study is retrospective
 
-!!! note
+!!! note "Note on Visit Numbers"
     * If any retrospective studies exist for a subject, they should be assigned the first visit number 01
     * All following admissions to the hospital would be given incremental visit numbers (i.e. visit 2: 02, visit 3: 03)
     * Two separate admissions to the hospital should not have the same visit number
     * Scalp and Intracranial recordings should have distinct visit numbers (ex. If 01 is used for the participant’s first stay in the EMU for scalp EEG, 02 should be used if they come back for intracranial EEG)
 
+!!! note "Note on Session Numbers"
+	If a day in sequence of sessions is missing/not present this session number should still be accounted for
+	e.g. 
+	```sh
+	ses-001 (data present), ses-002 (data missing), ses-003 (data present)
+	```
+	The directory naming would look like:
+	```sh
+	sub-003_01_SE01_IEEG_FULL_RET
+	sub-003_01_SE03_IEEG_FULL_RET
+	```
+	Notice that no folder is specified for the missing ses-002 but the number is still accounted for by skipping it.
+	
 ### Example
 
 ```sh
