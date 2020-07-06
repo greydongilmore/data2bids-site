@@ -6,8 +6,8 @@ template: overrides/main.html
 
 This section describes steps required to use **edf2bids**. If you have not installed **edf2bids** you have two options:
 
-  * [Install a compiled version](installation/obtain-pre-compiled-versions)
-  * [Compile from source code](installation/compile-from-source)
+  * [Install a compiled version](installation.html#obtain-pre-compiled-versions)
+  * [Compile from source code](installation#compile-from-source)
 
 ---
 

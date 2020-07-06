@@ -4,6 +4,7 @@ template: overrides/main_noedit.html
 
 # Installation
 
+There are a few ways to install **edf2bids**. For those looking to simply run the software you should [install a compiled version](installation.html#obtain-pre-compiled-versions).
 ## Obtain pre-compiled versions
 
 #### Windows
