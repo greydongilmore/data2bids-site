@@ -6,14 +6,22 @@ template: overrides/main_noedit.html
 
 ## Obtain pre-compiled versions
 
+#### Windows
+
+For 32-bit and 64-bit Windows download and extract <a href="https://drive.google.com/file/d/1BffgtCBPzZPTLZJwZgcOA42i_kfa0ogY/view?usp=sharing" target="_blank">this folder</a>.
+
 ## Compile from source
-
-### Requirements
-
 
 ### Python Setup
 
 First you will need to install Python, depending on what operating system you are using there are different approaches.
+
+#### Windows
+
+1. You will need to download the <a href="https://www.python.org/downloads/windows/" target="_blank">windows python installer</a>.
+2. Underneath the heading at the top that says Python Releases for Windows, click on the link for the Latest Python 3 Release - Python 3.x.x
+3. Scroll to the bottom and select either Windows x86-64 executable installer for 64-bit or Windows x86 executable installer for 32-bit
+4. Install by double-clicking on the downloaded file.
 
 #### Mac
 
@@ -29,13 +37,6 @@ First you will need to install Python, depending on what operating system you ar
 ```console
 brew install python3
 ```
-
-#### Windows
-
-1. You will need to download the <a href="https://www.python.org/downloads/windows/" target="_blank">windows python installer</a>.
-2. Underneath the heading at the top that says Python Releases for Windows, click on the link for the Latest Python 3 Release - Python 3.x.x
-3. Scroll to the bottom and select either Windows x86-64 executable installer for 64-bit or Windows x86 executable installer for 32-bit
-4. Install by double-clicking on the downloaded file.
 
 #### Linux
 
