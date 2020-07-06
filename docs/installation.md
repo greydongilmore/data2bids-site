@@ -49,7 +49,7 @@ sudo apt install python3-pip
 
 ### Compiling
 
-## Other Usful Software
+## Other Useful Software
 
 ### EDFBrowser
 
