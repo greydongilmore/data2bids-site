@@ -30,6 +30,23 @@ working_dir/
 
 ```
 
+<div id="tree"></div>
+<script>
+    $(document).ready(function() {
+      $.ajax({
+          url : "../../assets/working_dir.json",
+          dataType: "text",
+          success : function (tree) {
+              $('#tree').bstreeview({ data: tree });
+          }
+      });
+});
+</script>
+
+!!! warning
+    When beginning a conversion with **edf2bids** ensure the **output** directory is empty and the **input** directory only contains the subject folders you wish to convert.
+
+
 ## Option 01: Do not specify visit/session number
 
 If you do not need to specify the visit or session number for each EDF file for the subjects, then this option will assign session numbers based on the **Date** timestamp within the EDF files. So the earliest EDF file will be given **ses-001** while the latest EDF file will be given **ses-###** (### will be equal to the number of EDF files for that subject).
@@ -49,8 +66,18 @@ input/
 
 ```
 
-!!! warning
-    When beginning a conversion with **edf2bids** ensure the **output** directory is empty and the **input** directory only contains the subject folders you wish to convert.
+<div id="tree2"></div>
+<script>
+    $(document).ready(function() {
+      $.ajax({
+          url : "../../assets/no_ses_visit.json",
+          dataType: "text",
+          success : function (tree) {
+              $('#tree2').bstreeview({ data: tree });
+          }
+      });
+});
+</script>
 
 ## Option 02: Specify visit/session number
 
@@ -119,6 +146,18 @@ input/
 
 ```
 
+<div id="tree3"></div>
+<script>
+    $(document).ready(function() {
+      $.ajax({
+          url : "../../assets/specify_ses_visit.json",
+          dataType: "text",
+          success : function (tree) {
+              $('#tree3').bstreeview({ data: tree });
+          }
+      });
+});
+</script>
 
 <br>
 <br>
