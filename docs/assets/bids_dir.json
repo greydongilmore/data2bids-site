@@ -140,12 +140,28 @@
                 ]
               }
             ]
+          },
+          {
+            "text": ".bidsignore",
+            "icon": "fa fa-file"
+          },
+          {
+            "text": "dataset_description.json",
+            "icon": "fa fa-file"
+          },
+          {
+            "text": "participants.json",
+            "icon": "fa fa-file"
+          },
+          {
+            "text": "participants.tsv",
+            "icon": "fa fa-file"
+          },
+          {
+            "text": "README",
+            "icon": "fa fa-file"
           }
         ]
-      },
-      {
-        "text": "dataset_description.json",
-        "icon": "fa fa-file"
       }
     ]
   }
