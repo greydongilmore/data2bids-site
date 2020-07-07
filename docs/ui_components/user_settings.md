@@ -28,7 +28,7 @@ template: overrides/main.html
 
 	<center><img src="../img/metadata_03.png" alt="drawing"/></center>
 
-3. Once you have modified the information click Save and the information will be stored and used for every subsequent dataset processed in the Conversion software. You will not need to re-define these values, unless they change at your site.
+3. Once you have modified the information click **Save** and the information will be stored and used for every subsequent dataset processed by **edf2bids**. You will not need to re-define these values, unless they change at your site.
 
 ## Main window settings panel
 
@@ -36,6 +36,6 @@ template: overrides/main.html
 
 	<center><img src="../img/main_settings_panel.png" alt="drawing"/></center>
 
-	* **De-identify input directory**: if this is selected the input EDF files will be de-identified first prior to being copied. If left unchecked, then only the output directory EDF files will be de-identified. Default is unchecked.
-	* **Offset dates**: if selected all dates in the EDF files will be offset by a random number of days (~1000 days). The offset value can be determined but is securely stored.
-	* **Test conversion**: this should only be selected if testing the software on new data. This option will not copy the EDF files or read the annotations. This means it will quickly run through the data and output a BIDS structure without the EDF file.
+	* **De-identify input directory**: if this is selected the input EDF/EDF+ files will be de-identified first prior to being copied. If left unchecked, then only the output directory EDF/EDF+ files will be de-identified. Default is unchecked.
+	* **Offset dates**: if selected all dates in the EDF/EDF+ files will be offset by a random number of days (~1000 days). The offset value can be determined but is securely stored.
+	* **Test conversion**: this should only be selected if testing the software on new data. This option will not copy the EDF/EDF+ files or read the annotations. This means it will quickly run through the data and output a BIDS structure without the EDF/EDF+ file.

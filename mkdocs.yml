@@ -37,6 +37,8 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.arithmatex
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -57,6 +59,7 @@ nav:
   - Getting Started:
     - Overview: ui_components/overview.md
     - Input Directory Setup: ui_components/input_dir_setup.md
+    - Check EDF Type: ui_components/check_edf_type.md
     - Adjust User Settings: ui_components/user_settings.md
     - Input/Output Directories: ui_components/directory_selection.md
     - Output Folder Structure: ui_components/bids_output.md

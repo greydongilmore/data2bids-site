@@ -88,3 +88,5 @@ The format required to upload the Brain-CODE is different from BIDS. This conver
 14. You are done! If you have more EEG sessions to upload for this participant, you can go back to the main subject page by clicking on the navigation links at the top. You can then repeat from step 5 and on.
 
 	<center><img src="../img/spred_13.png" alt="drawing" style="width:80%;"/></center>
+
+<br><br>
