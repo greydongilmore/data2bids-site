@@ -29,7 +29,7 @@ The format required to upload the Brain-CODE is different from BIDS. This conver
 
 5. You will be uploading the **.zip** directories to Brain-CODE.
 
-## Upload Data To
+## Upload Data To SPReD
 
 1. Login to <a href="https://spred.braincode.ca/spred/" target="_blank">SPReD</a> and navigate to the EPL31 project for your site.
 
