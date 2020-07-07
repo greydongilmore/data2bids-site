@@ -36,4 +36,19 @@ Within each session folder there will be a modality folder (either eeg or ieeg),
   * **\*_eeg.json/** **or** **\*_ieeg.json:** contains metadata information about the EDF/EDF+ file.
   * **\*_eeg.edf/** **or** **\*_ieeg.edf:** contains the data in the de-identified EDF/EDF+ file.
 
+### Example
+
+<div id="tree"></div>
+<script>
+    $(document).ready(function() {
+      $.ajax({
+          url : "../../assets/bids_dir.json",
+          dataType: "text",
+          success : function (tree) {
+              $('#tree').bstreeview({ data: tree });
+          }
+      });
+});
+</script>
+
 <br><br>

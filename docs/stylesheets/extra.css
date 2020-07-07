@@ -71,6 +71,10 @@
   font-size: 18px;
 }
 
+.bstreeview .list-group-item {
+  font-size: 15px;
+}
+
 @page {
     size: a4 portrait;
     margin: 25mm 10mm 25mm 10mm;
