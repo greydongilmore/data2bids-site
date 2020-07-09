@@ -14,6 +14,8 @@ For 32-bit and 64-bit Windows download and extract <a href="https://drive.google
 
 ## Compile from source
 
+The source code can be download from the <a href="https://github.com/greydongilmore/edf2bids" target="_blank">GitHub repository</a>.
+
 ### Python Setup
 
 First you will need to install Python, depending on what operating system you are using there are different approaches.
