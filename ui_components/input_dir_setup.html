@@ -497,8 +497,8 @@
 
 
   <li class="md-nav__item">
-    <a href="user_settings.html" title="Adjust User Settings" class="md-nav__link">
-      Adjust User Settings
+    <a href="edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
+      edf2bids Settings
     </a>
   </li>
 
@@ -533,8 +533,8 @@
 
 
   <li class="md-nav__item">
-    <a href="spred_upload.html" title="SPReD Data Upload" class="md-nav__link">
-      SPReD Data Upload
+    <a href="spred_upload.html" title="SPReD Upload [EpLink]" class="md-nav__link">
+      SPReD Upload [EpLink]
     </a>
   </li>
 
@@ -754,7 +754,9 @@
   
   <h1 id="input-directory-setup">Input Directory Setup<a class="headerlink" href="#input-directory-setup" title="Permanent link">&para;</a></h1>
 <p>This section outlines how the data should be organized prior to running the <strong>edf2bids</strong> software. The data files should be in EDF/EDF+ format following the <a href="https://www.edfplus.info/specs/edf.html" target="_blank">specifications</a> provided by the EDF format developers. </p>
-<p>It is recommemded you organize your data based on the working directory schema described in the ensuing section. The root input directory (<code>input</code>) should contain a sub-directory for each of the subjects you want to have converted (i.e. <code>input\sub-001</code>, <code>input\sub-002</code> etc.). </p>
+<p><a href="input_dir_setup.html#setup-a-working-directory">Setup a working directory</a> is a recommemded way to organize your working directory of data (this is optional but highly recommended).</p>
+<p><a href="input_dir_setup.html#option-01-do-not-specify-visitsession-number">Option 01: Do not specify visit/session number</a> should be followed if you do not have a specific naming convention for visits and sessions. In this option, the visit and session number are not supplied to the <strong>edf2bids</strong> software and instead are calculated based on the date/time of the EDF/EDF+ aquisition.</p>
+<p><a href="input_dir_setup.html#option-02-specify-visitsession-number">Option 02: Specify visit/session number</a> should be followed for data from the <strong>EpLink study</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>At this moment the names of the EDF/EDF+ files are not yet BIDS compliant, but they do contain some metadata in the filename that will be used later.</p>
@@ -797,6 +799,10 @@
 
 <h2 id="option-01-do-not-specify-visitsession-number">Option 01: Do not specify visit/session number<a class="headerlink" href="#option-01-do-not-specify-visitsession-number" title="Permanent link">&para;</a></h2>
 <p>If you do not need to specify the visit or session number for each EDF file for the subjects, then this option will assign session numbers based on the <strong>Date</strong> timestamp within the EDF files. So the earliest EDF file will be given <strong>ses-001</strong> while the latest EDF file will be given <strong>ses-###</strong> (### will be equal to the number of EDF files for that subject).</p>
+<div class="admonition important">
+<p class="admonition-title">Input directory</p>
+<p>The input directory (<code>input</code>) should contain a sub-directory for each of the subjects you want to have converted (i.e. <code>input\sub-001</code>, <code>input\sub-002</code> etc.). Within the <strong>edf2bids</strong> software you select <code>input</code> as the input directory and not the individual subject directories</p>
+</div>
 <h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Definition of terms</p>
@@ -841,6 +847,10 @@
 </code></pre></div>
 
 <p>A folder with the above naming scheme would indicate this is subject 3's second visit and first session. The data collected was a full IEEG recording that was retrospective (recorded prior to the subject consent).</p>
+<div class="admonition important">
+<p class="admonition-title">Input directory</p>
+<p>The input directory (<code>input</code>) should contain a sub-directory for each of the subjects you want to have converted (i.e. <code>input\sub-001</code>, <code>input\sub-002</code> etc.). Within the <strong>edf2bids</strong> software you select <code>input</code> as the input directory and not the individual subject directories</p>
+</div>
 <h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
 <p>Each day of recording should be in a separate folder within the subject directory:</p>
 <h4 id="static_2">Static<a class="headerlink" href="#static_2" title="Permanent link">&para;</a></h4>
