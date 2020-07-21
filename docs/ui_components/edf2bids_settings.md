@@ -2,11 +2,11 @@
 template: overrides/main.html
 ---
 
-# Adjusting User Settings
+# edf2bids Settings
 
 ## Adjusting metadata settings
 
-1. In the software, select **File** then **Settings**.
+1. In the **edf2bids** software, select **File** then **Settings**.
 
 	<center><img src="../img/metadata_01.png" alt="drawing"/></center>
 

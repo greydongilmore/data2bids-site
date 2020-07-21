@@ -4,7 +4,7 @@ template: overrides/main.html
 
 # Output Folder Structure
 
-## BIDs Output Structure
+## BIDS output structure
 
 The output folder will look like the following (each subject having their own directory):
 
@@ -33,10 +33,12 @@ Within each session folder there will be a modality folder (either eeg or ieeg),
   * **\*_electrodes.tsv:** contains information associated with the electrodes used to collect the data.
   * **\*_annotations.tsv:** contains all annotations present in the EDF/EDF+ file, identifiers have been scrubbed.
   * **\*_channels.tsv:** contains information about each channel that was used in the recording.
-  * **\*_eeg.json/** **or** **\*_ieeg.json:** contains metadata information about the EDF/EDF+ file.
-  * **\*_eeg.edf/** **or** **\*_ieeg.edf:** contains the data in the de-identified EDF/EDF+ file.
+  * **\*\_eeg.json/** **or** **\*\_ieeg.json:** contains metadata information about the EDF/EDF+ file.
+  * **\*\_eeg.edf/** **or** **\*\_ieeg.edf:** contains the data in the de-identified EDF/EDF+ file.
 
 ### Example
+
+#### Interactive
 
 <div id="tree"></div>
 <script>
@@ -50,5 +52,21 @@ Within each session folder there will be a modality folder (either eeg or ieeg),
       });
 });
 </script>
+
+## SPReD Output Structure
+
+1. When the SPReD conversion is completed a new directory will be created in the output directory. All unused BIDS files will be transferred to the **bids_old** directory, while all the SPReD files will be moved to the **SPReD** directory.
+
+    <center><img src="../img/bids_spred_02.png" alt="drawing" style="width:80%;"/></center>
+
+2. The **SPReD** directory will look like:
+
+    <center><img src="../img/bids_spred_03.png" alt="drawing" style="width:30%;"/></center>
+
+3. Within each subdirectory of the **.zip** folders the same files from the BIDS format will be found:
+
+    <center><img src="../img/bids_spred_04.png" alt="drawing" style="width:80%;"/></center>
+
+4. You will be uploading the **.zip** directories to Brain-CODE.
 
 <br><br>

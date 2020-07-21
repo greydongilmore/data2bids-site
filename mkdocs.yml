@@ -61,7 +61,7 @@ nav:
     - Definitions: ui_components/definitions.md
     - Input Directory Setup: ui_components/input_dir_setup.md
     - Check EDF Type: ui_components/check_edf_type.md
-    - Adjust User Settings: ui_components/user_settings.md
+    - edf2bids Settings: ui_components/edf2bids_settings.md
     - Run Conversion: ui_components/run_conversion.md
     - Output Folder Structure: ui_components/bids_output.md
-    - SPReD Data Upload: ui_components/spred_upload.md
+    - SPReD Upload [EpLink]: ui_components/spred_upload.md

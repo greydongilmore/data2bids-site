@@ -17,9 +17,12 @@
     
     
       
-        <title>Adjust User Settings - edf2bids</title>
+        <title>Check EDF Type - edf2bids</title>
       
     
+    
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/bstreeview.min.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/main.545621a7.min.css">
       
@@ -31,7 +34,19 @@
         <meta name="theme-color" content="#ef5350">
       
     
+
     
+    
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+<!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/7e31cfd31d.js" crossorigin="anonymous"></script>
+    <script src="../js/bstreeview.min.js"></script>
+
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -53,7 +68,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="none" data-md-color-primary="red" data-md-color-accent="red">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -62,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adjusting-user-settings" class="md-skip">
+        <a href="#check-edf-type" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +104,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Adjust User Settings
+              Check EDF Type
             
           </span>
         </div>
@@ -251,6 +266,18 @@
 
 
   <li class="md-nav__item">
+    <a href="definitions.html" title="Definitions" class="md-nav__link">
+      Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="input_dir_setup.html" title="Input Directory Setup" class="md-nav__link">
       Input Directory Setup
     </a>
@@ -272,14 +299,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Adjust User Settings
+        Check EDF Type
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="user_settings.html" title="Adjust User Settings" class="md-nav__link md-nav__link--active">
-      Adjust User Settings
+    <a href="check_edf_type.html" title="Check EDF Type" class="md-nav__link md-nav__link--active">
+      Check EDF Type
     </a>
     
       
@@ -298,15 +325,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adjusting-metadata-settings" class="md-nav__link">
-    Adjusting metadata settings
+  <a href="#edf-type-overview" class="md-nav__link">
+    EDF Type Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#main-window-settings-panel" class="md-nav__link">
-    Main window settings panel
+  <a href="#convert-edf-type" class="md-nav__link">
+    Convert EDF Type
   </a>
   
 </li>
@@ -324,8 +351,8 @@
 
 
   <li class="md-nav__item">
-    <a href="directory_selection.html" title="Input/Output Directories" class="md-nav__link">
-      Input/Output Directories
+    <a href="edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
+      edf2bids Settings
     </a>
   </li>
 
@@ -336,8 +363,32 @@
 
 
   <li class="md-nav__item">
-    <a href="bids_output.html" title="BIDS Output Folder Structure" class="md-nav__link">
-      BIDS Output Folder Structure
+    <a href="run_conversion.html" title="Run Conversion" class="md-nav__link">
+      Run Conversion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bids_output.html" title="Output Folder Structure" class="md-nav__link">
+      Output Folder Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="spred_upload.html" title="SPReD Upload [EpLink]" class="md-nav__link">
+      SPReD Upload [EpLink]
     </a>
   </li>
 
@@ -373,15 +424,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adjusting-metadata-settings" class="md-nav__link">
-    Adjusting metadata settings
+  <a href="#edf-type-overview" class="md-nav__link">
+    EDF Type Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#main-window-settings-panel" class="md-nav__link">
-    Main window settings panel
+  <a href="#convert-edf-type" class="md-nav__link">
+    Convert EDF Type
   </a>
   
 </li>
@@ -398,7 +449,7 @@
             <article class="md-content__inner md-typeset">
               
   
-    <a href="https://github.com/greydongilmore/edf2bids-site/blob/master/docs/ui_components/user_settings.md" title="Edit this page" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
+    <a href="https://github.com/greydongilmore/edf2bids-site/blob/master/docs/ui_components/check_edf_type.md" title="Edit this page" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg> <p style="margin-top:2px;">Edit this page</p>
     </a>
     <a href="https://github.com/greydongilmore/edf2bids-site/issues/new/choose" title="Open an issue" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
@@ -409,47 +460,31 @@
     
   
   
-  <h1 id="adjusting-user-settings">Adjusting User Settings<a class="headerlink" href="#adjusting-user-settings" title="Permanent link">&para;</a></h1>
-<h2 id="adjusting-metadata-settings">Adjusting metadata settings<a class="headerlink" href="#adjusting-metadata-settings" title="Permanent link">&para;</a></h2>
+  <h1 id="check-edf-type">Check EDF Type<a class="headerlink" href="#check-edf-type" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Detailed EDF format description</p>
+<p>for a detailed explanation of the EDF format see the <a href="../index.html#edf-file-structure">description page</a></p>
+</div>
+<h2 id="edf-type-overview">EDF Type Overview<a class="headerlink" href="#edf-type-overview" title="Permanent link">&para;</a></h2>
+<p>Only EDF+ files can be stored in either a continuous (EDF+C) or discontinuous (EDF+D) format, while EDF files can only be continuous. A discontinuity within the EDF+ file would occur when the recording is stopped and subsequently started again, resulting in a lapse in recording time. There are two ways to account for the missing data during the non-recording period:</p>
+<ul>
+<li><strong>Continuous:</strong> to keep the timeline in the file continuous, the data record during the non-recording time can be filled with zeros. This would maintain the timeline within the file.</li>
+<li><strong>Discontinuous:</strong> ignore the time the recording stopped and "Glue" the different recording sessions together. This creates a jump in the timeline of the EDF+ file.</li>
+</ul>
+<p>For most applications, the EDF+ file will need to be in <code>EDF+C</code> format. The majority of softwares and analysis tools require this.</p>
+<h2 id="convert-edf-type">Convert EDF Type<a class="headerlink" href="#convert-edf-type" title="Permanent link">&para;</a></h2>
+<p>You need to ensure all EDF+ files are in continuous format (EDF+C). This is easy to check within <strong>edf2bids</strong>. </p>
 <ol>
+<li>Ensure your input directory <a href="input_dir_setup.html#setup-a-working-directory">has been organzied</a> prior to opening within <strong>edf2bids</strong>.</li>
+<li>Within <strong>edf2bids</strong> select the input directory and check the <code>EDF Type</code> column. You should flag any file that is in <code>EDF+D</code> format.</li>
 <li>
-<p>In the software, select <strong>File</strong> then <strong>Settings</strong>.</p>
-<p><center><img src="../img/metadata_01.png" alt="drawing"/></center></p>
+<p>Once you have identified the files that are in <code>EDF+D</code> format, open EDFBrowser, select <strong>Tools</strong> at the top and <strong>Convert EDF+D to EDF+C</strong>.</p>
+<p><center><img src="../img/check_edf_type_01.png" alt="drawing" style="width:80%;"/></center></p>
 </li>
 <li>
-<p>A settings panel will appear with two tabs: Json Metadata and Electrode Info.</p>
-<ul>
-<li><strong>Json metadata</strong> contains general information about the dataset.</li>
-<li><strong>Lab:</strong> what is the name of the lab collecting this data</li>
-<li><strong>Experimenter:</strong> list all individuals involved in this dataset</li>
-<li><strong>Dataset Name:</strong> overall name for the dataset.</li>
-<li><strong>Institution Name/Address:</strong> name and address of the institution at which  this dataset was collected</li>
-</ul>
-<p><center><img src="../img/metadata_02.png" alt="drawing"/></center></p>
-<ul>
-<li><strong>Electrode info</strong> contains information about the specific electrodes used at the center:</li>
-<li><strong>Manufacturer:</strong> who produces the electrodes.</li>
-<li><strong>Type:</strong> what type of electrode is it (i.e. depth, scalp etc.)</li>
-<li><strong>Material:</strong> what material are the electrodes made from (i.e. platinum)</li>
-<li><strong>Diameter:</strong> what is the diameter of the electrode</li>
-</ul>
-<p><center><img src="../img/metadata_03.png" alt="drawing"/></center></p>
+<p>A Dialog box will open allowing you to select one of the identified files that is in <code>EDF+D</code> format, select one file.</p>
 </li>
-<li>
-<p>Once you have modified the information click Save and the information will be stored and used for every subsequent dataset processed in the Conversion software. You will not need to re-define these values, unless they change at your site.</p>
-</li>
-</ol>
-<h2 id="main-window-settings-panel">Main window settings panel<a class="headerlink" href="#main-window-settings-panel" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>The settings panel is located at the bottom left of the main window.</p>
-<p><center><img src="../img/main_settings_panel.png" alt="drawing"/></center></p>
-<ul>
-<li><strong>De-identify input directory</strong>: if this is selected the input EDF files will be de-identified first prior to being copied. If left unchecked, then only the output directory EDF files will be de-identified. Default is unchecked.</li>
-<li><strong>Offset dates</strong>: if selected all dates in the EDF files will be offset by a random number of days (~1000 days). The offset value can be determined but is securely stored.</li>
-<li><strong>Test conversion</strong>: this should only be selected if testing the software on new data. This option will not copy the EDF files or read the annotations. This means it will quickly run through the data and output a BIDS structure without the EDF file.</li>
-</ul>
-</li>
+<li>Once conversion is complete you will notice the original file remains but now there are several smaller files with a 4 digit suffix accounting for the number of times the recording was stopped/started</li>
 </ol>
   
     
@@ -525,8 +560,8 @@
         <!-- Link to next page -->
         
           <a
-            href="directory_selection.html"
-            title="Input/Output Directories"
+            href="edf2bids_settings.html"
+            title="edf2bids Settings"
             class="md-footer-nav__link md-footer-nav__link--next"
             rel="next"
           >
@@ -535,7 +570,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Input/Output Directories
+                edf2bids Settings
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

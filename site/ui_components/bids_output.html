@@ -17,9 +17,12 @@
     
     
       
-        <title>BIDS Output Folder Structure - edf2bids</title>
+        <title>Output Folder Structure - edf2bids</title>
       
     
+    
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/bstreeview.min.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/main.545621a7.min.css">
       
@@ -31,7 +34,19 @@
         <meta name="theme-color" content="#ef5350">
       
     
+
     
+    
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+<!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/7e31cfd31d.js" crossorigin="anonymous"></script>
+    <script src="../js/bstreeview.min.js"></script>
+
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -53,7 +68,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="none" data-md-color-primary="red" data-md-color-accent="red">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -62,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bids-output-folder-structure" class="md-skip">
+        <a href="#output-folder-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +104,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              BIDS Output Folder Structure
+              Output Folder Structure
             
           </span>
         </div>
@@ -251,6 +266,18 @@
 
 
   <li class="md-nav__item">
+    <a href="definitions.html" title="Definitions" class="md-nav__link">
+      Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="input_dir_setup.html" title="Input Directory Setup" class="md-nav__link">
       Input Directory Setup
     </a>
@@ -263,8 +290,8 @@
 
 
   <li class="md-nav__item">
-    <a href="user_settings.html" title="Adjust User Settings" class="md-nav__link">
-      Adjust User Settings
+    <a href="check_edf_type.html" title="Check EDF Type" class="md-nav__link">
+      Check EDF Type
     </a>
   </li>
 
@@ -275,8 +302,20 @@
 
 
   <li class="md-nav__item">
-    <a href="directory_selection.html" title="Input/Output Directories" class="md-nav__link">
-      Input/Output Directories
+    <a href="edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
+      edf2bids Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="run_conversion.html" title="Run Conversion" class="md-nav__link">
+      Run Conversion
     </a>
   </li>
 
@@ -295,10 +334,102 @@
       
     
     
-    <a href="bids_output.html" title="BIDS Output Folder Structure" class="md-nav__link md-nav__link--active">
-      BIDS Output Folder Structure
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Output Folder Structure
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="bids_output.html" title="Output Folder Structure" class="md-nav__link md-nav__link--active">
+      Output Folder Structure
     </a>
     
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bids-output-structure" class="md-nav__link">
+    BIDS output structure
+  </a>
+  
+    <nav class="md-nav" aria-label="BIDS output structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subject-directory" class="md-nav__link">
+    Subject Directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-directory" class="md-nav__link">
+    Session Directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive" class="md-nav__link">
+    Interactive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spred-output-structure" class="md-nav__link">
+    SPReD Output Structure
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="spred_upload.html" title="SPReD Upload [EpLink]" class="md-nav__link">
+      SPReD Upload [EpLink]
+    </a>
   </li>
 
         
@@ -324,6 +455,70 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bids-output-structure" class="md-nav__link">
+    BIDS output structure
+  </a>
+  
+    <nav class="md-nav" aria-label="BIDS output structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subject-directory" class="md-nav__link">
+    Subject Directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-directory" class="md-nav__link">
+    Session Directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive" class="md-nav__link">
+    Interactive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spred-output-structure" class="md-nav__link">
+    SPReD Output Structure
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -345,29 +540,67 @@
     
   
   
-  <h1 id="bids-output-folder-structure">BIDS Output Folder Structure<a class="headerlink" href="#bids-output-folder-structure" title="Permanent link">&para;</a></h1>
-<p>The output folder will look like the following:</p>
+  <h1 id="output-folder-structure">Output Folder Structure<a class="headerlink" href="#output-folder-structure" title="Permanent link">&para;</a></h1>
+<h2 id="bids-output-structure">BIDS output structure<a class="headerlink" href="#bids-output-structure" title="Permanent link">&para;</a></h2>
+<p>The output folder will look like the following (each subject having their own directory):</p>
 <p><center><img src="../img/dir_structure_01.png" alt="drawing"/></center></p>
 <ul>
-<li>Each patient will have their own folder</li>
-<li><strong>code:</strong> this folder will contain the code used to convert the EDF data for each EDF file for the subjects.</li>
+<li><strong>code:</strong> this folder will contain the code used to convert the EDF/EDF+ data for each EDF/EDF+ file for the subjects.</li>
 <li><strong>dataset_description.json:</strong> this file will contain the Json Metadata you previously defined. This is overall information about the dataset</li>
 <li><strong>participants.tsv:</strong> this file contains a list of all the subjects in the dataset and their general demographics (i.e. age, sex etc.). This file can also be used to store additional subject information that is not variable over the different visits and sessions. </li>
 </ul>
-<p>Within each subject directory there will be a different session folder for each EDF file.</p>
+<h3 id="subject-directory">Subject Directory<a class="headerlink" href="#subject-directory" title="Permanent link">&para;</a></h3>
+<p>Within each subject directory there will be a different session folder for each day of recording.</p>
 <p><center><img src="../img/sub_dir_structure_01.png" alt="drawing"/></center></p>
 <ul>
-<li><strong>*_scans.tsv:</strong> this file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF type etc.).</li>
+<li><strong>*_scans.tsv:</strong> this file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF+ type etc.).</li>
 </ul>
-<p>Within each session folder there will be a modality folder (either eeg or ieeg), inside that will be five files, containing different information associated with the specific EDF file. This file can also be used to store additional metadata information that varies from one recording to the next.</p>
+<p><center><img src="../img/scans_tsv.png" alt="drawing"/></center></p>
+<h3 id="session-directory">Session Directory<a class="headerlink" href="#session-directory" title="Permanent link">&para;</a></h3>
+<p>Within each session folder there will be a modality folder (either eeg or ieeg), inside that will be five files, containing different information associated with the specific EDF/EDF+ file. This file can also be used to store additional metadata information that varies from one recording to the next.</p>
 <p><center><img src="../img/ses_dir_structure_01.png" alt="drawing"/></center></p>
 <ul>
 <li><strong>*_electrodes.tsv:</strong> contains information associated with the electrodes used to collect the data.</li>
-<li><strong>*_annotations.tsv:</strong> contains all annotations present in the EDF file, identifiers have been scrubbed.</li>
+<li><strong>*_annotations.tsv:</strong> contains all annotations present in the EDF/EDF+ file, identifiers have been scrubbed.</li>
 <li><strong>*_channels.tsv:</strong> contains information about each channel that was used in the recording.</li>
-<li><strong>*_eeg.json/</strong> <strong>or</strong> <strong>*_ieeg.json:</strong> contains metadata information about the EDF file.</li>
-<li><strong>*_eeg.edf/</strong> <strong>or</strong> <strong>*_ieeg.edf:</strong> contains the data in the de-identified EDF file.</li>
+<li><strong>*_eeg.json/</strong> <strong>or</strong> <strong>*_ieeg.json:</strong> contains metadata information about the EDF/EDF+ file.</li>
+<li><strong>*_eeg.edf/</strong> <strong>or</strong> <strong>*_ieeg.edf:</strong> contains the data in the de-identified EDF/EDF+ file.</li>
 </ul>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<h4 id="interactive">Interactive<a class="headerlink" href="#interactive" title="Permanent link">&para;</a></h4>
+<div id="tree"></div>
+
+<script>
+    $(document).ready(function() {
+      $.ajax({
+          url : "../../assets/bids_dir.json",
+          dataType: "text",
+          success : function (tree) {
+              $('#tree').bstreeview({ data: tree });
+          }
+      });
+});
+</script>
+
+<h2 id="spred-output-structure">SPReD Output Structure<a class="headerlink" href="#spred-output-structure" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>When the SPReD conversion is completed a new directory will be created in the output directory. All unused BIDS files will be transferred to the <strong>bids_old</strong> directory, while all the SPReD files will be moved to the <strong>SPReD</strong> directory.</p>
+<p><center><img src="../img/bids_spred_02.png" alt="drawing" style="width:80%;"/></center></p>
+</li>
+<li>
+<p>The <strong>SPReD</strong> directory will look like:</p>
+<p><center><img src="../img/bids_spred_03.png" alt="drawing" style="width:30%;"/></center></p>
+</li>
+<li>
+<p>Within each subdirectory of the <strong>.zip</strong> folders the same files from the BIDS format will be found:</p>
+<p><center><img src="../img/bids_spred_04.png" alt="drawing" style="width:80%;"/></center></p>
+</li>
+<li>
+<p>You will be uploading the <strong>.zip</strong> directories to Brain-CODE.</p>
+</li>
+</ol>
+<p><br><br></p>
   
     
   
@@ -420,8 +653,8 @@
         <!-- Link to previous page -->
         
           <a
-            href="directory_selection.html"
-            title="Input/Output Directories"
+            href="run_conversion.html"
+            title="Run Conversion"
             class="md-footer-nav__link md-footer-nav__link--prev"
             rel="prev"
           >
@@ -433,13 +666,32 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Input/Output Directories
+                Run Conversion
               </div>
             </div>
           </a>
         
 
         <!-- Link to next page -->
+        
+          <a
+            href="spred_upload.html"
+            title="SPReD Upload [EpLink]"
+            class="md-footer-nav__link md-footer-nav__link--next"
+            rel="next"
+          >
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                SPReD Upload [EpLink]
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>

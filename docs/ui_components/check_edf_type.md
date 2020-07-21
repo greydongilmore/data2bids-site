@@ -4,6 +4,9 @@ template: overrides/main.html
 
 # Check EDF Type
 
+!!! note "Detailed EDF format description"
+    for a detailed explanation of the EDF format see the [description page](../index.html#edf-file-structure)
+
 ## EDF Type Overview
 
 Only EDF+ files can be stored in either a continuous (EDF+C) or discontinuous (EDF+D) format, while EDF files can only be continuous. A discontinuity within the EDF+ file would occur when the recording is stopped and subsequently started again, resulting in a lapse in recording time. There are two ways to account for the missing data during the non-recording period:

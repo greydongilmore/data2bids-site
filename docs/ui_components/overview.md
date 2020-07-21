@@ -16,8 +16,8 @@ The following steps should be taken sequentially:
 1. [**Organize your input directory**](input_dir_setup.html#input-directory-setup)
 2. [**Check EDF file type**](check_edf_type.html)
 2. [**Adjust software settings**](user_settings.html#adjusting-metadata-settings)
-3. [**Confirm input directory data**](directory_selection.html#input-directory-selection)
-4. [**Confirm output directory data**](directory_selection.html#output-directory-selection)
+3. [**Confirm input directory data**](run_conversion.html#input-directory-selection)
+4. [**Confirm output directory data**](run_conversion.html#output-directory-selection)
 5. [**Check output folder data**](bids_output.html#bids-output-folder-structure)
-5. [**Convert/Upload data to SPReD**](spred_upload.html#convert-bids-to-spred-format) \[optional\]
+5. [**Convert/Upload data to SPReD**](spred_upload.html#convert-bids-to-spred-format) \[EpLink study only\]
 <br><br>

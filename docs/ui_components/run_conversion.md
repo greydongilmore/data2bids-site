@@ -50,18 +50,6 @@ The format required to upload the Brain-CODE is different from BIDS. This conver
     !!! note
         files will be moved from the BIDs structure so the BIDs format will be destroyed.
 
-2. Press the **SPReD** button and a new directory will be created in the output directory folder. All the older BIDs files that are not used will be transferred to **bids_old**.
+2. Press the **SPReD** button and wait for the conversion to complete.
 
-    <center><img src="../img/bids_spred_02.png" alt="drawing" style="width:80%;"/></center>
-
-3. The **SPReD** directory will look like:
-
-    <center><img src="../img/bids_spred_03.png" alt="drawing" style="width:30%;"/></center>
-
-4. Within each subdirectory of the **.zip** folders the same files from the BIDS format will be found:
-
-    <center><img src="../img/bids_spred_04.png" alt="drawing" style="width:80%;"/></center>
-
-5. You will be uploading the **.zip** directories to Brain-CODE.
-6. 
 <br><br>
