@@ -57,11 +57,11 @@ nav:
   - Home: index.md
   - Installation: installation.md
   - Getting Started:
-    - Overview: ui_components/overview.md
-    - Definitions: ui_components/definitions.md
-    - Input Directory Setup: ui_components/input_dir_setup.md
-    - Check EDF Type: ui_components/check_edf_type.md
-    - edf2bids Settings: ui_components/edf2bids_settings.md
-    - Run Conversion: ui_components/run_conversion.md
-    - Output Folder Structure: ui_components/bids_output.md
-    - SPReD Upload [EpLink]: ui_components/spred_upload.md
+    - Overview: getting_started/01_overview.md
+    - Definitions: getting_started/02_definitions.md
+    - Input Directory Setup: getting_started/03_input_dir_setup.md
+    - Check EDF Type: getting_started/04_check_edf_type.md
+    - edf2bids Settings: getting_started/05_edf2bids_settings.md
+    - Run Conversion: getting_started/06_run_conversion.md
+    - Output Directory Structure: getting_started/07_output_structure.md
+    - SPReD Upload [EpLink]: getting_started/08_spred_upload.md

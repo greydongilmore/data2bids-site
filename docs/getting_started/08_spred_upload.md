@@ -4,7 +4,7 @@ template: overrides/main.html
 
 # SPReD Upload [EpLink]
 
-## Upload Data To SPReD
+## Upload data to SPReD
 
 1. Login to <a href="https://spred.braincode.ca/spred/" target="_blank">SPReD</a> and navigate to the EPL31 project for your site.
 

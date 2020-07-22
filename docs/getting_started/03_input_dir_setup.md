@@ -6,11 +6,11 @@ template: overrides/main.html
 
 This section outlines how the data should be organized prior to running the **edf2bids** software. The data files should be in EDF/EDF+ format following the <a href="https://www.edfplus.info/specs/edf.html" target="_blank">specifications</a> provided by the EDF format developers. 
 
-[Setup a working directory](input_dir_setup.html#setup-a-working-directory) is a recommemded way to organize your working directory of data (this is optional but highly recommended).
+[Setup a working directory](03_input_dir_setup.html#setup-a-working-directory) is a recommemded way to organize your working directory of data (this is optional but highly recommended).
 
-[Option 01: Do not specify visit/session number](input_dir_setup.html#option-01-do-not-specify-visitsession-number) should be followed if you do not have a specific naming convention for visits and sessions. In this option, the visit and session number are not supplied to the **edf2bids** software and instead are calculated based on the date/time of the EDF/EDF+ aquisition.
+[Option 01: Do not specify visit/session number](03_input_dir_setup.html#option-01-do-not-specify-visitsession-number) should be followed if you do not have a specific naming convention for visits and sessions. In this option, the visit and session number are not supplied to the **edf2bids** software and instead are calculated based on the date/time of the EDF/EDF+ aquisition.
 
-[Option 02: Specify visit/session number](input_dir_setup.html#option-02-specify-visitsession-number) should be followed for data from the **EpLink study**.
+[Option 02: Specify visit/session number](03_input_dir_setup.html#option-02-specify-visitsession-number) should be followed for data from the **EpLink study**.
 
 !!! note 
     At this moment the names of the EDF/EDF+ files are not yet BIDS compliant, but they do contain some metadata in the filename that will be used later.
@@ -66,7 +66,7 @@ If you do not need to specify the visit or session number for each EDF file for 
 ### Example
 
 !!! note "Definition of terms"
-    for a complete list of terms see the [definitions page](definitions.html#filename-terms)
+    for a complete list of terms see the [definitions page](02_definitions.html#filename-terms)
 
 #### Static
 
@@ -107,7 +107,7 @@ In some instances you may want to manually assign the specific visit or session 
 ```
 
 !!! note "Definition of terms"
-    for a complete list of terms see the [definitions page](definitions.html#filename-terms)
+    for a complete list of terms see the [definitions page](02_definitions.html#filename-terms)
 
 ```sh
 sub-003_02_SE01_IEEG_FULL_RET

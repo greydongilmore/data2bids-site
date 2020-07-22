@@ -56,11 +56,11 @@
     vertical-align: middle;
 }
 
-/*.md-grid {
+.md-grid {
     max-width: 70rem;
     margin-right: auto;
     margin-left: auto;
-}*/
+}
 
 .md-content {
   text-align: justify;

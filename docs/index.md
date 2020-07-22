@@ -28,7 +28,7 @@ The EDF/EDF+ header is split into two parts: measurement info and channel info. 
 
 <center>
 
-```measurement info (256) + channel info (number of channels * 256)``` 
+`measurement info (256) + channel info (number of channels * 256)`
 
 </center>
 
@@ -56,7 +56,7 @@ The first 256 bytes in an EDF/EDF+ file is allocated to the measurement info (i.
 
 </center>
 
-??? note "[1] patient id"
+??? note "<sup>1</sup> patient id"
 	* **Code:** hospital subject code
 	* **Sex:** F or M
 	* **DOB:** birthdate in dd-MMM-yyyy
@@ -64,7 +64,7 @@ The first 256 bytes in an EDF/EDF+ file is allocated to the measurement info (i.
 
 	**e.g. `MCH-0234567 F 02-MAY-1951 Haagse_Harry`**
 
-??? note "[2] recording id"
+??? note "<sup>2</sup> recording id"
 	* **Startdate:** the text `Startdate`
 	* **start_date:** start date itself in dd-MMM-yyyy
 	* **InvestigID:** a code specifying the technition/clinician
@@ -94,10 +94,10 @@ The channel info record is 256 bytes and each channel has its own channel info r
 
 </center>
 
-??? note "[1] digital min/max"
+??? note "<sup>1</sup> digital min/max"
 	* digital range must be somewhere between -32768 and 32767 (because data samples are 16-bit signed integers)
 
-??? note "[2] prefiltering"
+??? note "<sup>2</sup> prefiltering"
 	* **HighPass:** HP
 	* **LowPass:** LP
 	* **Notch:** N

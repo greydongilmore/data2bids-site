@@ -12,19 +12,19 @@ template: overrides/main.html
 
 2. A settings panel will appear with two tabs: Json Metadata and Electrode Info.
 
-	* **Json metadata** contains general information about the dataset.
-  	  * **Lab:** what is the name of the lab collecting this data
-  	  * **Experimenter:** list all individuals involved in this dataset
-  	  * **Dataset Name:** overall name for the dataset.
-  	  * **Institution Name/Address:** name and address of the institution at which  this dataset was collected
+    * **Json metadata** contains general information about the dataset.
+        - **Lab:** what is the name of the lab collecting this data
+        - **Experimenter:** list all individuals involved in this dataset
+        - **Dataset Name:** overall name for the dataset.
+        - **Institution Name/Address:** name and address of the institution at which  this dataset was collected
 
 	<center><img src="../img/metadata_02.png" alt="drawing"/></center>
 
 	* **Electrode info** contains information about the specific electrodes used at the center:
-  	  * **Manufacturer:** who produces the electrodes.
-  	  * **Type:** what type of electrode is it (i.e. depth, scalp etc.)
-  	  * **Material:** what material are the electrodes made from (i.e. platinum)
-  	  * **Diameter:** what is the diameter of the electrode
+  	    - **Manufacturer:** who produces the electrodes.
+        - **Type:** what type of electrode is it (i.e. depth, scalp etc.)
+        - **Material:** what material are the electrodes made from (i.e. platinum)
+        - **Diameter:** what is the diameter of the electrode
 
 	<center><img src="../img/metadata_03.png" alt="drawing"/></center>
 

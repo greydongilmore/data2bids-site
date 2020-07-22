@@ -15,7 +15,7 @@ The input directory selected here should be organized according to the first sec
 2. You will now be able to review the information that was detected about the input files. Each subject is expandable by clicking the box beside the subject name. The columns displayed are:
 
 !!! note "Definition of columns"
-    for a complete list of column explanations see the [definitions page](definitions.html#edf2bids-terms)
+    for a complete list of column explanations see the [definitions page](02_definitions.html#edf2bids-terms)
 
 ## Output directory selection
 
