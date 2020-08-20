@@ -20,7 +20,7 @@ For most applications, the EDF+ file will need to be in `EDF+C` format. The majo
 
 You need to ensure all EDF+ files are in continuous format (EDF+C). This is easy to check within **edf2bids**. 
 
-1. Ensure your input directory [has been organized](03_input_dir_setup.html#setup-a-working-directory) prior to opening within **edf2bids**.
+1. Ensure your input directory [has been organized](04_input_dir_setup.html#setup-a-working-directory) prior to opening within **edf2bids**.
 2. Within **edf2bids** select the input directory and check the `EDF Type` column. You should flag any file that is in `EDF+D` format.
 3. Once you have identified the files that are in `EDF+D` format, open [EDFBrowser](../installation.html#edfbrowser), select **Tools** at the top and **Convert EDF+D to EDF+C**.
 
@@ -29,3 +29,6 @@ You need to ensure all EDF+ files are in continuous format (EDF+C). This is easy
 4. A dialog box will open allowing you to select one of the identified files that is in `EDF+D` format, select one file.
 5. Once conversion is complete you will notice the original file remains but now there are several smaller files with a 4 digit suffix accounting for the number of times the recording was stopped/started.
 
+<br>
+<br>
+<br>

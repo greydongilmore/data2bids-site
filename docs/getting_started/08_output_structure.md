@@ -1,8 +1,7 @@
 ---
 template: overrides/main.html
+title: Output directory structure
 ---
-
-# Output directory structure
 
 ## BIDS directory structure
 
@@ -73,4 +72,6 @@ Within each session sub-directory there will be a modality sub-directory (either
 
 4. You will be uploading the **.zip** directories to Brain-CODE.
 
-<br><br>
+<br>
+<br>
+<br>

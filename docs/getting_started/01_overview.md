@@ -24,3 +24,7 @@ The following steps should be taken sequentially:
 ## EpLink Study Workflow
 
 <center><img src="../img/workflow.png" alt="drawing"/></center>
+
+<br>
+<br>
+<br>

@@ -10,7 +10,7 @@ The input directory selected here should be organized according to the first sec
 
 1. In the software, select **Input Directory** and choose the directory that contains the data to be converted (select the main/root directory that contains all subject directories). Click **Select Folder** in the window and the data will load into the **Input Directory** window.
 
-    <img src="../img/input_dir_01.png"/>
+    <center><img src="../img/input_dir_01.png"/></center><br>
 
 2. You will now be able to review the information that was detected about the input files. Each subject is expandable by clicking the box beside the subject name. The columns displayed are:
 
@@ -21,7 +21,7 @@ The input directory selected here should be organized according to the first sec
 
 1. Once you have confirmed the input data is correct, click **Output Directory** and select the directory you want the BIDS dataset to appear. The **Output Directory** window will now present the final output file information (prior to conversion). This is the final check to ensure that any changes have been updated.
 
-    <img src="../img/output_dir_01.png" alt="drawing"/>
+    <center><img src="../img/output_dir_01.png" alt="drawing"/></center><br>
 
     !!! note 
         EDF/EDF+ files in the Input Directory will be **COPIED** to the new location and will be renamed to be BIDS compliant. Thus, you will have two copies of the EDF/EDF+ files. This is a safety measure in case an error occurs in the conversion, the source data will remain intact.
@@ -37,7 +37,7 @@ The input directory selected here should be organized according to the first sec
 
 3. You will receive updates in the **Conversion Status** window. The final notice, once the conversion is complete, will show **Your data has been BIDsified!**. 
 
-    <img src="../img/final_message.png" alt="drawing"/>
+    <center><img src="../img/final_message.png" alt="drawing"/></center><br>
 
 ## Convert to SPReD (EpLink)
 
@@ -50,7 +50,7 @@ The format required to upload the Brain-CODE is different from BIDS. This conver
 
 2. Press the **SPReD** button and wait for the conversion to complete.
     
-    <center><img src="../img/final_message_spred.png" alt="drawing"/></center>
+    <center><img src="../img/final_message_spred.png" alt="drawing"/></center><br>
 
 ## Imaging Anonymization
 
@@ -88,4 +88,6 @@ If an `imaging` directory was supplied in the input directory then the blue **im
     
     <center><img src="../img/final_message_imaging.png" alt="drawing"/></center>
 
-<br><br>
+<br>
+<br>
+<br>
