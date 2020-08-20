@@ -59,9 +59,10 @@ nav:
   - Getting Started:
     - Overview: getting_started/01_overview.md
     - Definitions: getting_started/02_definitions.md
-    - Input Directory Setup: getting_started/03_input_dir_setup.md
-    - Check EDF Type: getting_started/04_check_edf_type.md
-    - edf2bids Settings: getting_started/05_edf2bids_settings.md
-    - Run Conversion: getting_started/06_run_conversion.md
-    - Output Directory Structure: getting_started/07_output_structure.md
-    - SPReD Upload [EpLink]: getting_started/08_spred_upload.md
+    - Export from Natus: getting_started/03_natus_export.md
+    - Input Directory Setup: getting_started/04_input_dir_setup.md
+    - Check EDF Type: getting_started/05_check_edf_type.md
+    - edf2bids Settings: getting_started/06_edf2bids_settings.md
+    - Run Conversion: getting_started/07_run_conversion.md
+    - Output Directory Structure: getting_started/08_output_structure.md
+    - SPReD Upload [EpLink]: getting_started/09_spred_upload.md

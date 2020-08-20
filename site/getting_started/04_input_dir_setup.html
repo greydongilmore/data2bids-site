@@ -254,7 +254,7 @@
 
 
   <li class="md-nav__item">
-    <a href="overview.html" title="Overview" class="md-nav__link">
+    <a href="01_overview.html" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -266,8 +266,20 @@
 
 
   <li class="md-nav__item">
-    <a href="definitions.html" title="Definitions" class="md-nav__link">
+    <a href="02_definitions.html" title="Definitions" class="md-nav__link">
       Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="03_natus_export.html" title="Export from Natus" class="md-nav__link">
+      Export from Natus
     </a>
   </li>
 
@@ -293,7 +305,7 @@
         </span>
       </label>
     
-    <a href="input_dir_setup.html" title="Input Directory Setup" class="md-nav__link md-nav__link--active">
+    <a href="04_input_dir_setup.html" title="Input Directory Setup" class="md-nav__link md-nav__link--active">
       Input Directory Setup
     </a>
     
@@ -485,7 +497,7 @@
 
 
   <li class="md-nav__item">
-    <a href="check_edf_type.html" title="Check EDF Type" class="md-nav__link">
+    <a href="05_check_edf_type.html" title="Check EDF Type" class="md-nav__link">
       Check EDF Type
     </a>
   </li>
@@ -497,7 +509,7 @@
 
 
   <li class="md-nav__item">
-    <a href="edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
+    <a href="06_edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
       edf2bids Settings
     </a>
   </li>
@@ -509,7 +521,7 @@
 
 
   <li class="md-nav__item">
-    <a href="run_conversion.html" title="Run Conversion" class="md-nav__link">
+    <a href="07_run_conversion.html" title="Run Conversion" class="md-nav__link">
       Run Conversion
     </a>
   </li>
@@ -521,8 +533,8 @@
 
 
   <li class="md-nav__item">
-    <a href="bids_output.html" title="Output Folder Structure" class="md-nav__link">
-      Output Folder Structure
+    <a href="08_output_structure.html" title="Output Directory Structure" class="md-nav__link">
+      Output Directory Structure
     </a>
   </li>
 
@@ -533,7 +545,7 @@
 
 
   <li class="md-nav__item">
-    <a href="spred_upload.html" title="SPReD Upload [EpLink]" class="md-nav__link">
+    <a href="09_spred_upload.html" title="SPReD Upload [EpLink]" class="md-nav__link">
       SPReD Upload [EpLink]
     </a>
   </li>
@@ -741,7 +753,7 @@
             <article class="md-content__inner md-typeset">
               
   
-    <a href="https://github.com/greydongilmore/edf2bids-site/blob/master/docs/ui_components/input_dir_setup.md" title="Edit this page" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
+    <a href="https://github.com/greydongilmore/edf2bids-site/blob/master/docs/getting_started/04_input_dir_setup.md" title="Edit this page" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg> <p style="margin-top:2px;">Edit this page</p>
     </a>
     <a href="https://github.com/greydongilmore/edf2bids-site/issues/new/choose" title="Open an issue" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
@@ -754,9 +766,9 @@
   
   <h1 id="input-directory-setup">Input Directory Setup<a class="headerlink" href="#input-directory-setup" title="Permanent link">&para;</a></h1>
 <p>This section outlines how the data should be organized prior to running the <strong>edf2bids</strong> software. The data files should be in EDF/EDF+ format following the <a href="https://www.edfplus.info/specs/edf.html" target="_blank">specifications</a> provided by the EDF format developers. </p>
-<p><a href="input_dir_setup.html#setup-a-working-directory">Setup a working directory</a> is a recommemded way to organize your working directory of data (this is optional but highly recommended).</p>
-<p><a href="input_dir_setup.html#option-01-do-not-specify-visitsession-number">Option 01: Do not specify visit/session number</a> should be followed if you do not have a specific naming convention for visits and sessions. In this option, the visit and session number are not supplied to the <strong>edf2bids</strong> software and instead are calculated based on the date/time of the EDF/EDF+ aquisition.</p>
-<p><a href="input_dir_setup.html#option-02-specify-visitsession-number">Option 02: Specify visit/session number</a> should be followed for data from the <strong>EpLink study</strong>.</p>
+<p><a href="03_input_dir_setup.html#setup-a-working-directory">Setup a working directory</a> is a recommemded way to organize your working directory of data (this is optional but highly recommended).</p>
+<p><a href="03_input_dir_setup.html#option-01-do-not-specify-visitsession-number">Option 01: Do not specify visit/session number</a> should be followed if you do not have a specific naming convention for visits and sessions. In this option, the visit and session number are not supplied to the <strong>edf2bids</strong> software and instead are calculated based on the date/time of the EDF/EDF+ aquisition.</p>
+<p><a href="03_input_dir_setup.html#option-02-specify-visitsession-number">Option 02: Specify visit/session number</a> should be followed for data from the <strong>EpLink study</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>At this moment the names of the EDF/EDF+ files are not yet BIDS compliant, but they do contain some metadata in the filename that will be used later.</p>
@@ -806,7 +818,7 @@
 <h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Definition of terms</p>
-<p>for a complete list of terms see the <a href="definitions.html#filename-terms">definitions page</a></p>
+<p>for a complete list of terms see the <a href="02_definitions.html#filename-terms">definitions page</a></p>
 </div>
 <h4 id="static_1">Static<a class="headerlink" href="#static_1" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>input/
@@ -841,7 +853,7 @@
 
 <div class="admonition note">
 <p class="admonition-title">Definition of terms</p>
-<p>for a complete list of terms see the <a href="definitions.html#filename-terms">definitions page</a></p>
+<p>for a complete list of terms see the <a href="02_definitions.html#filename-terms">definitions page</a></p>
 </div>
 <div class="highlight"><pre><span></span><code>sub-003_02_SE01_IEEG_FULL_RET
 </code></pre></div>
@@ -973,8 +985,8 @@
         <!-- Link to previous page -->
         
           <a
-            href="definitions.html"
-            title="Definitions"
+            href="03_natus_export.html"
+            title="Export from Natus"
             class="md-footer-nav__link md-footer-nav__link--prev"
             rel="prev"
           >
@@ -986,7 +998,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Definitions
+                Export from Natus
               </div>
             </div>
           </a>
@@ -995,7 +1007,7 @@
         <!-- Link to next page -->
         
           <a
-            href="check_edf_type.html"
+            href="05_check_edf_type.html"
             title="Check EDF Type"
             class="md-footer-nav__link md-footer-nav__link--next"
             rel="next"

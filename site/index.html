@@ -329,7 +329,7 @@
 
 
   <li class="md-nav__item">
-    <a href="ui_components/overview.html" title="Overview" class="md-nav__link">
+    <a href="getting_started/01_overview.html" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -341,7 +341,7 @@
 
 
   <li class="md-nav__item">
-    <a href="ui_components/definitions.html" title="Definitions" class="md-nav__link">
+    <a href="getting_started/02_definitions.html" title="Definitions" class="md-nav__link">
       Definitions
     </a>
   </li>
@@ -353,7 +353,19 @@
 
 
   <li class="md-nav__item">
-    <a href="ui_components/input_dir_setup.html" title="Input Directory Setup" class="md-nav__link">
+    <a href="getting_started/03_natus_export.html" title="Export from Natus" class="md-nav__link">
+      Export from Natus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="getting_started/04_input_dir_setup.html" title="Input Directory Setup" class="md-nav__link">
       Input Directory Setup
     </a>
   </li>
@@ -365,7 +377,7 @@
 
 
   <li class="md-nav__item">
-    <a href="ui_components/check_edf_type.html" title="Check EDF Type" class="md-nav__link">
+    <a href="getting_started/05_check_edf_type.html" title="Check EDF Type" class="md-nav__link">
       Check EDF Type
     </a>
   </li>
@@ -377,7 +389,7 @@
 
 
   <li class="md-nav__item">
-    <a href="ui_components/edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
+    <a href="getting_started/06_edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
       edf2bids Settings
     </a>
   </li>
@@ -389,7 +401,7 @@
 
 
   <li class="md-nav__item">
-    <a href="ui_components/run_conversion.html" title="Run Conversion" class="md-nav__link">
+    <a href="getting_started/07_run_conversion.html" title="Run Conversion" class="md-nav__link">
       Run Conversion
     </a>
   </li>
@@ -401,8 +413,8 @@
 
 
   <li class="md-nav__item">
-    <a href="ui_components/bids_output.html" title="Output Folder Structure" class="md-nav__link">
-      Output Folder Structure
+    <a href="getting_started/08_output_structure.html" title="Output Directory Structure" class="md-nav__link">
+      Output Directory Structure
     </a>
   </li>
 
@@ -413,7 +425,7 @@
 
 
   <li class="md-nav__item">
-    <a href="ui_components/spred_upload.html" title="SPReD Upload [EpLink]" class="md-nav__link">
+    <a href="getting_started/09_spred_upload.html" title="SPReD Upload [EpLink]" class="md-nav__link">
       SPReD Upload [EpLink]
     </a>
   </li>
@@ -535,7 +547,7 @@
 <h3 id="the-header">The Header<a class="headerlink" href="#the-header" title="Permanent link">&para;</a></h3>
 <p>The EDF/EDF+ header is split into two parts: measurement info and channel info. The measurement info contains general information about the recording while the channel info contains specific information about each channel used to record. Thus, the length of the full header (the ‘header record’) equals:</p>
 <p><center></p>
-<p><code>measurement info (256) + channel info (number of channels * 256)</code> </p>
+<p><code>measurement info (256) + channel info (number of channels * 256)</code></p>
 <p></center></p>
 <p>The header record is ascii only, and contains the following fields:</p>
 <h4 id="measurement-info">Measurement Info<a class="headerlink" href="#measurement-info" title="Permanent link">&para;</a></h4>
@@ -620,7 +632,7 @@
 </tbody>
 </table>
 <p></center></p>
-<details class="note"><summary>[1] patient id</summary><ul>
+<details class="note"><summary><sup>1</sup> patient id</summary><ul>
 <li><strong>Code:</strong> hospital subject code</li>
 <li><strong>Sex:</strong> F or M</li>
 <li><strong>DOB:</strong> birthdate in dd-MMM-yyyy</li>
@@ -628,7 +640,7 @@
 </ul>
 <p><strong>e.g. <code>MCH-0234567 F 02-MAY-1951 Haagse_Harry</code></strong></p>
 </details>
-<details class="note"><summary>[2] recording id</summary><ul>
+<details class="note"><summary><sup>2</sup> recording id</summary><ul>
 <li><strong>Startdate:</strong> the text <code>Startdate</code></li>
 <li><strong>start_date:</strong> start date itself in dd-MMM-yyyy</li>
 <li><strong>InvestigID:</strong> a code specifying the technition/clinician</li>
@@ -718,11 +730,11 @@
 </tbody>
 </table>
 <p></center></p>
-<details class="note"><summary>[1] digital min/max</summary><ul>
+<details class="note"><summary><sup>1</sup> digital min/max</summary><ul>
 <li>digital range must be somewhere between -32768 and 32767 (because data samples are 16-bit signed integers)</li>
 </ul>
 </details>
-<details class="note"><summary>[2] prefiltering</summary><ul>
+<details class="note"><summary><sup>2</sup> prefiltering</summary><ul>
 <li><strong>HighPass:</strong> HP</li>
 <li><strong>LowPass:</strong> LP</li>
 <li><strong>Notch:</strong> N</li>

@@ -10,7 +10,7 @@ There are a few ways to install **edf2bids**. For those looking to simply run th
 
 #### Windows
 
-For 32-bit and 64-bit Windows download and extract <a href="https://drive.google.com/file/d/1WTWwDP-Q4ydJUEllVj4hmupyxXtPzfKO/view?usp=sharing" target="_blank">this folder</a>.
+For 64-bit Windows, compiled version can be found in <a href="https://drive.google.com/drive/folders/1op8Gv6sVWosIL7QQyXsUvNNjR5XXXj0j?usp=sharing" target="_blank">this google drive folder</a>. Make sure to download the latest version, the zipped folders contain the date of compiling.
 
 ## Compile from source
 

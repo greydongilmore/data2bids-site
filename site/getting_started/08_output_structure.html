@@ -17,7 +17,7 @@
     
     
       
-        <title>Run Conversion - edf2bids</title>
+        <title>Output Directory Structure - edf2bids</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#run-conversion" class="md-skip">
+        <a href="#output-directory-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Run Conversion
+              Output Directory Structure
             
           </span>
         </div>
@@ -254,7 +254,7 @@
 
 
   <li class="md-nav__item">
-    <a href="overview.html" title="Overview" class="md-nav__link">
+    <a href="01_overview.html" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -266,7 +266,7 @@
 
 
   <li class="md-nav__item">
-    <a href="definitions.html" title="Definitions" class="md-nav__link">
+    <a href="02_definitions.html" title="Definitions" class="md-nav__link">
       Definitions
     </a>
   </li>
@@ -278,7 +278,19 @@
 
 
   <li class="md-nav__item">
-    <a href="input_dir_setup.html" title="Input Directory Setup" class="md-nav__link">
+    <a href="03_natus_export.html" title="Export from Natus" class="md-nav__link">
+      Export from Natus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="04_input_dir_setup.html" title="Input Directory Setup" class="md-nav__link">
       Input Directory Setup
     </a>
   </li>
@@ -290,7 +302,7 @@
 
 
   <li class="md-nav__item">
-    <a href="check_edf_type.html" title="Check EDF Type" class="md-nav__link">
+    <a href="05_check_edf_type.html" title="Check EDF Type" class="md-nav__link">
       Check EDF Type
     </a>
   </li>
@@ -302,8 +314,20 @@
 
 
   <li class="md-nav__item">
-    <a href="edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
+    <a href="06_edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
       edf2bids Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="07_run_conversion.html" title="Run Conversion" class="md-nav__link">
+      Run Conversion
     </a>
   </li>
 
@@ -323,14 +347,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Run Conversion
+        Output Directory Structure
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="run_conversion.html" title="Run Conversion" class="md-nav__link md-nav__link--active">
-      Run Conversion
+    <a href="08_output_structure.html" title="Output Directory Structure" class="md-nav__link md-nav__link--active">
+      Output Directory Structure
     </a>
     
       
@@ -349,29 +373,75 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#input-directory-selection" class="md-nav__link">
-    Input directory selection
+  <a href="#bids-directory-structure" class="md-nav__link">
+    BIDS directory structure
   </a>
+  
+    <nav class="md-nav" aria-label="BIDS directory structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subject-directory" class="md-nav__link">
+    Subject directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Subject directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    directory structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_scanstsv-content" class="md-nav__link">
+    *_scans.tsv content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-directory" class="md-nav__link">
+    Session directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive" class="md-nav__link">
+    Interactive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#output-directory-selection" class="md-nav__link">
-    Output directory selection
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#convert-to-bids" class="md-nav__link">
-    Convert to BIDs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#convert-to-spred-eplink" class="md-nav__link">
-    Convert to SPReD (EpLink)
+  <a href="#spred-directory-structure" class="md-nav__link">
+    SPReD directory structure
   </a>
   
 </li>
@@ -389,19 +459,7 @@
 
 
   <li class="md-nav__item">
-    <a href="bids_output.html" title="Output Folder Structure" class="md-nav__link">
-      Output Folder Structure
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="spred_upload.html" title="SPReD Upload [EpLink]" class="md-nav__link">
+    <a href="09_spred_upload.html" title="SPReD Upload [EpLink]" class="md-nav__link">
       SPReD Upload [EpLink]
     </a>
   </li>
@@ -438,29 +496,75 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#input-directory-selection" class="md-nav__link">
-    Input directory selection
+  <a href="#bids-directory-structure" class="md-nav__link">
+    BIDS directory structure
   </a>
+  
+    <nav class="md-nav" aria-label="BIDS directory structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subject-directory" class="md-nav__link">
+    Subject directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Subject directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    directory structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_scanstsv-content" class="md-nav__link">
+    *_scans.tsv content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-directory" class="md-nav__link">
+    Session directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive" class="md-nav__link">
+    Interactive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#output-directory-selection" class="md-nav__link">
-    Output directory selection
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#convert-to-bids" class="md-nav__link">
-    Convert to BIDs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#convert-to-spred-eplink" class="md-nav__link">
-    Convert to SPReD (EpLink)
+  <a href="#spred-directory-structure" class="md-nav__link">
+    SPReD directory structure
   </a>
   
 </li>
@@ -477,7 +581,7 @@
             <article class="md-content__inner md-typeset">
               
   
-    <a href="https://github.com/greydongilmore/edf2bids-site/blob/master/docs/ui_components/run_conversion.md" title="Edit this page" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
+    <a href="https://github.com/greydongilmore/edf2bids-site/blob/master/docs/getting_started/08_output_structure.md" title="Edit this page" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg> <p style="margin-top:2px;">Edit this page</p>
     </a>
     <a href="https://github.com/greydongilmore/edf2bids-site/issues/new/choose" title="Open an issue" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
@@ -488,62 +592,66 @@
     
   
   
-  <h1 id="run-conversion">Run Conversion<a class="headerlink" href="#run-conversion" title="Permanent link">&para;</a></h1>
-<h2 id="input-directory-selection">Input directory selection<a class="headerlink" href="#input-directory-selection" title="Permanent link">&para;</a></h2>
-<p>The input directory selected here should be organized according to the first section in this documentation. Prior to loading the data, make sure all the settings in the settings panel have been configured to your specification (found at the bottom left of the main window).</p>
+  <h1 id="output-directory-structure">Output directory structure<a class="headerlink" href="#output-directory-structure" title="Permanent link">&para;</a></h1>
+<h2 id="bids-directory-structure">BIDS directory structure<a class="headerlink" href="#bids-directory-structure" title="Permanent link">&para;</a></h2>
+<p>The output directory will look like the following (each subject having their own directory):</p>
+<p><center><img src="../img/dir_structure_01.png" alt="drawing"/></center></p>
+<ul>
+<li><strong>code:</strong> this folder will contain the code used to convert the EDF/EDF+ data for each EDF/EDF+ file for the subjects.</li>
+<li><strong>dataset_description.json:</strong> this file will contain the Json Metadata you previously defined. This is overall information about the dataset</li>
+<li><strong>participants.tsv:</strong> this file contains a list of all the subjects in the dataset and their general demographics (i.e. age, sex etc.). This file can also be used to store additional subject information that is not variable over the different visits and sessions. </li>
+</ul>
+<h3 id="subject-directory">Subject directory<a class="headerlink" href="#subject-directory" title="Permanent link">&para;</a></h3>
+<h4 id="directory-structure">directory structure<a class="headerlink" href="#directory-structure" title="Permanent link">&para;</a></h4>
+<p>Within each subject directory there will be a different session sub-directory for each day of recording.</p>
+<p><center><img src="../img/sub_dir_structure_01.png" alt="drawing"/></center></p>
+<ul>
+<li><strong>*_scans.tsv:</strong> this file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF+ type etc.).</li>
+</ul>
+<h4 id="_scanstsv-content">*_scans.tsv content<a class="headerlink" href="#_scanstsv-content" title="Permanent link">&para;</a></h4>
+<p><center><img src="../img/scans_tsv.png" alt="drawing"/></center></p>
+<h3 id="session-directory">Session directory<a class="headerlink" href="#session-directory" title="Permanent link">&para;</a></h3>
+<p>Within each session sub-directory there will be a modality sub-directory (either eeg/ieeg). Within the modality sub-directory there will be five files, containing different information associated with the specific EDF/EDF+ file.</p>
+<p><center><img src="../img/ses_dir_structure_01.png" alt="drawing"/></center></p>
+<ul>
+<li><strong>*_electrodes.tsv:</strong> contains information associated with the electrodes used to collect the data.</li>
+<li><strong>*_annotations.tsv:</strong> contains all annotations present in the EDF/EDF+ file, identifiers have been scrubbed.</li>
+<li><strong>*_channels.tsv:</strong> contains information about each channel that was used in the recording.</li>
+<li><strong>*_eeg.json/</strong> <strong>or</strong> <strong>*_ieeg.json:</strong> contains metadata information about the EDF/EDF+ file.</li>
+<li><strong>*_eeg.edf/</strong> <strong>or</strong> <strong>*_ieeg.edf:</strong> contains the data in the de-identified EDF/EDF+ file.</li>
+</ul>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<h4 id="interactive">Interactive<a class="headerlink" href="#interactive" title="Permanent link">&para;</a></h4>
+<div id="tree"></div>
+
+<script>
+    $(document).ready(function() {
+      $.ajax({
+          url : "../../assets/bids_dir.json",
+          dataType: "text",
+          success : function (tree) {
+              $('#tree').bstreeview({ data: tree });
+          }
+      });
+});
+</script>
+
+<h2 id="spred-directory-structure">SPReD directory structure<a class="headerlink" href="#spred-directory-structure" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>In the software, select <strong>Input Directory</strong> and choose the directory that contains the data to be converted (select the main/root directory that contains all subject directories). Click <strong>Select Folder</strong> in the window and the data will load into the <strong>Input Directory</strong> window.</p>
-<p><img src="../img/input_dir_01.png"/></p>
+<p>When the SPReD conversion is completed a new sub-directory will be created in the output directory. All unused BIDS files will be transferred to the <strong>bids_old</strong> suu-directory, while all the SPReD files will be moved to the <strong>SPReD</strong> sub-directory.</p>
+<p><center><img src="../img/bids_spred_02.png" alt="drawing" style="width:80%;"/></center></p>
 </li>
 <li>
-<p>You will now be able to review the information that was detected about the input files. Each subject is expandable by clicking the box beside the subject name. The columns displayed are:</p>
-</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Definition of columns</p>
-<p>for a complete list of column explanations see the <a href="definitions.html#edf2bids-terms">definitions page</a></p>
-</div>
-<h2 id="output-directory-selection">Output directory selection<a class="headerlink" href="#output-directory-selection" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Once you have confirmed the input data is correct, click <strong>Output Directory</strong> and select the directory you want the BIDS dataset to appear. The <strong>Output Directory</strong> window will now present the final output file information (prior to conversion). This is the final check to ensure that any changes have been updated.</p>
-<p><img src="../img/output_dir_01.png" alt="drawing"/></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>EDF/EDF+ files in the Input Directory will be <strong>COPIED</strong> to the new location and will be renamed to be BIDS compliant. Thus, you will have two copies of the EDF/EDF+ files. This is a safety measure in case an error occurs in the conversion, the source data will remain intact.</p>
-</div>
+<p>The <strong>SPReD</strong> sub-directory will look like:</p>
+<p><center><img src="../img/bids_spred_03.png" alt="drawing" style="width:30%;"/></center></p>
 </li>
 <li>
-<p>If you are converting data for a participant that already has recordings in the output folder, the checkboxes for those recordings will appear checked in the <strong>Output Directory</strong> window.</p>
-</li>
-</ol>
-<h2 id="convert-to-bids">Convert to BIDs<a class="headerlink" href="#convert-to-bids" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Once you have confirmed the Output Directory file information is correct press the green <strong>Convert</strong> button.</p>
+<p>Within each sub-directory of the <strong>.zip</strong> folders the same files from the BIDS output will be found:</p>
+<p><center><img src="../img/bids_spred_04.png" alt="drawing" style="width:80%;"/></center></p>
 </li>
 <li>
-<p>During the conversion process you can cancel the conversion at any time by pressing the <strong>Cancel</strong> button. However, if you cancel the conversion you will need to delete the contents of the output directory and start over.</p>
-</li>
-<li>
-<p>You will receive updates in the <strong>Conversion Status</strong> window. The final notice, once the conversion is complete, will show <strong>Your data has been BIDsified!</strong>. </p>
-</li>
-</ol>
-<p><img src="../img/final_message.png" alt="drawing"/></p>
-<h2 id="convert-to-spred-eplink">Convert to SPReD (EpLink)<a class="headerlink" href="#convert-to-spred-eplink" title="Permanent link">&para;</a></h2>
-<p>The format required to upload the Brain-CODE is different from BIDS. This conversion step will provide a SPReD compliant format output.</p>
-<ol>
-<li>
-<p>Following successful conversion to BIDS, a new button in the main window will become active names <strong>SPReD</strong>.</p>
-<p><center><img src="../img/bids_spred_01.png" alt="drawing" style="width:100%;"/></center></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>files will be moved from the BIDs structure so the BIDs format will be destroyed.</p>
-</div>
-</li>
-<li>
-<p>Press the <strong>SPReD</strong> button and wait for the conversion to complete.</p>
+<p>You will be uploading the <strong>.zip</strong> directories to Brain-CODE.</p>
 </li>
 </ol>
 <p><br><br></p>
@@ -599,8 +707,8 @@
         <!-- Link to previous page -->
         
           <a
-            href="edf2bids_settings.html"
-            title="edf2bids Settings"
+            href="07_run_conversion.html"
+            title="Run Conversion"
             class="md-footer-nav__link md-footer-nav__link--prev"
             rel="prev"
           >
@@ -612,7 +720,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                edf2bids Settings
+                Run Conversion
               </div>
             </div>
           </a>
@@ -621,8 +729,8 @@
         <!-- Link to next page -->
         
           <a
-            href="bids_output.html"
-            title="Output Folder Structure"
+            href="09_spred_upload.html"
+            title="SPReD Upload [EpLink]"
             class="md-footer-nav__link md-footer-nav__link--next"
             rel="next"
           >
@@ -631,7 +739,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Output Folder Structure
+                SPReD Upload [EpLink]
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
