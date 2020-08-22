@@ -23,7 +23,7 @@ The following steps should be taken sequentially:
 
 ## EpLink Study Workflow
 
-<center><img src="../img/workflow.png" alt="drawing"/></center>
+<center><img src="../img/workflow.svg" alt="drawing"/></center>
 
 <br>
 <br>

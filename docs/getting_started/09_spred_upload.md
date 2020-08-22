@@ -57,7 +57,7 @@ template: overrides/main.html
 
 	<center><img src="../img/spred_11.png" alt="drawing" style="width:80%;"/></center><br>
 
-13. There will be another box that pops up asking you would like to extract the contents of the archive, click **OK**.
+13. There will be another box that pops up asking you would like to extract the contents of the archive, click **Cancel**.
 
 	<center><img src="../img/spred_12.png" alt="drawing" style="width:80%;"/></center><br>
 

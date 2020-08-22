@@ -17,7 +17,7 @@ Throughout this documentation the following filename terms will be used:
 | `ses_num` | each day spent in hospital during the visit (2 digits starting with SE, ex. SE01) |
 | `type` | type of data collected (should be _IEEG/_EEG) |
 | `task` | format of the edf data (should be _CLIP/_FULL/_CS) |
-| `RET` [optional] | indicates the study is retrospective <sup>1</sup> |
+| `RET`  | if included, indicates the study is retrospective <sup>1</sup> |
 
 </center>
 
