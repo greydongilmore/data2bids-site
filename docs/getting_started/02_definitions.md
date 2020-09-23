@@ -1,8 +1,7 @@
 ---
 template: overrides/main.html
+title: Definitions
 ---
-
-# Definitions
 
 ## Filename terms
 
@@ -10,7 +9,7 @@ Throughout this documentation the following filename terms will be used:
 
 <center>
 
-|term           |definition |
+| term           | definition |
 |---------------|------------------------------------------------------|
 | `sub_num` <img width="100"></img> | specific subject number |
 | `visit_num` | each stay within the hospital (2 digits) |

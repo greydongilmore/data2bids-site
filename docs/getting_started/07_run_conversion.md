@@ -29,6 +29,18 @@ The input directory selected here should be organized according to the first sec
 
 2. If you are converting data for a participant that already has recordings in the output folder, the checkboxes for those recordings will appear checked in the **Output Directory** window.
 
+## Dry-run prior to conversion
+
+It is recommended that you dry-run the conversion. This ensures the input directory is set-up correctly and that the EDF files are properly formatted. During annotation extract, the EDF file format is checked using EDFBrowser libraries. Since copying the EDF file to the output directory is the most time intensive aspect, you are able to run annotation extraction (with file checking) as a separate dry-run.
+
+If an error is found within an EDF file, you will see a message similar to this:
+
+<center><img src="../img/error_message_01.png" alt="drawing"/></center><br>
+
+You should scroll upwards to find the last session that was being converted, prior to the error, and remove it from the input directory:
+
+<center><img src="../img/error_message_02.png" alt="drawing"/></center><br>
+
 ## Convert to BIDs
 
 1. Once you have confirmed the Output Directory file information is correct press the green **Convert** button.

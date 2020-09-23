@@ -9,7 +9,7 @@ template: overrides/main_noedit.html
 
 <center><img src="./img/main_gui.png" alt="drawing"/></center>
 
-## European Data Format (EDF)
+# European Data Format (EDF)
 
 The European Data Format (EDF) is a simple and flexible format for exchange and storage of multichannel biological and physical signals. It was developed by a few European medical engineers who first met at the 1987 international Sleep Congress in Copenhagen. In March 1990, they agreed upon a very simple file format to exchange their sleep recordings. This format became known as the **European Data Format**.
 
