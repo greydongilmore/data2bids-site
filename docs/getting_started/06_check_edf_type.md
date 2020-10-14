@@ -1,8 +1,7 @@
 ---
 template: overrides/main.html
+title: Check EDF Type
 ---
-
-# Check EDF Type
 
 !!! note "Detailed EDF format description"
     for a detailed explanation of the EDF format see the [description page](../index.html#edf-file-structure)

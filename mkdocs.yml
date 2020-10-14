@@ -58,10 +58,10 @@ nav:
   - Getting Started:
     - Overview: getting_started/01_overview.md
     - Definitions: getting_started/02_definitions.md
-    - Export from Natus: getting_started/03_natus_export.md
-    - Input Directory Setup: getting_started/04_input_dir_setup.md
-    - Check EDF Type: getting_started/05_check_edf_type.md
-    - edf2bids Settings: getting_started/06_edf2bids_settings.md
+    - edf2bids Settings: getting_started/03_edf2bids_settings.md
+    - Export from NeuroWorks: getting_started/04_neuroworks_export.md
+    - Input Directory Setup: getting_started/05_input_dir_setup.md
+    - Check EDF Type: getting_started/06_check_edf_type.md
     - Run Conversion: getting_started/07_run_conversion.md
     - Output Directory Structure: getting_started/08_output_structure.md
     - SPReD Upload [EpLink]: getting_started/09_spred_upload.md

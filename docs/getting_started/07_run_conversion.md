@@ -1,8 +1,7 @@
 ---
 template: overrides/main.html
+title: Run Conversion
 ---
-
-# Run Conversion
 
 ## Input directory selection
 
@@ -27,7 +26,7 @@ The input directory selected here should be organized according to the first sec
         EDF/EDF+ files in the Input Directory will be **COPIED** to the new location and will be renamed to be BIDS compliant. Thus, you will have two copies of the EDF/EDF+ files. This is a safety measure in case an error occurs in the conversion, the source data will remain intact.
 
 
-2. If you are converting data for a participant that already has recordings in the output folder, the checkboxes for those recordings will appear checked in the **Output Directory** window.
+2. If you are converting data for a participant that already has recordings in the output folder, the check boxes for those recordings will appear checked in the **Output Directory** window.
 
 ## Dry-run prior to conversion
 
@@ -54,7 +53,7 @@ You should scroll upwards to find the last session that was being converted, pri
 ## Convert to SPReD (EpLink)
 
 !!! note
-        files will be moved from the BIDS structure to SPReD structure (the BIDs format will be destroyed)
+    files will be moved from the BIDS structure to SPReD structure (the BIDs format will be destroyed)
 
 The format required to upload the Brain-CODE is different from BIDS. This conversion step will provide a SPReD compliant format output.
 

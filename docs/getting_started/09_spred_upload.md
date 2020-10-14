@@ -1,8 +1,7 @@
 ---
 template: overrides/main.html
+title: SPReD Upload [EpLink]
 ---
-
-# SPReD Upload [EpLink]
 
 ## Upload data to SPReD
 

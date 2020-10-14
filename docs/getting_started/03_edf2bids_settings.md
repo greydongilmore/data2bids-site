@@ -6,7 +6,7 @@ title: edf2bids Settings
 ## Adjusting metadata settings
 
 !!! note
-    You will only need to modify these settings once upon initial installation of the edf2bids software
+    You will only need to modify these settings once upon initial installation of the **edf2bids** software
 
 1. In the **edf2bids** software, select **File** then **Settings**.
 

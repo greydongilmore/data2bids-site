@@ -1,6 +1,7 @@
 ---
 template: overrides/main_noedit.html
 ---
+
 <center><img src="./img/edf2bids_full_icon.svg" alt="drawing" style="width:60%;"/></center>
 
 <center><em>An open-source software to sort EDF/EDF+ files into a BIDs compliant structure</em></center>
@@ -13,7 +14,7 @@ template: overrides/main_noedit.html
 
 The European Data Format (EDF) is a simple and flexible format for exchange and storage of multichannel biological and physical signals. It was developed by a few European medical engineers who first met at the 1987 international Sleep Congress in Copenhagen. In March 1990, they agreed upon a very simple file format to exchange their sleep recordings. This format became known as the **European Data Format**.
 
-An extension of EDF, named EDF+, was developed in 2002 and is largely compatible to EDF. However, the EDF+ format provides a few advantages: the files can contain interrupted recordings, annotations can be stored within the file along with stimuli/events. Medical type recordings often contain annotations about patient events, stimulation responses and are often discontinuos as the patient may require breaks during recording time. EDF+ allows for these medical type recordings to be stored much easier. 
+An extension of EDF, named EDF+, was developed in 2002 and is largely compatible to EDF. However, the EDF+ format provides a few advantages: the files can contain interrupted recordings, annotations can be stored within the file along with stimuli/events. Medical type recordings often contain annotations about patient events, stimulation responses and are often discontinuous as the patient may require breaks during recording time. EDF+ allows for these medical type recordings to be stored much easier. 
 
 The full specifications can be found on the <a href="https://www.edfplus.info/specs/edf.html" target="_blank">EDF website</a>. The site also supports users and developers by offering free downloads of files and software, a list of EDF(+) compatible companies and further contact possibilities.
 
