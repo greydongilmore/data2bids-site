@@ -26,7 +26,7 @@ title: edf2bids Settings
   	    - **Manufacturer:** who produces the electrodes.
         - **Type:** what type of electrode is it (i.e. depth, scalp etc.)
         - **Material:** what material are the electrodes made from (i.e. platinum)
-        - **Diameter:** what is the diameter of the electrode
+        - **Diameter:** what is the diameter of the electrode (in mm)
 
 	<center><img src="../img/metadata_03.png" alt="drawing"/></center><br>
 

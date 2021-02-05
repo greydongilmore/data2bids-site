@@ -3,9 +3,9 @@ template: overrides/main_noedit.html
 title: Installation
 ---
 
-There are a few ways to install **edf2bids**. For those looking to simply run the software you should install a compiled version.
+# Installation
 
-## Obtain pre-compiled versions
+There are a few ways to install **edf2bids**. For those looking to simply run the software you should install a compiled version. Currently, the software comes pre-compiled for Windows 10 systems.
 
 #### Windows
 
@@ -13,7 +13,7 @@ For 64-bit Windows, compiled version can be found in <a href="https://drive.goog
 
 ## Compile from source
 
-The source code can be download from the <a href="https://github.com/greydongilmore/edf2bids" target="_blank">GitHub repository</a>.
+For users wanting to compile the source code, you can obtain the code from the <a href="https://github.com/greydongilmore/edf2bids" target="_blank">GitHub repository</a>.
 
 ### Python Setup
 
