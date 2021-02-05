@@ -74,24 +74,3 @@
 .bstreeview .list-group-item {
   font-size: 15px;
 }
-
-@page {
-    size: a4 portrait;
-    margin: 25mm 10mm 25mm 10mm;
-    counter-increment: page;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-    white-space: pre;
-    color: grey;
-    @top-left {
-        content: '© 2018 My Company';
-    }
-    @top-center {
-        content: string(chapter);
-    }
-    @top-right {
-        content: 'Page ' counter(page);
-    }
-    .img{
-        width: 50%;
-    }
-}

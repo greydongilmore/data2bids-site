@@ -221,6 +221,11 @@
         "text": "output",
         "icon": "fa fa-folder",
         "nodes": []
+      },
+      {
+        "text": "complete",
+        "icon": "fa fa-folder",
+        "nodes": []
       }
     ]
   }

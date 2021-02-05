@@ -23,9 +23,7 @@ It is recommended that you establish a working directory to ensure your data rem
 !!! warning
     When beginning a conversion with **edf2bids** ensure the **output** directory is empty and the **input** directory only contains the subject folders you wish to convert.
 
-### Example
-
-#### Static
+### Static example
 
 ```sh
 
@@ -38,7 +36,7 @@ working_dir/
 
 ```
 
-#### Interactive
+### Interactive example
 
 <div id="tree"></div>
 <script>
@@ -69,7 +67,7 @@ If you do not need to specify the visit or session number for each EDF file for 
 !!! note "Definition of terms"
     for a complete list of terms see the [definitions page](02_definitions.html#filename-terms)
 
-#### Static example
+### Static example
 
 ```sh
 
@@ -84,7 +82,7 @@ input/
 
 ```
 
-#### Interactive example
+### Interactive example
 
 <div id="tree2"></div>
 <script>
@@ -225,39 +223,7 @@ When creating the channel labels file, it is easiest to use Excel or Libreoffice
     |C35 | LAHc9 |
     |C36 | LAHc10 |
 
-## Imaging Data
 
-**edf2bids** will anonymize imaging DICOM files if they are present within the input directory. The DICOMs should be within a directory named **imaging**, which is at the root of the subjects directory. Within the **imaging** directory should be another directory with the desired output name for the zipped directory (containing all the anonymized DICOMs). The directories containing the actual DICOM files can be given any name, generally they are named after the specific sequence acquired for the DICOMs inside.
-
-### Example
-
-#### Static
-
-```sh
-
-input/
-└── <sub_num>/                           # Individual subject directory
-      └── <imaging>/                       # Imaging directory for dicoms
-            ├── T1w_scan/<*.dcm files>     # DICOM directories, can be given any name
-            ├── T2w_scan/<*.dcm files>
-            └── dwi/<*.dcm files>
-
-```
-
-#### Interactive
-
-<div id="tree4"></div>
-<script>
-    $(document).ready(function() {
-      $.ajax({
-          url : "../../assets/imaging_data.json",
-          dataType: "text",
-          success : function (tree) {
-              $('#tree4').bstreeview({ data: tree });
-          }
-      });
-});
-</script>
 
 <br>
 <br>

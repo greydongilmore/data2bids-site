@@ -17,7 +17,7 @@
     
     
       
-        <title>Run Conversion - edf2bids</title>
+        <title>Run Conversion</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#run-conversion" class="md-skip">
+        <a href="#input-directory-selection" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="edf2bids" class="md-header-nav__button md-logo" aria-label="edf2bids">
+    <a href=".." title="edf2bids v3.1" class="md-header-nav__button md-logo" aria-label="edf2bids v3.1">
       
   <img src="../img/edf2bids_white_icon.svg" alt="logo">
 
@@ -100,7 +100,7 @@
       
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
-            edf2bids
+            edf2bids v3.1
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
@@ -174,12 +174,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="edf2bids" class="md-nav__button md-logo" aria-label="edf2bids">
+    <a href=".." title="edf2bids v3.1" class="md-nav__button md-logo" aria-label="edf2bids v3.1">
       
   <img src="../img/edf2bids_white_icon.svg" alt="logo">
 
     </a>
-    edf2bids
+    edf2bids v3.1
   </label>
   
     <div class="md-nav__source">
@@ -278,8 +278,8 @@
 
 
   <li class="md-nav__item">
-    <a href="03_natus_export.html" title="Export from Natus" class="md-nav__link">
-      Export from Natus
+    <a href="03_edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
+      edf2bids Settings
     </a>
   </li>
 
@@ -290,7 +290,19 @@
 
 
   <li class="md-nav__item">
-    <a href="04_input_dir_setup.html" title="Input Directory Setup" class="md-nav__link">
+    <a href="04_neuroworks_export.html" title="Export from NeuroWorks" class="md-nav__link">
+      Export from NeuroWorks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="05_input_dir_setup.html" title="Input Directory Setup" class="md-nav__link">
       Input Directory Setup
     </a>
   </li>
@@ -302,8 +314,8 @@
 
 
   <li class="md-nav__item">
-    <a href="05_check_edf_type.html" title="Check EDF Type" class="md-nav__link">
-      Check EDF Type
+    <a href="055_imaging_dir_setup.html" title="Imaging Directory Setup" class="md-nav__link">
+      Imaging Directory Setup
     </a>
   </li>
 
@@ -314,8 +326,8 @@
 
 
   <li class="md-nav__item">
-    <a href="06_edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
-      edf2bids Settings
+    <a href="06_check_edf_type.html" title="Check EDF Type" class="md-nav__link">
+      Check EDF Type
     </a>
   </li>
 
@@ -330,8 +342,6 @@
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -348,8 +358,6 @@
       
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -370,6 +378,13 @@
         <li class="md-nav__item">
   <a href="#output-directory-selection" class="md-nav__link">
     Output directory selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dry-run-prior-to-conversion" class="md-nav__link">
+    Dry-run prior to conversion
   </a>
   
 </li>
@@ -445,8 +460,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -466,6 +479,13 @@
         <li class="md-nav__item">
   <a href="#output-directory-selection" class="md-nav__link">
     Output directory selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dry-run-prior-to-conversion" class="md-nav__link">
+    Dry-run prior to conversion
   </a>
   
 </li>
@@ -514,8 +534,9 @@
     
   
   
-  <h1 id="run-conversion">Run Conversion<a class="headerlink" href="#run-conversion" title="Permanent link">&para;</a></h1>
-<h2 id="input-directory-selection">Input directory selection<a class="headerlink" href="#input-directory-selection" title="Permanent link">&para;</a></h2>
+    <h1>Run Conversion</h1>
+  
+  <h2 id="input-directory-selection">Input directory selection<a class="headerlink" href="#input-directory-selection" title="Permanent link">&para;</a></h2>
 <p>The input directory selected here should be organized according to the first section in this documentation. Prior to loading the data, make sure all the settings in the settings panel have been configured to your specification (found at the bottom left of the main window).</p>
 <ol>
 <li>
@@ -541,9 +562,15 @@
 </div>
 </li>
 <li>
-<p>If you are converting data for a participant that already has recordings in the output folder, the checkboxes for those recordings will appear checked in the <strong>Output Directory</strong> window.</p>
+<p>If you are converting data for a participant that already has recordings in the output folder, the check boxes for those recordings will appear checked in the <strong>Output Directory</strong> window.</p>
 </li>
 </ol>
+<h2 id="dry-run-prior-to-conversion">Dry-run prior to conversion<a class="headerlink" href="#dry-run-prior-to-conversion" title="Permanent link">&para;</a></h2>
+<p>It is recommended that you dry-run the conversion. This ensures the input directory is set-up correctly and that the EDF files are properly formatted. During annotation extract, the EDF file format is checked using EDFBrowser libraries. Since copying the EDF file to the output directory is the most time intensive aspect, you are able to run annotation extraction (with file checking) as a separate dry-run.</p>
+<p>If an error is found within an EDF file, you will see a message similar to this:</p>
+<p><center><img src="../img/error_message_01.png" alt="drawing"/></center><br></p>
+<p>You should scroll upwards to find the last session that was being converted, prior to the error, and remove it from the input directory:</p>
+<p><center><img src="../img/error_message_02.png" alt="drawing"/></center><br></p>
 <h2 id="convert-to-bids">Convert to BIDs<a class="headerlink" href="#convert-to-bids" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -559,8 +586,8 @@
 </ol>
 <h2 id="convert-to-spred-eplink">Convert to SPReD (EpLink)<a class="headerlink" href="#convert-to-spred-eplink" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
-<p class="admonition-title">Note<p>files will be moved from the BIDS structure to SPReD structure (the BIDs format will be destroyed)</p>
-</p>
+<p class="admonition-title">Note</p>
+<p>files will be moved from the BIDS structure to SPReD structure (the BIDs format will be destroyed)</p>
 </div>
 <p>The format required to upload the Brain-CODE is different from BIDS. This conversion step will provide a SPReD compliant format output.</p>
 <ol>
@@ -728,8 +755,8 @@
         <!-- Link to previous page -->
         
           <a
-            href="06_edf2bids_settings.html"
-            title="edf2bids Settings"
+            href="06_check_edf_type.html"
+            title="Check EDF Type"
             class="md-footer-nav__link md-footer-nav__link--prev"
             rel="prev"
           >
@@ -741,7 +768,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                edf2bids Settings
+                Check EDF Type
               </div>
             </div>
           </a>

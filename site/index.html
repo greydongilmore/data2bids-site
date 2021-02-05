@@ -17,7 +17,7 @@
     
     
       
-        <title>Home - edf2bids</title>
+        <title>Home - edf2bids v3.1</title>
       
     
     
@@ -73,7 +73,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="." title="edf2bids" class="md-header-nav__button md-logo" aria-label="edf2bids">
+    <a href="." title="edf2bids v3.1" class="md-header-nav__button md-logo" aria-label="edf2bids v3.1">
       
   <img src="img/edf2bids_white_icon.svg" alt="logo">
 
@@ -85,7 +85,7 @@
       
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
-            edf2bids
+            edf2bids v3.1
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
@@ -159,12 +159,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="edf2bids" class="md-nav__button md-logo" aria-label="edf2bids">
+    <a href="." title="edf2bids v3.1" class="md-nav__button md-logo" aria-label="edf2bids v3.1">
       
   <img src="img/edf2bids_white_icon.svg" alt="logo">
 
     </a>
-    edf2bids
+    edf2bids v3.1
   </label>
   
     <div class="md-nav__source">
@@ -193,6 +193,8 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Home
@@ -209,6 +211,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -217,13 +221,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#european-data-format-edf" class="md-nav__link">
-    European Data Format (EDF)
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#edf-file-structure" class="md-nav__link">
@@ -353,8 +350,8 @@
 
 
   <li class="md-nav__item">
-    <a href="getting_started/03_natus_export.html" title="Export from Natus" class="md-nav__link">
-      Export from Natus
+    <a href="getting_started/03_edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
+      edf2bids Settings
     </a>
   </li>
 
@@ -365,7 +362,19 @@
 
 
   <li class="md-nav__item">
-    <a href="getting_started/04_input_dir_setup.html" title="Input Directory Setup" class="md-nav__link">
+    <a href="getting_started/04_neuroworks_export.html" title="Export from NeuroWorks" class="md-nav__link">
+      Export from NeuroWorks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="getting_started/05_input_dir_setup.html" title="Input Directory Setup" class="md-nav__link">
       Input Directory Setup
     </a>
   </li>
@@ -377,8 +386,8 @@
 
 
   <li class="md-nav__item">
-    <a href="getting_started/05_check_edf_type.html" title="Check EDF Type" class="md-nav__link">
-      Check EDF Type
+    <a href="getting_started/055_imaging_dir_setup.html" title="Imaging Directory Setup" class="md-nav__link">
+      Imaging Directory Setup
     </a>
   </li>
 
@@ -389,8 +398,8 @@
 
 
   <li class="md-nav__item">
-    <a href="getting_started/06_edf2bids_settings.html" title="edf2bids Settings" class="md-nav__link">
-      edf2bids Settings
+    <a href="getting_started/06_check_edf_type.html" title="Check EDF Type" class="md-nav__link">
+      Check EDF Type
     </a>
   </li>
 
@@ -450,6 +459,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -458,13 +469,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#european-data-format-edf" class="md-nav__link">
-    European Data Format (EDF)
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#edf-file-structure" class="md-nav__link">
@@ -538,9 +542,9 @@
 <p><center><em>An open-source software to sort EDF/EDF+ files into a BIDs compliant structure</em></center></p>
 <hr />
 <p><center><img src="./img/main_gui.png" alt="drawing"/></center></p>
-<h2 id="european-data-format-edf">European Data Format (EDF)<a class="headerlink" href="#european-data-format-edf" title="Permanent link">&para;</a></h2>
+<h1 id="european-data-format-edf">European Data Format (EDF)<a class="headerlink" href="#european-data-format-edf" title="Permanent link">&para;</a></h1>
 <p>The European Data Format (EDF) is a simple and flexible format for exchange and storage of multichannel biological and physical signals. It was developed by a few European medical engineers who first met at the 1987 international Sleep Congress in Copenhagen. In March 1990, they agreed upon a very simple file format to exchange their sleep recordings. This format became known as the <strong>European Data Format</strong>.</p>
-<p>An extension of EDF, named EDF+, was developed in 2002 and is largely compatible to EDF. However, the EDF+ format provides a few advantages: the files can contain interrupted recordings, annotations can be stored within the file along with stimuli/events. Medical type recordings often contain annotations about patient events, stimulation responses and are often discontinuos as the patient may require breaks during recording time. EDF+ allows for these medical type recordings to be stored much easier. </p>
+<p>An extension of EDF, named EDF+, was developed in 2002 and is largely compatible to EDF. However, the EDF+ format provides a few advantages: the files can contain interrupted recordings, annotations can be stored within the file along with stimuli/events. Medical type recordings often contain annotations about patient events, stimulation responses and are often discontinuous as the patient may require breaks during recording time. EDF+ allows for these medical type recordings to be stored much easier. </p>
 <p>The full specifications can be found on the <a href="https://www.edfplus.info/specs/edf.html" target="_blank">EDF website</a>. The site also supports users and developers by offering free downloads of files and software, a list of EDF(+) compatible companies and further contact possibilities.</p>
 <h2 id="edf-file-structure">EDF File Structure<a class="headerlink" href="#edf-file-structure" title="Permanent link">&para;</a></h2>
 <p>EDF/EDF+ files consist of a header (ascii) that describes the contents of the file and the experimental settings. The data (int16) are stored after the header.</p>
