@@ -30,27 +30,59 @@ First you will need to install Python, depending on what operating system you ar
 
 1. Install Homebrew by opening a Terminal window and pasting the following line. 
 
-```console
-/usr/bin/ruby -e $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
-```
+    ```console
+    /usr/bin/ruby -e $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
+    ```
 
 2. Homebrew asks you to enter your password so it can finalize the installation. Enter your user account password and hit enter
 3. Once Homebrew has finished installing, return to your terminal and run the following command:
 
-```console
-brew install python3
-```
+    ```console
+    brew install python3
+    ```
 
 #### Linux
 
 1. Open a terminal window and run the following commands:
 
-```console
-sudo apt-get install python3.6
-sudo apt install python3-pip
-```
+    ```console
+    sudo apt-get install python3.6
+    sudo apt install python3-pip
+    ```
 
 ### Compiling
+
+1. Make a directory on your computer to store the source code:
+
+    ```sh
+    mkdir /Documents/software
+    ```
+
+2. Clone a copy of the edf2bids repository to your system:
+
+    ```sh
+    cd /Documents/software
+    git clone https://github.com/greydongilmore/edf2bids.git
+    ```
+
+3. Install the Python dependencies by opening a terminal, changing to the project directory and running:
+
+    ```sh
+    cd /edf2bids
+    python3 -m pip install -r requirements.txt
+    ```
+
+4. Once you have installed the dependencies, you can run the program from the Terminal (from within the edf2bids directory):
+
+    ```sh
+    python3 main.py
+    ```
+
+5. To compile edf2bids for your platform, you can run the following:
+
+    ```sh
+    python3 setup.py build_exe
+    ```
 
 ## Other Useful Software
 
