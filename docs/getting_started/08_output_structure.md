@@ -9,13 +9,11 @@ The output directory will look like the following (each subject having their own
 
 <center><img src="../img/dir_structure_01.png" alt="drawing"/></center>
 
-* **code:** this folder will contain the code used to convert the EDF/EDF+ data for each EDF/EDF+ file for the subjects.
-* **dataset_description.json:** this file will contain the Json Metadata you previously defined. This is overall information about the dataset
+* **code:** this directory will contain the code used to convert the EDF/EDF+ data for each EDF/EDF+ file for the subjects.
+* **dataset_description.json:** this file will contain the Json Metadata previously defined in the **Settings** menu. This is overall information about the dataset
 * **participants.tsv:** this file contains a list of all the subjects in the dataset and their general demographics (i.e. age, sex etc.). This file can also be used to store additional subject information that is not variable over the different visits and sessions. 
 
 ### Subject directory
-
-#### directory structure
 
 Within each subject directory there will be a different session sub-directory for each day of recording.
   
@@ -23,9 +21,12 @@ Within each subject directory there will be a different session sub-directory fo
 
 * **\*_scans.tsv:** this file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF+ type etc.).
 
-#### \*_scans.tsv content
-
-<center><img src="../img/scans_tsv.png" alt="drawing"/></center>
+<center>
+<figure>
+  <img src="../img/scans_tsv.png" alt="drawing" />
+  <figcaption>Example content of the ***_scans.tsv** file.</figcaption>
+</figure>
+</center>
 
 ### Session directory
 
@@ -58,19 +59,15 @@ Within each session sub-directory there will be a modality sub-directory (either
 
 ## SPReD directory structure
 
-1. When the SPReD conversion is completed a new sub-directory will be created in the output directory. All unused BIDS files will be transferred to the **bids_old** suu-directory, while all the SPReD files will be moved to the **SPReD** sub-directory.
+1. When the SPReD conversion is completed a new sub-directory will be created in the output directory. All unused BIDS files will be transferred to the **bids_old** sub-directory, while all the SPReD files will be moved to the **SPReD** sub-directory.
 
-    <center><img src="../img/bids_spred_02.png" alt="drawing" style="width:80%;"/></center>
+    <center><img src="../img/bids_spred_03.png" alt="drawing"/></center>
 
-2. The **SPReD** sub-directory will look like:
+2. Within each sub-directory of the **.zip** folders the same files from the BIDS output will be found:
 
-    <center><img src="../img/bids_spred_03.png" alt="drawing" style="width:30%;"/></center>
+    <center><img src="../img/ses_dir_structure_01.png" alt="drawing"/></center>
 
-3. Within each sub-directory of the **.zip** folders the same files from the BIDS output will be found:
-
-    <center><img src="../img/bids_spred_04.png" alt="drawing" style="width:80%;"/></center>
-
-4. You will be uploading the **.zip** directories to Brain-CODE.
+3. You will be uploading the **.zip** directories to Brain-CODE.
 
 <br>
 <br>
