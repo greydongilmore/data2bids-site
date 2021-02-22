@@ -1,10 +1,10 @@
-site_name: edf2bids v3.1
+site_name: data2bids v3.1
 site_author: Greydon Gilmore
 
 # Repository
 repo_name: GitHub
-repo_url: https://github.com/greydongilmore/edf2bids-site
-edit_uri: https://github.com/greydongilmore/edf2bids-site/blob/master/docs
+repo_url: https://github.com/greydongilmore/data2bids-site
+edit_uri: https://github.com/greydongilmore/data2bids-site/blob/master/docs
 
 # Copyright
 copyright: Copyright &copy; 2020 Greydon Gilmore
@@ -58,7 +58,7 @@ nav:
   - Getting Started:
     - Overview: getting_started/01_overview.md
     - Definitions: getting_started/02_definitions.md
-    - edf2bids Settings: getting_started/03_edf2bids_settings.md
+    - data2bids Settings: getting_started/03_edf2bids_settings.md
     - Export from NeuroWorks: getting_started/04_neuroworks_export.md
     - Input Directory Setup: getting_started/05_input_dir_setup.md
     - Imaging Directory Setup: getting_started/055_imaging_dir_setup.md
