@@ -1,14 +1,14 @@
 ---
 template: overrides/main.html
-title: edf2bids Settings
+title: data2bids Settings
 ---
 
 ## Adjusting metadata settings
 
 !!! note
-    You will only need to modify these settings once upon initial installation of the **edf2bids** software
+    You will only need to modify these settings once upon initial installation of the **data2bids** software
 
-1. In the **edf2bids** software, select **File** then **Settings**.
+1. In the **data2bids** software, select **File** then **Settings**.
 
 	<center><img src="../img/metadata_01.png" alt="drawing"/></center>
     <br>
@@ -32,7 +32,7 @@ title: edf2bids Settings
 
 	<center><img src="../img/metadata_03.png" alt="drawing"/></center>
     <br>
-3. Once you have modified the information click **Save** and the information will be stored and used for every subsequent dataset processed by **edf2bids**. You will not need to re-define these values, unless they change at your site.
+3. Once you have modified the information click **Save** and the information will be stored and used for every subsequent dataset processed by **data2bids**. You will not need to re-define these values, unless they change at your site.
 
 ## Main window settings panel
 

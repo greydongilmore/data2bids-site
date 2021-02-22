@@ -5,7 +5,7 @@ title: Installation
 
 # Installation
 
-There are a few ways to install **edf2bids**. For those looking to simply run the software you should install a compiled version. Currently, the software comes pre-compiled for Windows 10 systems.
+There are a few ways to install **data2bids**. For those looking to simply run the software you should install a compiled version. Currently, the software comes pre-compiled for Windows 10 systems.
 
 #### Windows
 
@@ -13,7 +13,7 @@ For 64-bit Windows, compiled version can be found in <a href="https://drive.goog
 
 ## Compile from source
 
-For users wanting to compile the source code, you can obtain the code from the <a href="https://github.com/greydongilmore/edf2bids" target="_blank">GitHub repository</a>.
+For users wanting to compile the source code, you can obtain the code from the <a href="https://github.com/greydongilmore/data2bids" target="_blank">GitHub repository</a>.
 
 ### Python Setup
 
@@ -58,27 +58,27 @@ First you will need to install Python, depending on what operating system you ar
     mkdir /Documents/software
     ```
 
-2. Clone a copy of the edf2bids repository to your system:
+2. Clone a copy of the data2bids repository to your system:
 
     ```sh
     cd /Documents/software
-    git clone https://github.com/greydongilmore/edf2bids.git
+    git clone https://github.com/greydongilmore/data2bids.git
     ```
 
 3. Install the Python dependencies by opening a terminal, changing to the project directory and running:
 
     ```sh
-    cd /edf2bids
+    cd /data2bids
     python3 -m pip install -r requirements.txt
     ```
 
-4. Once you have installed the dependencies, you can run the program from the Terminal (from within the edf2bids directory):
+4. Once you have installed the dependencies, you can run the program from the Terminal (from within the data2bids directory):
 
     ```sh
     python3 main.py
     ```
 
-5. To compile edf2bids for your platform, you can run the following:
+5. To compile data2bids for your platform, you can run the following:
 
     ```sh
     python3 setup.py build_exe
@@ -88,7 +88,7 @@ First you will need to install Python, depending on what operating system you ar
 
 ### EDFBrowser
 
-<a href="https://www.teuniz.net/edfbrowser/" target="_blank">EDFBrowser</a> (developed by Teunis van Beelen) is a free, open-source, viewer/toolbox for EEG/IEEG data. It is a great tool to use when attempting to organize your input directory for **edf2bids**.
+<a href="https://www.teuniz.net/edfbrowser/" target="_blank">EDFBrowser</a> (developed by Teunis van Beelen) is a free, open-source, viewer/toolbox for EEG/IEEG data. It is a great tool to use when attempting to organize your input directory for **data2bids**.
 
 #### Windows
 

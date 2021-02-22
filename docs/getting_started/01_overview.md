@@ -3,7 +3,7 @@ template: overrides/main.html
 title: Overview
 ---
 
-This section describes steps required to use **edf2bids**. If you have not installed **edf2bids** you have two options:
+This section describes steps required to use **data2bids**. If you have not installed **data2bids** you have two options:
 
   * [Install a compiled version](../installation.html#obtain-pre-compiled-versions)
   * [Compile from source code](../installation.html#compile-from-source)

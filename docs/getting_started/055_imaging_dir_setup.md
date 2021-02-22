@@ -5,7 +5,7 @@ title: Imaging Directory Setup
 
 ## Imaging Data
 
-**edf2bids** will anonymize imaging DICOM files if they are present within the input directory. The DICOMs should be within a directory named **imaging**, which is at the root of the subject directory. Within the **imaging** directory, there should be a sub-directory for all imaging sessions for the subject. The session sub-directories should contain the DICOM files either compressed or uncompressed. The accepted compression formats include: .tar, .tgz, .tar.gz, .tar.bz2, .zip. The DICOM filenames can be anything, you could also place all the DICOM files for all imaging sequences into one directory.
+**data2bids** will anonymize imaging DICOM files if they are present within the input directory. The DICOMs should be within a directory named **imaging**, which is at the root of the subject directory. Within the **imaging** directory, there should be a sub-directory for all imaging sessions for the subject. The session sub-directories should contain the DICOM files either compressed or uncompressed. The accepted compression formats include: .tar, .tgz, .tar.gz, .tar.bz2, .zip. The DICOM filenames can be anything, you could also place all the DICOM files for all imaging sequences into one directory.
 
 The imaging session folders should be in the format **`EPL31_LHS_001_<ses_num>`** , where **`ses_num`** is the imaging session number for the imaging data. If the subject only has one session, you still need to include the DICOM files within a session sub-directory.
 

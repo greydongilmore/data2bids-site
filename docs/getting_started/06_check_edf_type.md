@@ -17,10 +17,10 @@ For most applications, the EDF+ file will need to be in `EDF+C` format. The majo
 
 ## Convert EDF Type
 
-You need to ensure all EDF+ files are in continuous format (EDF+C). This is easy to check within **edf2bids**. 
+You need to ensure all EDF+ files are in continuous format (EDF+C). This is easy to check within **data2bids**. 
 
-1. Ensure your input directory [has been organized](04_input_dir_setup.html#setup-a-working-directory) prior to opening within **edf2bids**.
-2. Within **edf2bids** select the input directory and check the `EDF Type` column. You should flag any file that is in `EDF+D` format.
+1. Ensure your input directory [has been organized](04_input_dir_setup.html#setup-a-working-directory) prior to opening within **data2bids**.
+2. Within **data2bids** select the input directory and check the `EDF Type` column. You should flag any file that is in `EDF+D` format.
 3. Once you have identified the files that are in `EDF+D` format, open [EDFBrowser](../installation.html#edfbrowser), select **Tools** at the top and **Convert EDF+D to EDF+C**.
 
 	<center><img src="../img/check_edf_type_01.png" alt="drawing" style="width:80%;"/></center>

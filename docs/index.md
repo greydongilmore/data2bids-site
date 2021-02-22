@@ -4,9 +4,11 @@ template: overrides/main_noedit.html
 
 <center><img src="./img/edf2bids_full_icon.svg" alt="drawing" style="width:60%;"/></center>
 
-<center><em>An open-source software to sort EDF/EDF+ files into a BIDs compliant structure</em></center>
+<center><em>An open-source software to sort clinical data into a BIDS compliant structure</em></center>
 
 ---
+
+Currently, **data2bids** will convert EDF/EDF+ and DICOM file formats into a <a href="https://bids.neuroimaging.io/" target="_blank">Brain Imaging Data Structure</a> compliant format.
 
 <center><img src="./img/main_gui.png" alt="drawing"/></center>
 

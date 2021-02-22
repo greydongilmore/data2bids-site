@@ -42,9 +42,9 @@ Throughout this documentation the following filename terms will be used:
     Notice that no folder is specified for the missing ses-002 but the number is still accounted for by skipping it.
 
 
-## edf2bids terms
+## data2bids terms
 
-Within the edf2bids software, the columns present within the input/output windows are:
+Within the data2bids software, the columns present within the input/output windows are:
 
 <center>
 

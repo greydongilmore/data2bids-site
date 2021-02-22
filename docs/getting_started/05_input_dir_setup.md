@@ -3,7 +3,7 @@ template: overrides/main.html
 title: Input Directory Setup
 ---
 
-This section outlines how the data should be organized prior to running the **edf2bids** software. The data files should be in EDF/EDF+ format following the <a href="https://www.edfplus.info/specs/edf.html" target="_blank">specifications</a> provided by the EDF format developers. 
+This section outlines how the data should be organized prior to running the **data2bids** software. The data files should be in EDF/EDF+ format following the <a href="https://www.edfplus.info/specs/edf.html" target="_blank">specifications</a> provided by the EDF format developers. 
 
 [Setup a working directory](05_input_dir_setup.html#setup-a-working-directory) is a recommended way to organize your working directory of data (this is optional but highly recommended).
 
@@ -14,14 +14,14 @@ This section outlines how the data should be organized prior to running the **ed
 
 It is recommended that you establish a working directory to ensure your data remains organized. The optimal setup would be one with the following five directories:
 
-* **unorganized**: this directory holds unorganized subject data ready to be organized for **edf2bids**
-* **organized**: this directory holds organized subject data ready to be organized for **edf2bids** (according to either option below)
-* **input**: this directory holds subject data ready to be converted with **edf2bids**
-* **output**: this directory holds the output converted data from **edf2bids**
+* **unorganized**: this directory holds unorganized subject data ready to be organized for **data2bids**
+* **organized**: this directory holds organized subject data ready to be organized for **data2bids** (according to either option below)
+* **input**: this directory holds subject data ready to be converted with **data2bids**
+* **output**: this directory holds the output converted data from **data2bids**
 * **complete**: this directory holds the fully converted data from the output directory (which needs to be empty every time a new conversion is occurring)
 
 !!! warning
-    When beginning a conversion with **edf2bids** ensure the **output** directory is empty and the **input** directory only contains the subject folders you wish to convert.
+    When beginning a conversion with **data2bids** ensure the **output** directory is empty and the **input** directory only contains the subject folders you wish to convert.
 
 ### Static example
 
@@ -53,7 +53,7 @@ working_dir/
 
 ## Input directory
 
-If you do not require a specific naming convention for visits and sessions then [Option 01: Do not specify visit/session number](05_input_dir_setup.html#option-01-do-not-specify-visitsession-number) should be followed. In this option, the visit and session number are not supplied to the **edf2bids** software and instead are automatically determined based on the date/time of the EDF/EDF+ acquisition.
+If you do not require a specific naming convention for visits and sessions then [Option 01: Do not specify visit/session number](05_input_dir_setup.html#option-01-do-not-specify-visitsession-number) should be followed. In this option, the visit and session number are not supplied to the **data2bids** software and instead are automatically determined based on the date/time of the EDF/EDF+ acquisition.
 
 For the **EpLink study**, you should follow [Option 02: Specify visit/session number](05_input_dir_setup.html#option-02-specify-visitsession-number).
 
@@ -62,7 +62,7 @@ For the **EpLink study**, you should follow [Option 02: Specify visit/session nu
 If you do not need to specify the visit or session number for each EDF file for the subjects, then this option will assign session numbers based on the **Date** timestamp within the EDF files. So the earliest EDF file will be given **ses-001** while the latest EDF file will be given **ses-###** (### will be equal to the number of EDF files for that subject).
 
 !!! important "Input directory"
-    The input directory (`input`) should contain a sub-directory for each of the subjects you want to have converted (i.e. `input\sub-001`, `input\sub-002` etc.). Within the **edf2bids** software you select `input` as the input directory and not the individual subject directories
+    The input directory (`input`) should contain a sub-directory for each of the subjects you want to have converted (i.e. `input\sub-001`, `input\sub-002` etc.). Within the **data2bids** software you select `input` as the input directory and not the individual subject directories
 
 !!! note "Definition of terms"
     for a complete list of terms see the [definitions page](02_definitions.html#filename-terms)
@@ -115,7 +115,7 @@ sub-003_02_SE01_IEEG_FULL_RET
 A folder with the above naming scheme would indicate this is subject 3's second visit and first session. The data collected was a full IEEG recording that was retrospective (recorded prior to the subject consent).
 
 !!! important "Input directory"
-    The input directory (`input`) should contain a sub-directory for each of the subjects you want to have converted (i.e. `input\sub-001`, `input\sub-002` etc.). Within the **edf2bids** software you select `input` as the input directory and not the individual subject directories
+    The input directory (`input`) should contain a sub-directory for each of the subjects you want to have converted (i.e. `input\sub-001`, `input\sub-002` etc.). Within the **data2bids** software you select `input` as the input directory and not the individual subject directories
     
 Each day of recording should be in a separate folder within the subject directory:
 
