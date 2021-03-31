@@ -667,7 +667,6 @@
 <p>Install Homebrew by opening a Terminal window and pasting the following line. </p>
 <div class="highlight"><pre><span></span><code><span class="go">/usr/bin/ruby -e $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Homebrew asks you to enter your password so it can finalize the installation. Enter your user account password and hit enter</p>
@@ -676,7 +675,6 @@
 <p>Once Homebrew has finished installing, return to your terminal and run the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="go">brew install python3</span>
 </code></pre></div>
-
 </li>
 </ol>
 <h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h4>
@@ -686,7 +684,6 @@
 <div class="highlight"><pre><span></span><code><span class="go">sudo apt-get install python3.6</span>
 <span class="go">sudo apt install python3-pip</span>
 </code></pre></div>
-
 </li>
 </ol>
 <h3 id="compiling">Compiling<a class="headerlink" href="#compiling" title="Permanent link">&para;</a></h3>
@@ -695,33 +692,28 @@
 <p>Make a directory on your computer to store the source code:</p>
 <div class="highlight"><pre><span></span><code>mkdir /Documents/software
 </code></pre></div>
-
 </li>
 <li>
 <p>Clone a copy of the data2bids repository to your system:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> /Documents/software
 git clone https://github.com/greydongilmore/data2bids.git
 </code></pre></div>
-
 </li>
 <li>
 <p>Install the Python dependencies by opening a terminal, changing to the project directory and running:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> /data2bids
 python3 -m pip install -r requirements.txt
 </code></pre></div>
-
 </li>
 <li>
 <p>Once you have installed the dependencies, you can run the program from the Terminal (from within the data2bids directory):</p>
 <div class="highlight"><pre><span></span><code>python3 main.py
 </code></pre></div>
-
 </li>
 <li>
 <p>To compile data2bids for your platform, you can run the following:</p>
 <div class="highlight"><pre><span></span><code>python3 setup.py build_exe
 </code></pre></div>
-
 </li>
 </ol>
 <h2 id="other-useful-software">Other Useful Software<a class="headerlink" href="#other-useful-software" title="Permanent link">&para;</a></h2>
@@ -737,7 +729,6 @@ python3 -m pip install -r requirements.txt
 <div class="highlight"><pre><span></span><code>sudo apt-get update
 sudo apt-get install g++ make git qtbase5-dev-tools qtbase5-dev qt5-default
 </code></pre></div>
-
 <p>Then enter the following commands to download and install:</p>
 <div class="highlight"><pre><span></span><code>git clone https://gitlab.com/Teuniz/EDFbrowser.git
 <span class="nb">cd</span> EDFbrowser
@@ -746,7 +737,6 @@ make -j4
 sudo make install
 edfbrowser
 </code></pre></div>
-
 <p><br><br></p>
   
     

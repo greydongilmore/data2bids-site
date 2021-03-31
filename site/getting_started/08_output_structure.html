@@ -389,9 +389,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#electrodes-vs-channels" class="md-nav__link">
+    Electrodes vs. channels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#subject-directory" class="md-nav__link">
     Subject directory
   </a>
+  
+    <nav class="md-nav" aria-label="Subject directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_scanstsv" class="md-nav__link">
+    *_scans.tsv
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -400,14 +420,55 @@
     Session directory
   </a>
   
+    <nav class="md-nav" aria-label="Session directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_electrodestsv" class="md-nav__link">
+    *_electrodes.tsv
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#_channelstsv" class="md-nav__link">
+    *_channels.tsv
   </a>
   
-    <nav class="md-nav" aria-label="Example">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_annotationstsv" class="md-nav__link">
+    *_annotations.tsv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_eegjson-or-_ieegjson" class="md-nav__link">
+    *_eeg.json or *_ieeg.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_eegedf-or-_ieegedf" class="md-nav__link">
+    *_eeg.edf or *_ieeg.edf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-structure" class="md-nav__link">
+    Example Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Structure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -490,9 +551,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#electrodes-vs-channels" class="md-nav__link">
+    Electrodes vs. channels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#subject-directory" class="md-nav__link">
     Subject directory
   </a>
+  
+    <nav class="md-nav" aria-label="Subject directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_scanstsv" class="md-nav__link">
+    *_scans.tsv
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -501,14 +582,55 @@
     Session directory
   </a>
   
+    <nav class="md-nav" aria-label="Session directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_electrodestsv" class="md-nav__link">
+    *_electrodes.tsv
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#_channelstsv" class="md-nav__link">
+    *_channels.tsv
   </a>
   
-    <nav class="md-nav" aria-label="Example">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_annotationstsv" class="md-nav__link">
+    *_annotations.tsv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_eegjson-or-_ieegjson" class="md-nav__link">
+    *_eeg.json or *_ieeg.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_eegedf-or-_ieegedf" class="md-nav__link">
+    *_eeg.edf or *_ieeg.edf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-structure" class="md-nav__link">
+    Example Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Structure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -562,38 +684,121 @@
   
   <h2 id="bids-directory-structure">BIDS directory structure<a class="headerlink" href="#bids-directory-structure" title="Permanent link">&para;</a></h2>
 <p>The output directory will look like the following (each subject having their own directory):</p>
-<p><center><img src="../img/dir_structure_01.png" alt="drawing"/></center></p>
+<p><center><img src="../img/dir_structure_01.png" alt="drawing" width="30%"/></center></p>
 <ul>
 <li><strong>code:</strong> this directory will contain the code used to convert the EDF/EDF+ data for each EDF/EDF+ file for the subjects.</li>
 <li><strong>dataset_description.json:</strong> this file will contain the Json Metadata previously defined in the <strong>Settings</strong> menu. This is overall information about the dataset</li>
 <li><strong>participants.tsv:</strong> this file contains a list of all the subjects in the dataset and their general demographics (i.e. age, sex etc.). This file can also be used to store additional subject information that is not variable over the different visits and sessions. </li>
 </ul>
+<h3 id="electrodes-vs-channels">Electrodes vs. channels<a class="headerlink" href="#electrodes-vs-channels" title="Permanent link">&para;</a></h3>
+<p>It is important to understand the difference between the terms <code>electrode</code> and <code>channel</code>. An iEEG electrode is placed on or in the brain, whereas a channel is the combination of the analog differential amplifier and analog-to-digital converter that result in a potential (voltage) difference that is stored in the EEG/iEEG dataset.</p>
+<ul>
+<li><strong>Electrode:</strong> a single point of contact between the acquisition system and the recording site. Multiple electrodes can be organized as arrays, grids, leads, strips, probes, shafts, caps (for EEG) etc.</li>
+<li><strong>Channel:</strong> a single analog-to-digital converter in the recording system that regularly samples the value of a transducer, which results in the signal being represented as a time series in the digitized data. This can be connected to two electrodes (to measure the potential difference between them), a magnetic field or magnetic gradient sensor, temperature sensor, accelerometer etc.</li>
+</ul>
 <h3 id="subject-directory">Subject directory<a class="headerlink" href="#subject-directory" title="Permanent link">&para;</a></h3>
 <p>Within each subject directory there will be a different session sub-directory for each day of recording.</p>
-<p><center><img src="../img/sub_dir_structure_01.png" alt="drawing"/></center></p>
-<ul>
-<li><strong>*_scans.tsv:</strong> this file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF+ type etc.).</li>
-</ul>
-<p><center>
+<p><center><img src="../img/sub_dir_structure_01.png" alt="drawing" width="40%"/></center></p>
+<h4 id="_scanstsv">*_scans.tsv<a class="headerlink" href="#_scanstsv" title="Permanent link">&para;</a></h4>
+<p>The <code>*_scans.tsv</code> file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF+ type etc.).</p>
+<p><center></p>
 <figure>
   <img src="../img/scans_tsv.png" alt="drawing" />
-  <figcaption>Example content of the <strong>*_scans.tsv</strong> file.</figcaption>
+  <figcaption>Example content of the <b>*_scans.tsv</b> file.</figcaption>
 </figure>
-</center></p>
+<p></center></p>
+<ul>
+<li><strong>filename:</strong> relative filename for each EDF/EDF+ file.</li>
+<li><strong>acq_time:</strong> the date and time the recording was started in the format YYYY-MM-DDTHH:MM:SS (note: the <code>T</code> is used to separate the date from time)</li>
+<li><strong>duration:</strong> the total duration of the EDF/EDF+ file in decimal hours</li>
+<li><strong>edf_type:</strong> indicates the EDF type for the file, either continuous (EDF+C) or discontinuous (EDF+D) </li>
+</ul>
 <h3 id="session-directory">Session directory<a class="headerlink" href="#session-directory" title="Permanent link">&para;</a></h3>
 <p>Within each session sub-directory there will be a modality sub-directory (either eeg/ieeg). Within the modality sub-directory there will be five files, containing different information associated with the specific EDF/EDF+ file.</p>
-<p><center><img src="../img/ses_dir_structure_01.png" alt="drawing"/></center></p>
+<p><center><img src="../img/ses_dir_structure_01.png" alt="drawing" width="50%"/></center></p>
+<h4 id="_electrodestsv">*_electrodes.tsv<a class="headerlink" href="#_electrodestsv" title="Permanent link">&para;</a></h4>
+<p>The <code>*_electrodes.tsv</code> file contains information associated with the electrodes used to collect the data.</p>
+<p><center></p>
+<figure>
+  <img src="../img/electrodes_file.png" alt="drawing" width="80%"/>
+  <figcaption>Example content of the <b>*_electrodes.tsv</b> file.</figcaption>
+</figure>
+<p></center></p>
 <ul>
-<li><strong>*_electrodes.tsv:</strong> contains information associated with the electrodes used to collect the data.</li>
-<li><strong>*_annotations.tsv:</strong> contains all annotations present in the EDF/EDF+ file, identifiers have been scrubbed.</li>
-<li><strong>*_channels.tsv:</strong> contains information about each channel that was used in the recording.</li>
-<li><strong>*_eeg.json/</strong> <strong>or</strong> <strong>*_ieeg.json:</strong> contains metadata information about the EDF/EDF+ file.</li>
-<li><strong>*_eeg.edf/</strong> <strong>or</strong> <strong>*_ieeg.edf:</strong> contains the data in the de-identified EDF/EDF+ file.</li>
+<li><strong>name:</strong> label given to the specific channel during the recording.</li>
+<li><strong>x,y,z:</strong> the coordinates in MRI space for the specific electrode contact.</li>
+<li><strong>size:</strong> the diameter of the recording electrode in millimeters</li>
+<li><strong>type:</strong> the electrode type (i.e. depth, scalp etc.)</li>
+<li><strong>material:</strong> the electrode material.</li>
+<li><strong>manufacturer:</strong> the manufacturer of the electrode.</li>
 </ul>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<h4 id="_channelstsv">*_channels.tsv<a class="headerlink" href="#_channelstsv" title="Permanent link">&para;</a></h4>
+<p>The <code>*_channels.tsv</code> file contains information about each channel that was used in the recording.</p>
+<p><center></p>
+<figure>
+  <img src="../img/channels_file.png" alt="drawing" width="80%"/>
+  <figcaption>Example content of the <b>*_channels.tsv</b> file.</figcaption>
+</figure>
+<p></center></p>
+<ul>
+<li><strong>name:</strong> label of the specific channel.</li>
+<li><strong>type:</strong> type of channel (i.e. SEEG,EEG, DBS, EOG, ECG etc.)</li>
+<li><strong>units:</strong> physical unit of the value represented in this channel (i.e. <code>V</code> for Volt)</li>
+<li><strong>low_cutoff:</strong> frequency used for the low pass filter applied to the channel in Hz (note: if no low pass filter was applied, <code>n/a</code> is used).</li>
+<li><strong>high_cutoff:</strong> frequency used for the high pass filter applied to the channel in Hz (note: if no high pass filter was applied, <code>n/a</code> is used).</li>
+<li><strong>sampling_frequency:</strong> sampling rate of the channel in Hz.</li>
+<li><strong>notch:</strong> frequency used for the notch filter applied to the channel in Hz (note: if no notch filter was applied, <code>n/a</code> is used).</li>
+<li><strong>reference:</strong> label for the reference (i.e. 'mastoid', 'ElectrodeName01', 'intracranial' etc.). If the channel is not known then <code>n/a</code> is used.</li>
+<li><strong>group:</strong> which group of channels (grid/strip/seeg/depth) this channel belongs to. This is relevant because one group has one cable-bundle and noise can be shared.</li>
+</ul>
+<h4 id="_annotationstsv">*_annotations.tsv<a class="headerlink" href="#_annotationstsv" title="Permanent link">&para;</a></h4>
+<p>The <code>*_annotations.tsv</code> file contains all annotations present in the EDF+ file, identifiers have been scrubbed.</p>
+<p><center></p>
+<figure>
+  <img src="../img/annotations_file.png" alt="drawing" />
+  <figcaption>Example content of the <b>*_annotations.tsv</b> file.</figcaption>
+</figure>
+<p></center></p>
+<ul>
+<li><strong>onset:</strong> the time the event occurred, relative to the time the recording began.</li>
+<li><strong>duration:</strong> the duration of the marked event (-1 indicates no duration, which is default for all events).</li>
+<li><strong>time_abs:</strong> the absolute time for the event (real world time).</li>
+<li><strong>time_rel:</strong> the relative time for the event (time elapsed since the beginning of the recording).</li>
+<li><strong>event:</strong> the event marker text.</li>
+</ul>
+<h4 id="_eegjson-or-_ieegjson">*_eeg.json or *_ieeg.json<a class="headerlink" href="#_eegjson-or-_ieegjson" title="Permanent link">&para;</a></h4>
+<p>The <code>*_eeg.json/*_ieeg.json</code> file contains metadata information about the EDF/EDF+ file.</p>
+<p><center></p>
+<figure>
+  <img src="../img/json_sidecar_file.png" alt="drawing" width="50%" />
+  <figcaption>Example content of the <b>*_eeg.json</b> or <b>*_ieeg.json</b> file.</figcaption>
+</figure>
+<p></center></p>
+<ul>
+<li><strong>TaskName:</strong> name of the task, no two tasks should have the same name (i.e. <code>full</code> for a full 24hr recording, <code>clip</code> if the data has been clipped by the neurologist etc.)</li>
+<li><strong>InstitutionName:</strong> name of the institution in charge of the equipment that produced the composite instances.</li>
+<li><strong>InstitutionAddress:</strong> address of the institution in charge of the equipment that produced the composite instances.</li>
+<li><strong>Manufacturer:</strong> manufacturer of the amplifier system.</li>
+<li><strong>ManufacturersModelName:</strong> manufacturer's designation of the EEG/iEEG amplifier model.</li>
+<li><strong>SamplingFrequency:</strong> sampling frequency (in Hz) of all the EEG/iEEG channels in the recording</li>
+<li><strong>HardwareFilters:</strong> the frequencies of the temporal hardware filters applied, if none exist then <code>n/a</code> is used.</li>
+<li><strong>SoftwareFilters:</strong> the frequencies of the temporal software filters applied, if none exist then <code>n/a</code> is used.</li>
+<li><strong>*ChannelCount:</strong> number of the respective channels included in the recording (i.e. EEG, EOG, ECG, SEEG etc.)</li>
+<li><strong>PowerLineFrequency:</strong> frequency (in Hz) of the power grid where the EEG/iEEG recording was done (for example, 50 or 60).</li>
+<li><strong>RecordingDuration:</strong> length of the recording in decimal hours.</li>
+<li><strong>RecordingType:</strong> defines whether the recording is <code>continuous</code>, <code>discontinuous</code> or <code>epoched</code>, where <code>epoched</code> is limited to time windows about events of interest.</li>
+<li><strong>SubjectArtefactDescription:</strong> freeform description of the observed subject artifact and its possible cause (i.e. "door open", "nurse walked into room at 2 min", "seizure at 10 min").</li>
+<li><strong>iEEGPlacementScheme:</strong> freeform description of the placement of the EEG/iEEG electrodes.</li>
+<li><strong>iEEGElectrodeGroups:</strong> field to describe the way electrodes are grouped into strips, grids or depth probes.</li>
+<li><strong>iEEGReference:</strong> general description of the reference scheme used and (when applicable) of location of the reference electrode in the raw recordings (i.e. "left mastoid", "bipolar").</li>
+<li><strong>ElectrodeManufacturer:</strong> manufacturer for the electrodes used during the recording (i.e. AD-TECH, DIXI)</li>
+<li><strong>ElectricalStimulationParameters:</strong> free form description of stimulation parameters, such as frequency or shape.</li>
+</ul>
+<h4 id="_eegedf-or-_ieegedf">*_eeg.edf or *_ieeg.edf<a class="headerlink" href="#_eegedf-or-_ieegedf" title="Permanent link">&para;</a></h4>
+<p>The <code>*_eeg.edf/*_ieeg.edf</code> contains the raw electrophysiology data.</p>
+<h3 id="example-structure">Example Structure<a class="headerlink" href="#example-structure" title="Permanent link">&para;</a></h3>
 <h4 id="interactive">Interactive<a class="headerlink" href="#interactive" title="Permanent link">&para;</a></h4>
 <div id="tree"></div>
-
 <script>
     $(document).ready(function() {
       $.ajax({
@@ -610,11 +815,11 @@
 <ol>
 <li>
 <p>When the SPReD conversion is completed a new sub-directory will be created in the output directory. All unused BIDS files will be transferred to the <strong>bids_old</strong> sub-directory, while all the SPReD files will be moved to the <strong>SPReD</strong> sub-directory.</p>
-<p><center><img src="../img/bids_spred_03.png" alt="drawing"/></center></p>
+<p><center><img src="../img/bids_spred_03.png" alt="drawing" width="40%"/></center></p>
 </li>
 <li>
 <p>Within each sub-directory of the <strong>.zip</strong> folders the same files from the BIDS output will be found:</p>
-<p><center><img src="../img/ses_dir_structure_01.png" alt="drawing"/></center></p>
+<p><center><img src="../img/ses_dir_structure_01.png" alt="drawing" width="50%"/></center></p>
 </li>
 <li>
 <p>You will be uploading the <strong>.zip</strong> directories to Brain-CODE.</p>

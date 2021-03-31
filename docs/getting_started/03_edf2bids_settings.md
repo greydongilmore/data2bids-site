@@ -32,6 +32,7 @@ title: data2bids Settings
 
 	<center><img src="../img/metadata_03.png" alt="drawing"/></center>
     <br>
+    
 3. Once you have modified the information click **Save** and the information will be stored and used for every subsequent dataset processed by **data2bids**. You will not need to re-define these values, unless they change at your site.
 
 ## Main window settings panel
