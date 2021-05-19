@@ -124,6 +124,6 @@ For example, two signals signal_A and signal_B are acquired at 100 Hz and 5 Hz r
 
 ## EDF File Structure Diagram
 
-<center><img src="./img/edf_specs.svg" alt="drawing"/></center>
+<center><img src="./img/edf_specs.png" alt="drawing"/></center>
 
 <br><br>
