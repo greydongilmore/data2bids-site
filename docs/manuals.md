@@ -22,6 +22,10 @@ title: Product Manuals
 * <a href="static/epilepsy_mri_protocol_pre.pdf" target="_blank">Pre-op MRI sequences</a>
 * <a href="static/epilepsy_mri_protocol_post.pdf" target="_blank">Post-op MRI sequences</a>
 
+## EDFbrowser
+
+* <a href="https://www.teuniz.net/edfbrowser/EDFbrowser%20manual.html" target="_blank">EDFbrowser software manual</a>
+
 <br>
 <br>
 <br>
