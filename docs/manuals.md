@@ -1,6 +1,6 @@
 ---
 template: overrides/main_noedit.html
-title: Installation
+title: Product Manuals
 ---
 
 # Product Manuals
