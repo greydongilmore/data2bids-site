@@ -19,8 +19,8 @@ title: Product Manuals
 
 ## MRI 
 
-* <a href="static/epilepsy_mri_protocol_pre.pdf" target="_blank">Pre-op MRI sequences</a>
-* <a href="static/epilepsy_mri_protocol_post.pdf" target="_blank">Post-op MRI sequences</a>
+* <a href="static/epilepsy_mri_protocol_pre.pdf" target="_blank">LHSC pre-op MRI sequences</a>
+* <a href="static/epilepsy_mri_protocol_post.pdf" target="_blank">LHSC post-op MRI sequences</a>
 
 ## EDFbrowser
 
