@@ -66,3 +66,4 @@ nav:
     - Run Conversion: getting_started/07_run_conversion.md
     - Output Directory Structure: getting_started/08_output_structure.md
     - SPReD Upload [EpLink]: getting_started/09_spred_upload.md
+  - Manuals: manuals.md
