@@ -17,9 +17,10 @@ title: Product Manuals
 * <a href="static/AdTech_product_manual_2016.pdf" target="_blank">2016 Product Manual</a>
 * <a href="static/AdTech_product_manual_2015.pdf" target="_blank">2015 Product Manual</a>
 
-## MRI 
+## MRI
 
-* <a href="static/epilepsy_mri_protocol_pre.pdf" target="_blank">LHSC pre-op MRI sequences</a>
+* <a href="static/epilepsy_mri_protocol_pre_2021.pdf" target="_blank">2021 LHSC pre-op MRI sequences</a>
+* <a href="static/epilepsy_mri_protocol_pre_2018.pdf" target="_blank">2018 LHSC pre-op MRI sequences</a>
 * <a href="static/epilepsy_mri_protocol_post.pdf" target="_blank">LHSC post-op MRI sequences</a>
 
 ## EDFbrowser
