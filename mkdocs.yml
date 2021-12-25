@@ -55,15 +55,18 @@ extra_javascript:
 nav:
   - Home: index.md
   - Installation: installation.md
-  - Getting Started:
-    - Overview: getting_started/01_overview.md
-    - Definitions: getting_started/02_definitions.md
-    - data2bids Settings: getting_started/03_edf2bids_settings.md
-    - Export from NeuroWorks: getting_started/04_neuroworks_export.md
-    - Input Directory Setup: getting_started/05_input_dir_setup.md
-    - Imaging Directory Setup: getting_started/055_imaging_dir_setup.md
-    - Check EDF Type: getting_started/06_check_edf_type.md
-    - Run Conversion: getting_started/07_run_conversion.md
-    - Output Directory Structure: getting_started/08_output_structure.md
-    - SPReD Upload [EpLink]: getting_started/09_spred_upload.md
+  - Run data2bids:
+    - Overview: run_data2bids/01_overview.md
+    - Definitions: run_data2bids/02_definitions.md
+    - data2bids Settings: run_data2bids/03_edf2bids_settings.md
+    - Export from NeuroWorks: run_data2bids/04_neuroworks_export.md
+    - Input Directory Setup: run_data2bids/05_input_dir_setup.md
+    - Imaging Directory Setup: run_data2bids/055_imaging_dir_setup.md
+    - Check EDF Type: run_data2bids/06_check_edf_type.md
+    - Run Conversion: run_data2bids/07_run_conversion.md
+    - Output Directory Structure: run_data2bids/08_output_structure.md
+    - SPReD Upload [EpLink]: run_data2bids/09_spred_upload.md
+  - Run seeg2bids:
+    - Overview: run_seeg2bids/01_overview.md
+    - Output: run_seeg2bids/05_output.md
   - Product Manuals: manuals.md
