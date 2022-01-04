@@ -1,9 +1,11 @@
 ---
 template: overrides/main.html
-title: Output
+title: 
 ---
+#
+## seeg2bids output
 
-The outputs from _seeg2bids_ conform to the <a href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html" target="_blank">BIDS Derivatives specification</a>. In general, there are two classes of data outputs from _seeg2bids_:
+The output files from _seeg2bids_ conform to the <a href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html" target="_blank">BIDS Derivatives specification</a>. In general, there are two classes of data outputs from _seeg2bids_:
 
 1. **Visual QA (quality assessment):** summary figures are generated throughout the pipeline so the user can confirm accuracy.
 
