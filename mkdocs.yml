@@ -70,3 +70,5 @@ nav:
     - Overview: run_seeg2bids/01_overview.md
     - Output: run_seeg2bids/05_output.md
   - Product Manuals: manuals.md
+  - Other Software: other_software.md
+  - Open Datasets: open_datasets.md
