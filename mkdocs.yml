@@ -7,7 +7,7 @@ repo_url: https://github.com/greydongilmore/data2bids-site
 edit_uri: https://github.com/greydongilmore/data2bids-site/blob/master/docs
 
 # Copyright
-copyright: Copyright &copy; 2020 Greydon Gilmore
+copyright: Copyright &copy; 2022 Greydon Gilmore
 
 # Configuration
 dev_addr: 127.0.0.1:7000
