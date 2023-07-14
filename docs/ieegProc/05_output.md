@@ -14,7 +14,7 @@ The output files from _ieegProc_ conform to the <a href="https://bids-specificat
 
 The _ieegProc_ output directory has the following structure:
 
-```
+```java
 derivatives/
 	├── atlasreg/
 	│		├── dataset_description.json
@@ -67,7 +67,7 @@ After copying, each volume is renamed accordinly:
 
 Execpt for the filename, these volumes will remain an identical copy to the ones found in the `bids` directory.
 
-```py
+```java
 derivatives/
 	└── atlasreg/
 		└── sub-<subject_label>/
@@ -124,8 +124,6 @@ After the segmentation step, the following files will be generated:
 * `sub-<subject_label>_desc-atropos3seg_mapping.json`: 
 * `sub-P033_desc-atroposKseg_dseg.nii.gz`: 
 * `sub-P033_desc-atroposKseg_probseg.nii.gz`:
-
-
 
 
 ```java
@@ -208,8 +206,7 @@ derivatives/
 					└── sub-<subject_label>_space-MNI152NLin2009cSym_desc-affine_electrodevis.png
 ```
 
-
-### seeg_coordinates derivatives
+## seeg_coordinates derivatives
 
 The files within the `seeg_coordinates` derivatives directory are:
 
@@ -232,23 +229,3 @@ derivatives/
 				├── sub-<subject_label>_space-native_SEEGA.fcsv
 				└── sub-<subject_label>_space-native_SEEGA.tsv
 ```
-
-## Sample QA figures
-
-### Coregistration of T1w without contrast to T1w+gadolinum
-
-<center><img src="imgs/sub-P078_desc-masked_from-noncontrast_to-contrast_regqc.svg" alt="drawing"/></center>
-<br><br>
-
-### Coregistration of post-op CT to T1w+gadolinum
-
-<center><img src="imgs/sub-P078_desc-masked_from-ct_to-T1w_regqc.svg" alt="drawing"/></center>
-<br><br>
-
-### Electrode contact positions in 2D and 3D
-
-<center><img src="imgs/sub-P078_space-MNI152NLin2009cSym_desc-affine_electrodevis.png" alt="drawing"/></center>
-
-
-
-<center><embed type="text/html" src="imgs/sub-P078_space-MNI152NLin2009cSym_desc-affine_electrodes.html" width="900" height="700"/></center>
