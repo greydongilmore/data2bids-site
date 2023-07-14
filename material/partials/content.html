@@ -1,15 +1,11 @@
 {#-
   This file was automatically generated - do not edit
 -#}
-{% if page.edit_url %}
-  <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
-    {% include ".icons/material/pencil.svg" %}
-  </a>
-{% endif %}
-{% if "tags" in config.plugins %}
+{% if "material/tags" in config.plugins %}
   {% include "partials/tags.html" %}
 {% endif %}
-{% if not "\x3ch1" in page.content %}
+{% include "partials/actions.html" %}
+{% if "\x3ch1" not in page.content %}
   <h1>{{ page.title | d(config.site_name, true)}}</h1>
 {% endif %}
 {{ page.content }}
@@ -19,3 +15,5 @@
 ) %}
   {% include "partials/source-file.html" %}
 {% endif %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}

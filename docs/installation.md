@@ -1,5 +1,5 @@
 ---
-template: overrides/main_noedit.html
+template: main_noedit.html
 title: Installation
 ---
 

@@ -1,5 +1,5 @@
 ---
-template: overrides/main_noedit.html
+template: main_noedit.html
 ---
 
 <center><img src="./img/edf2bids_full_icon.svg" alt="drawing" style="width:60%;"/></center>

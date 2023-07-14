@@ -14,7 +14,7 @@ dev_addr: 127.0.0.1:7000
 use_directory_urls: false
 theme:
   name: material
-  custom_dir: material
+  custom_dir: material/overrides
   palette:
     scheme: 
     primary: red
@@ -32,7 +32,9 @@ theme:
 
 markdown_extensions:
   - admonition
+  - attr_list
   - codehilite
+  - def_list
   - toc:
       permalink: true
   - pymdownx.superfences
@@ -41,6 +43,19 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 extra_css:
   - stylesheets/extra.css
@@ -51,6 +66,9 @@ plugins:
 
 extra_javascript:
   - https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - Home: index.md
@@ -66,9 +84,9 @@ nav:
     - Run Conversion: run_data2bids/07_run_conversion.md
     - Output Directory Structure: run_data2bids/08_output_structure.md
     - SPReD Upload [EpLink]: run_data2bids/09_spred_upload.md
-  - Run seeg2bids:
-    - Overview: run_seeg2bids/01_overview.md
-    - Output: run_seeg2bids/05_output.md
+  - ieegProc:
+    - Overview: ieegProc/01_overview.md
+    - Output: ieegProc/05_output.md
   - Product Manuals: manuals.md
   - Other Software: other_software.md
   - Open Datasets: open_datasets.md

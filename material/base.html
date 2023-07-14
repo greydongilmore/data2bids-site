@@ -21,8 +21,14 @@
       {% if page.canonical_url %}
         <link rel="canonical" href="{{ page.canonical_url }}">
       {% endif %}
+      {% if page.previous_page %}
+        <link rel="prev" href="{{ page.previous_page.url | url }}">
+      {% endif %}
+      {% if page.next_page %}
+        <link rel="next" href="{{ page.next_page.url | url }}">
+      {% endif %}
       <link rel="icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-9.1.17">
     {% endblock %}
     {% block htmltitle %}
       {% if page.meta and page.meta.title %}
@@ -34,17 +40,10 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.1dff34a1.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.26e3688c.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
-        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.cbb835fc.min.css' | url }}">
-        {% if palette.primary %}
-          {% import "partials/palette.html" as map %}
-          {% set primary = map.primary(
-            palette.primary | replace(" ", "-") | lower
-          ) %}
-          <meta name="theme-color" content="{{ primary }}">
-        {% endif %}
+        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.ecc896b0.min.css' | url }}">
       {% endif %}
       {% include "partials/icons.html" %}
     {% endblock %}
@@ -61,25 +60,30 @@
         <style>:root{--md-text-font:"{{ text }}";--md-code-font:"{{ code }}"}</style>
       {% endif %}
     {% endblock %}
-    {% for path in config["extra_css"] %}
+    {% for path in config.extra_css %}
       <link rel="stylesheet" href="{{ path | url }}">
     {% endfor %}
     {% include "partials/javascripts/base.html" %}
     {% block analytics %}
       {% include "partials/integrations/analytics.html" %}
     {% endblock %}
+    {% if page.meta and page.meta.meta %}
+      {% for tag in page.meta.meta %}
+        <meta {% for key, value in tag.items() %} {{ key }}="{{value}}" {% endfor %}>
+      {% endfor %}
+    {% endif %}
     {% block extrahead %}{% endblock %}
   </head>
-  {% set direction = config.theme.direction or lang.t('direction') %}
+  {% set direction = config.theme.direction or lang.t("direction") %}
   {% if config.theme.palette %}
     {% set palette = config.theme.palette %}
     {% if not palette is mapping %}
       {% set palette = palette | first %}
     {% endif %}
-    {% set scheme  = palette.scheme  | replace(" ", "-") | lower %}
-    {% set primary = palette.primary | replace(" ", "-") | lower %}
-    {% set accent  = palette.accent  | replace(" ", "-") | lower %}
-    <body dir="{{ direction }}" data-md-color-scheme="{{ scheme }}" data-md-color-primary="{{ primary }}" data-md-color-accent="{{ accent }}">
+    {% set scheme  = palette.scheme  | d("default", true) %}
+    {% set primary = palette.primary | d("indigo", true) %}
+    {% set accent  = palette.accent  | d("indigo", true) %}
+    <body dir="{{ direction }}" data-md-color-scheme="{{ scheme | replace(' ', '-') }}" data-md-color-primary="{{ primary | replace(' ', '-') }}" data-md-color-accent="{{ accent | replace(' ', '-') }}">
   {% else %}
     <body dir="{{ direction }}">
   {% endif %}
@@ -94,7 +98,7 @@
       {% if page.toc | first is defined %}
         {% set skip = page.toc | first %}
         <a href="{{ skip.url | url }}" class="md-skip">
-          {{ lang.t('skip.link.title') }}
+          {{ lang.t("action.skip") }}
         </a>
       {% endif %}
     </div>
@@ -102,21 +106,29 @@
       {% if self.announce() %}
         <aside class="md-banner">
           <div class="md-banner__inner md-grid md-typeset">
+            {% if "announce.dismiss" in features %}
+              <button class="md-banner__button md-icon" aria-label="{{ lang.t('announce.dismiss') }}">
+                {% include ".icons/material/close.svg" %}
+              </button>
+            {% endif %}
             {% block announce %}{% endblock %}
           </div>
+          {% if "announce.dismiss" in features %}
+            {% include "partials/javascripts/announce.html" %}
+          {% endif %}
         </aside>
       {% endif %}
     </div>
     {% if config.extra.version %}
-      <div data-md-component="outdated" hidden>
-        <aside class="md-banner md-banner--warning">
-          {% if self.outdated() %}
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        {% if self.outdated() %}
+          <aside class="md-banner md-banner--warning">
             <div class="md-banner__inner md-grid md-typeset">
               {% block outdated %}{% endblock %}
             </div>
             {% include "partials/javascripts/outdated.html" %}
-          {% endif %}
-        </aside>
+          </aside>
+        {% endif %}
       </div>
     {% endif %}
     {% block header %}
@@ -125,7 +137,7 @@
     <div class="md-container" data-md-component="container">
       {% block hero %}{% endblock %}
       {% block tabs %}
-        {% if not "navigation.tabs.sticky" in features %}
+        {% if "navigation.tabs.sticky" not in features %}
           {% if "navigation.tabs" in features %}
             {% include "partials/tabs.html" %}
           {% endif %}
@@ -146,7 +158,7 @@
                 </div>
               </div>
             {% endif %}
-            {% if not "toc.integrate" in features %}
+            {% if "toc.integrate" not in features %}
               {% if page.meta and page.meta.hide %}
                 {% set hidden = "hidden" if "toc" in page.meta.hide %}
               {% endif %}
@@ -159,20 +171,22 @@
               </div>
             {% endif %}
           {% endblock %}
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              {% block content %}
-                {% include "partials/content.html" %}
-              {% endblock %}
-            </article>
-            {% include "partials/javascripts/content.html" %}
-          </div>
+          {% block container %}
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                {% block content %}
+                  {% include "partials/content.html" %}
+                {% endblock %}
+              </article>
+            </div>
+          {% endblock %}
+          {% include "partials/javascripts/content.html" %}
         </div>
         {% if "navigation.top" in features %}
-          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
             {% include ".icons/material/arrow-up.svg" %}
-            {{ lang.t('top.title') }}
-          </a>
+            {{ lang.t("top") }}
+          </button>
         {% endif %}
       </main>
       {% block footer %}
@@ -182,24 +196,34 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    {% if config.extra.consent %}
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            {% include "partials/consent.html" %}
+          </form>
+        </aside>
+      </div>
+      {% include "partials/javascripts/consent.html" %}
+    {% endif %}
     {% block config %}
       {%- set app = {
         "base": base_url,
         "features": features,
         "translations": {},
-        "search": "assets/javascripts/workers/search.b97dbffb.min.js" | url
+        "search": "assets/javascripts/workers/search.208ed371.min.js" | url
       } -%}
       {%- if config.extra.version -%}
         {%- set _ = app.update({ "version": config.extra.version }) -%}
+      {%- endif -%}
+      {%- if config.extra.tags -%}
+        {%- set _ = app.update({ "tags": config.extra.tags }) -%}
       {%- endif -%}
       {%- set translations = app.translations -%}
       {%- for key in [
         "clipboard.copy",
         "clipboard.copied",
-        "search.config.lang",
-        "search.config.pipeline",
-        "search.config.separator",
-        "search.placeholder",
         "search.result.placeholder",
         "search.result.none",
         "search.result.one",
@@ -207,7 +231,7 @@
         "search.result.more.one",
         "search.result.more.other",
         "search.result.term.missing",
-        "select.version.title"
+        "select.version"
       ] -%}
         {%- set _ = translations.update({ key: lang.t(key) }) -%}
       {%- endfor -%}
@@ -216,9 +240,13 @@
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.c99f48ec.min.js' | url }}"></script>
-      {% for path in config["extra_javascript"] %}
-        <script src="{{ path | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.b425cdc4.min.js' | url }}"></script>
+      {% for path in config.extra_javascript %}
+        {% if path.endswith(".mjs") %}
+          <script type="module" src="{{ path | url }}"></script>
+        {% else %}
+          <script src="{{ path | url }}"></script>
+        {% endif %}
       {% endfor %}
     {% endblock %}
   </body>
