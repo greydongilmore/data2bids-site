@@ -1,0 +1,2234 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Greydon Gilmore">
+      
+      
+      
+        <link rel="prev" href="manuals.html">
+      
+      
+        <link rel="next" href="open_datasets.html">
+      
+      <link rel="icon" href="img/edf2bids_icon.svg">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Other Software - data2bids v3.1</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#other-software" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="data2bids v3.1" class="md-header__button md-logo" aria-label="data2bids v3.1" data-md-component="logo">
+      
+  <img src="img/edf2bids_white_icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            data2bids v3.1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Other Software
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/greydongilmore/data2bids-site" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="data2bids v3.1" class="md-nav__button md-logo" aria-label="data2bids v3.1" data-md-component="logo">
+      
+  <img src="img/edf2bids_white_icon.svg" alt="logo">
+
+    </a>
+    data2bids v3.1
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/greydongilmore/data2bids-site" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation.html" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Run data2bids
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Run data2bids
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run_data2bids/01_overview.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run_data2bids/02_definitions.html" class="md-nav__link">
+        Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run_data2bids/03_edf2bids_settings.html" class="md-nav__link">
+        data2bids Settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run_data2bids/04_neuroworks_export.html" class="md-nav__link">
+        Export from NeuroWorks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run_data2bids/05_input_dir_setup.html" class="md-nav__link">
+        Input Directory Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run_data2bids/055_imaging_dir_setup.html" class="md-nav__link">
+        Imaging Directory Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run_data2bids/06_check_edf_type.html" class="md-nav__link">
+        Check EDF Type
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run_data2bids/07_run_conversion.html" class="md-nav__link">
+        Run Conversion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run_data2bids/08_output_structure.html" class="md-nav__link">
+        Output Directory Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run_data2bids/09_spred_upload.html" class="md-nav__link">
+        SPReD Upload [EpLink]
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          ieegProc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          ieegProc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ieegProc/01_overview.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ieegProc/05_output.html" class="md-nav__link">
+        Output
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="manuals.html" class="md-nav__link">
+        Product Manuals
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Other Software
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="other_software.html" class="md-nav__link md-nav__link--active">
+        Other Software
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relevant-software" class="md-nav__link">
+    Relevant Software
+  </a>
+  
+    <nav class="md-nav" aria-label="Relevant Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edfbrowser" class="md-nav__link">
+    EDFBrowser
+  </a>
+  
+    <nav class="md-nav" aria-label="EDFBrowser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-purpose-tools" class="md-nav__link">
+    General Purpose Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="General Purpose Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mne" class="md-nav__link">
+    MNE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neural-ensemble-tools" class="md-nav__link">
+    Neural Ensemble Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wonambi" class="md-nav__link">
+    Wonambi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neurokit2" class="md-nav__link">
+    NeuroKit2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fieldtrip" class="md-nav__link">
+    FieldTrip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brainstorm" class="md-nav__link">
+    BrainStorm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eeglab" class="md-nav__link">
+    EEGLab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spm" class="md-nav__link">
+    SPM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nutmeg" class="md-nav__link">
+    NutMEG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signaleeg" class="md-nav__link">
+    Signaleeg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bbci-berlin-brain-computer-interface" class="md-nav__link">
+    BBCI - Berlin brain-computer interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eegutils" class="md-nav__link">
+    EEGUtils
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eeguana" class="md-nav__link">
+    EEGuana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eegjl" class="md-nav__link">
+    EEG.jl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartool" class="md-nav__link">
+    CarTool
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standalone-tools" class="md-nav__link">
+    Standalone Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Standalone Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neurodsp" class="md-nav__link">
+    NeuroDSP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specparam-formerly-fooof" class="md-nav__link">
+    SpecParam (formerly 'fooof')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bycycle" class="md-nav__link">
+    ByCycle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#irasa" class="md-nav__link">
+    IRASA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frites-framework-for-information-theoretic-analysis-of-electrophysiological-data-and-statistics" class="md-nav__link">
+    Frites - Framework for Information Theoretic analysis of Electrophysiological data and Statistics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antropy" class="md-nav__link">
+    Antropy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ptsa-python-time-series-analysis" class="md-nav__link">
+    PTSA - Python Time Series Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ghostipy-general-hub-of-spectral-techniques-in-python" class="md-nav__link">
+    GhostiPy - General Hub Of Spectral Techniques In Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-connectivity" class="md-nav__link">
+    Spectral Connectivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-connectivity-toolbox-for-python" class="md-nav__link">
+    Brain Connectivity Toolbox for Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensor-pac" class="md-nav__link">
+    Tensor PAC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pactools" class="md-nav__link">
+    PACTools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyeeg" class="md-nav__link">
+    PyEEG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecogtools" class="md-nav__link">
+    ECoGTools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eelbrain" class="md-nav__link">
+    EELBrain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yasa-yet-another-spindle-algorithm" class="md-nav__link">
+    YASA - Yet another spindle algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kcsd-kernel-current-source-density" class="md-nav__link">
+    kCSD - kernel Current Source Density
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emd-empirical-mode-decomposition" class="md-nav__link">
+    EMD - Empirical Mode Decomposition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ebosc-extended-better-oscillation-detector" class="md-nav__link">
+    eBOSC - extended Better OSCillation detector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-brain-electrophysiological-recording-stimulation" class="md-nav__link">
+    BEST - Brain Electrophysiological recording &amp; STimulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restingiaf" class="md-nav__link">
+    restingIAF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-opposition-code" class="md-nav__link">
+    Phase Opposition Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adam-amsterdam-decoding-and-modeling-toolbox" class="md-nav__link">
+    ADAM - Amsterdam Decoding and Modeling Toolbox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hermes" class="md-nav__link">
+    HERMES
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sereega-simulating-event-related-eeg-activity" class="md-nav__link">
+    SEREEGA - Simulating Event-Related EEG Activity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unfold" class="md-nav__link">
+    UNFOLD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ept-tfce" class="md-nav__link">
+    ept-TFCE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#era-erp-reliability-analysis" class="md-nav__link">
+    ERA - ERP Reliability Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchsqueezing" class="md-nav__link">
+    SynchSqueezing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automagic" class="md-nav__link">
+    AutoMagic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mvgc-multivariate-granger-causality-toolbox" class="md-nav__link">
+    MVGC - Multivariate Granger Causality Toolbox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openmeeg" class="md-nav__link">
+    OpenMEEG
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    Plugins
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autoreject" class="md-nav__link">
+    AutoReject
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mne-bids" class="md-nav__link">
+    MNE-BIDS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyprep" class="md-nav__link">
+    PyPREP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prep-pipeline" class="md-nav__link">
+    PREP Pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relax" class="md-nav__link">
+    RELAX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjust" class="md-nav__link">
+    ADJUST
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erplab" class="md-nav__link">
+    ERPlab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limo-linear-modeling" class="md-nav__link">
+    LIMO - Linear Modeling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sift-source-information-flow-toolbox" class="md-nav__link">
+    SIFT - Source Information Flow Toolbox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpt-measure-projection-toolbox" class="md-nav__link">
+    MPT - Measure Projection Toolbox
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neuro-tools" class="md-nav__link">
+    Neuro Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Neuro Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nibabel" class="md-nav__link">
+    nibabel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nilearn" class="md-nav__link">
+    nilearn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visbrain" class="md-nav__link">
+    Visbrain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pycortex" class="md-nav__link">
+    PyCortex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brainspace" class="md-nav__link">
+    BrainSpace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neuromaps" class="md-nav__link">
+    neuromaps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="open_datasets.html" class="md-nav__link">
+        Open Datasets
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relevant-software" class="md-nav__link">
+    Relevant Software
+  </a>
+  
+    <nav class="md-nav" aria-label="Relevant Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edfbrowser" class="md-nav__link">
+    EDFBrowser
+  </a>
+  
+    <nav class="md-nav" aria-label="EDFBrowser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-purpose-tools" class="md-nav__link">
+    General Purpose Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="General Purpose Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mne" class="md-nav__link">
+    MNE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neural-ensemble-tools" class="md-nav__link">
+    Neural Ensemble Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wonambi" class="md-nav__link">
+    Wonambi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neurokit2" class="md-nav__link">
+    NeuroKit2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fieldtrip" class="md-nav__link">
+    FieldTrip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brainstorm" class="md-nav__link">
+    BrainStorm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eeglab" class="md-nav__link">
+    EEGLab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spm" class="md-nav__link">
+    SPM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nutmeg" class="md-nav__link">
+    NutMEG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signaleeg" class="md-nav__link">
+    Signaleeg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bbci-berlin-brain-computer-interface" class="md-nav__link">
+    BBCI - Berlin brain-computer interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eegutils" class="md-nav__link">
+    EEGUtils
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eeguana" class="md-nav__link">
+    EEGuana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eegjl" class="md-nav__link">
+    EEG.jl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartool" class="md-nav__link">
+    CarTool
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standalone-tools" class="md-nav__link">
+    Standalone Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Standalone Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neurodsp" class="md-nav__link">
+    NeuroDSP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specparam-formerly-fooof" class="md-nav__link">
+    SpecParam (formerly 'fooof')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bycycle" class="md-nav__link">
+    ByCycle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#irasa" class="md-nav__link">
+    IRASA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frites-framework-for-information-theoretic-analysis-of-electrophysiological-data-and-statistics" class="md-nav__link">
+    Frites - Framework for Information Theoretic analysis of Electrophysiological data and Statistics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antropy" class="md-nav__link">
+    Antropy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ptsa-python-time-series-analysis" class="md-nav__link">
+    PTSA - Python Time Series Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ghostipy-general-hub-of-spectral-techniques-in-python" class="md-nav__link">
+    GhostiPy - General Hub Of Spectral Techniques In Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-connectivity" class="md-nav__link">
+    Spectral Connectivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-connectivity-toolbox-for-python" class="md-nav__link">
+    Brain Connectivity Toolbox for Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensor-pac" class="md-nav__link">
+    Tensor PAC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pactools" class="md-nav__link">
+    PACTools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyeeg" class="md-nav__link">
+    PyEEG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecogtools" class="md-nav__link">
+    ECoGTools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eelbrain" class="md-nav__link">
+    EELBrain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yasa-yet-another-spindle-algorithm" class="md-nav__link">
+    YASA - Yet another spindle algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kcsd-kernel-current-source-density" class="md-nav__link">
+    kCSD - kernel Current Source Density
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emd-empirical-mode-decomposition" class="md-nav__link">
+    EMD - Empirical Mode Decomposition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ebosc-extended-better-oscillation-detector" class="md-nav__link">
+    eBOSC - extended Better OSCillation detector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-brain-electrophysiological-recording-stimulation" class="md-nav__link">
+    BEST - Brain Electrophysiological recording &amp; STimulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restingiaf" class="md-nav__link">
+    restingIAF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-opposition-code" class="md-nav__link">
+    Phase Opposition Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adam-amsterdam-decoding-and-modeling-toolbox" class="md-nav__link">
+    ADAM - Amsterdam Decoding and Modeling Toolbox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hermes" class="md-nav__link">
+    HERMES
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sereega-simulating-event-related-eeg-activity" class="md-nav__link">
+    SEREEGA - Simulating Event-Related EEG Activity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unfold" class="md-nav__link">
+    UNFOLD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ept-tfce" class="md-nav__link">
+    ept-TFCE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#era-erp-reliability-analysis" class="md-nav__link">
+    ERA - ERP Reliability Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchsqueezing" class="md-nav__link">
+    SynchSqueezing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automagic" class="md-nav__link">
+    AutoMagic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mvgc-multivariate-granger-causality-toolbox" class="md-nav__link">
+    MVGC - Multivariate Granger Causality Toolbox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openmeeg" class="md-nav__link">
+    OpenMEEG
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    Plugins
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autoreject" class="md-nav__link">
+    AutoReject
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mne-bids" class="md-nav__link">
+    MNE-BIDS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyprep" class="md-nav__link">
+    PyPREP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prep-pipeline" class="md-nav__link">
+    PREP Pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relax" class="md-nav__link">
+    RELAX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjust" class="md-nav__link">
+    ADJUST
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erplab" class="md-nav__link">
+    ERPlab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limo-linear-modeling" class="md-nav__link">
+    LIMO - Linear Modeling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sift-source-information-flow-toolbox" class="md-nav__link">
+    SIFT - Source Information Flow Toolbox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpt-measure-projection-toolbox" class="md-nav__link">
+    MPT - Measure Projection Toolbox
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neuro-tools" class="md-nav__link">
+    Neuro Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Neuro Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nibabel" class="md-nav__link">
+    nibabel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nilearn" class="md-nav__link">
+    nilearn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visbrain" class="md-nav__link">
+    Visbrain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pycortex" class="md-nav__link">
+    PyCortex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brainspace" class="md-nav__link">
+    BrainSpace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neuromaps" class="md-nav__link">
+    neuromaps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+    
+  
+  <h1 id="other-software">Other Software<a class="headerlink" href="#other-software" title="Permanent link">&para;</a></h1>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#relevant-software">Relevant Software</a></li>
+<li><a href="#general-purpose-tools">General Purpose Tools</a></li>
+<li><a href="#standalone-tools">Standalone Tools</a></li>
+<li><a href="#plugins">Plugins</a></li>
+<li><a href="#neuro-tools">Neuro Tools</a></li>
+</ul>
+<h2 id="relevant-software">Relevant Software<a class="headerlink" href="#relevant-software" title="Permanent link">&para;</a></h2>
+<h3 id="edfbrowser">EDFBrowser<a class="headerlink" href="#edfbrowser" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.teuniz.net/edfbrowser/" target="_blank">EDFBrowser</a> (developed by Teunis van Beelen) is a free, open-source, viewer/toolbox for EEG/IEEG data. It is a great tool to use when attempting to organize your input directory for <strong>data2bids</strong>.</p>
+<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
+<p>For 64-bit windows download <a href="https://www.teuniz.net/edfbrowser/setup_edfbrowser_177_64bit.zip" target="_blank">this file</a>.</p>
+<p>For 32-bit Windows download <a href="https://www.teuniz.net/edfbrowser/setup_edfbrowser_177_32bit.zip" target="_blank">this file</a>.</p>
+<h4 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">&para;</a></h4>
+<p>You can download the latests <code>.dmg</code> file from <a href="https://gitlab.com/whitone/EDFbrowser/-/releases" target="_blank">this website</a>.</p>
+<h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h4>
+<p>To install on Linux, you must first have the dependencies installed (<code>g++</code>, <code>Qt5</code>):</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>g++<span class="w"> </span>make<span class="w"> </span>git<span class="w"> </span>qtbase5-dev-tools<span class="w"> </span>qtbase5-dev<span class="w"> </span>qt5-default
+</span></code></pre></div>
+<p>Then enter the following commands to download and install:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://gitlab.com/Teuniz/EDFbrowser.git
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>EDFbrowser
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>qmake
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>make<span class="w"> </span>-j4
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sudo<span class="w"> </span>make<span class="w"> </span>install
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>edfbrowser
+</span></code></pre></div>
+<h2 id="general-purpose-tools">General Purpose Tools<a class="headerlink" href="#general-purpose-tools" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following summary was compiled by <a href='https://github.com/TomDonoghue' target="_blank"> <strong>TomDonoghue</strong> </a>, in this <a href='https://github.com/openlists/ElectrophysiologySoftware' target="_blank">GitHub repository</a>.</p>
+</div>
+<p>The following are general purpose platforms, with functionality including: loading data, preprocessing, visualization, standard analysis, and making figures.</p>
+<h3 id="mne">MNE<a class="headerlink" href="#mne" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>MNE</code> is a general purpose tool for processing, analyzing, and visualizing M/EEG data.</p>
+<p><a href="https://martinos.org/mne/stable/index.html">HomePage</a> -
+<a href="https://github.com/mne-tools/mne-python">Github</a> -
+<a href="https://doi.org/10.1016/j.neuroimage.2013.10.027">Paper</a></p>
+<h3 id="neural-ensemble-tools">Neural Ensemble Tools<a class="headerlink" href="#neural-ensemble-tools" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><a href="https://neuralensemble.org/">Neural Ensemble</a> is an initiative for open-source software in neuroscience and includes a set of tools for managing and analyzing electrophysiology data.</p>
+<p><code>neo</code> is a tool for representing electrophysiology data, and reading neurophysiological file formats.</p>
+<p><a href="https://neo.readthedocs.io/en/latest/">HomePage</a> -
+<a href="https://github.com/NeuralEnsemble/python-neo">Github</a></p>
+<p><code>elephant</code> is a tool for analyzing electrophysiological data.</p>
+<p><a href="https://neuralensemble.org/elephant/">HomePage</a> -
+<a href="https://github.com/NeuralEnsemble/elephant">Github</a></p>
+<h3 id="wonambi">Wonambi<a class="headerlink" href="#wonambi" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" />
+<img alt="Language" src="https://img.shields.io/badge/GUI-yes-lightgrey.svg" /></p>
+<p><code>Wonambi</code> is a general purpose tool for processing, analyzing, and visualizing EEG data, including specific tools focused on sleep scoring and analysis.</p>
+<p><a href="https://wonambi-python.github.io">HomePage</a> -
+<a href="https://github.com/wonambi-python/wonambi">Github</a></p>
+<h3 id="neurokit2">NeuroKit2<a class="headerlink" href="#neurokit2" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>NeuroKit2</code> is a tool for neurophysiological signal processing.</p>
+<p><a href="https://neurokit2.readthedocs.io/en/latest/">HomePage</a> -
+<a href="https://github.com/neuropsychology/NeuroKit">Github</a></p>
+<h3 id="fieldtrip">FieldTrip<a class="headerlink" href="#fieldtrip" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" />
+<img alt="Language" src="https://img.shields.io/badge/GUI-yes-lightgrey.svg" /></p>
+<p><code>FieldTrip</code> is a general purpose tool for processing, analyzing, and visualizing M/EEG and iEEG/ECoG data.</p>
+<p><a href="http://www.fieldtriptoolbox.org">HomePage</a> -
+<a href="https://github.com/fieldtrip/fieldtrip">Github</a> -
+<a href="https://doi.org/10.1155/2011/156869">Paper</a></p>
+<h3 id="brainstorm">BrainStorm<a class="headerlink" href="#brainstorm" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" />
+<img alt="Language" src="https://img.shields.io/badge/GUI-yes-lightgrey.svg" /></p>
+<p><code>BrainStorm</code> is a general purpose tool for processing, analyzing and visualizing focused primarily on MEG data, with additional support for EEG &amp; ECoG data.</p>
+<p><a href="https://neuroimage.usc.edu/brainstorm/">HomePage</a> -
+<a href="https://github.com/brainstorm-tools/brainstorm3">Github</a> -
+<a href="https://doi.org/10.1155/2011/879716">Paper</a></p>
+<h3 id="eeglab">EEGLab<a class="headerlink" href="#eeglab" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" />
+<img alt="Language" src="https://img.shields.io/badge/GUI-yes-lightgrey.svg" /></p>
+<p><code>EEGLab</code> is a general purpose tool for processing, analyzing, and visualizing EEG data.</p>
+<p><a href="https://sccn.ucsd.edu/eeglab/index.php">HomePage</a> -
+<a href="https://doi.org/10.1016/j.jneumeth.2003.10.009">Paper</a></p>
+<h3 id="spm">SPM<a class="headerlink" href="#spm" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" />
+<img alt="Language" src="https://img.shields.io/badge/GUI-yes-lightgrey.svg" /></p>
+<p><code>SPM</code> is a general purpose toolbox for neuroimaging, including support for processing M/EEG data.</p>
+<p><a href="https://www.fil.ion.ucl.ac.uk/spm/">HomePage</a></p>
+<h3 id="nutmeg">NutMEG<a class="headerlink" href="#nutmeg" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>NutMEG</code> is a general purpose tool for processing, analyzing, and visualizing MEG data.</p>
+<p><a href="https://nitrc.org/plugins/mwiki/index.php/nutmeg:MainPage">HomePage</a> -
+<a href="https://github.com/UCSFBiomagneticImagingLab/nutmeg">Github</a> -
+<a href="https://doi.org/10.1155/2011/758973">Paper</a></p>
+<h3 id="signaleeg">Signaleeg<a class="headerlink" href="#signaleeg" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>Signaleeg</code> is a general purpose tool for processing and analyzing EEG data, with a focus on signal-data mining.</p>
+<p><a href="https://caleta.udg.edu/git/eXiT_Research_Group/Signaleeg/src/branch/v1">Code</a> -
+<a href="https://doi.org/10.1007/s12021-020-09507-2">Paper</a></p>
+<h3 id="bbci-berlin-brain-computer-interface">BBCI - Berlin brain-computer interface<a class="headerlink" href="#bbci-berlin-brain-computer-interface" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p>The <code>BBCI</code> tool is collection of tools for online and offline analyses for brain-computer interface experiments.</p>
+<p><a href="https://github.com/bbci/bbci_public">Github</a> -
+<a href="https://doi.org/10.3389/fnins.2016.00530">Paper</a></p>
+<h3 id="eegutils">EEGUtils<a class="headerlink" href="#eegutils" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-R-lightgrey.svg" /></p>
+<p><code>EEGUtils</code> is a general purpose tool for processing, analyzing, and visualizing EEG data.</p>
+<p><a href="https://bnicenboim.github.io/eeguana/">HomePage</a> -
+<a href="https://github.com/craddm/eegUtils">Github</a></p>
+<h3 id="eeguana">EEGuana<a class="headerlink" href="#eeguana" title="Permanent link">&para;</a></h3>
+<p><code>EEGuana</code> is a package for working with EEG data.</p>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-R-lightgrey.svg" /></p>
+<p><a href="https://craddm.github.io/eegUtils/">HomePage</a> -
+<a href="https://github.com/bnicenboim/eeguana/tree/master/R">Github</a></p>
+<h3 id="eegjl">EEG.jl<a class="headerlink" href="#eegjl" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Julia-green.svg" /></p>
+<p><code>EEG.jl</code> is library for processing EEG data.</p>
+<p><a href="https://eegjl.readthedocs.io/en/latest/">HomePage</a> -
+<a href="https://github.com/rob-luke/EEG.jl">Github</a></p>
+<h3 id="cartool">CarTool<a class="headerlink" href="#cartool" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-C++-yellowgreen.svg" /></p>
+<p><code>CarTool</code> is an EEG analysis toolbox.</p>
+<p><a href="https://sites.google.com/site/cartoolcommunity/">HomePage</a> -
+<a href="https://doi.org/10.1155/2011/813870">Paper</a></p>
+<h2 id="standalone-tools">Standalone Tools<a class="headerlink" href="#standalone-tools" title="Permanent link">&para;</a></h2>
+<p>The following are standalone tools, independent of general software platforms, for specific purposes.</p>
+<h3 id="neurodsp">NeuroDSP<a class="headerlink" href="#neurodsp" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>NeuroDSP</code> is a package for calculating a broad range of measures on neural time series, including a range of time-domain measures such as waveform shape analyses.</p>
+<p><a href="https://neurodsp-tools.github.io/">Homepage</a> -
+<a href="https://github.com/neurodsp-tools/neurodsp">Github</a> -
+<a href="https://doi.org/10.21105/joss.01272">Paper</a></p>
+<h3 id="specparam-formerly-fooof">SpecParam (formerly 'fooof')<a class="headerlink" href="#specparam-formerly-fooof" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>SpecParam</code> (formerly called <code>fooof</code>) is a package for parameterizing neural power spectra.</p>
+<p><a href="https://fooof-tools.github.io/">Homepage</a> -
+<a href="https://github.com/fooof-tools/fooof">Github</a> -
+<a href="https://doi.org/10.1038/s41593-020-00744-x">Paper</a></p>
+<h3 id="bycycle">ByCycle<a class="headerlink" href="#bycycle" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>ByCycle</code> is a tool for cycle-by-cycle analyses of neural oscillations.</p>
+<p><a href="https://bycycle-tools.github.io/">Homepage</a> -
+<a href="https://github.com/bycycle-tools/bycycle">Github</a> -
+<a href="https://doi.org/10.1152/jn.00273.2019">Paper</a></p>
+<h3 id="irasa">IRASA<a class="headerlink" href="#irasa" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p>A Python implementation of the 'irregular resampling auto-spectral analysis'.
+Note that this is a re-implementation of the algorithm described in the paper.</p>
+<p><a href="https://github.com/jrudoler/irasa">Github</a> -
+<a href="https://doi.org/10.1007/s10548-015-0448-0">Paper</a></p>
+<h3 id="frites-framework-for-information-theoretic-analysis-of-electrophysiological-data-and-statistics">Frites - Framework for Information Theoretic analysis of Electrophysiological data and Statistics<a class="headerlink" href="#frites-framework-for-information-theoretic-analysis-of-electrophysiological-data-and-statistics" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>FRITES</code> is package for computing information-theoretic measures on human and electrophysiological data.</p>
+<p><a href="https://brainets.github.io/frites/">Homepage</a> -
+<a href="https://github.com/brainets/frites">Github</a></p>
+<h3 id="antropy">Antropy<a class="headerlink" href="#antropy" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>Antropy</code> is a package for computing entropy and complexity measures on EEG data.</p>
+<p><a href="https://raphaelvallat.com/antropy/build/html/index.html">Homepage</a> -
+<a href="https://github.com/raphaelvallat/antropy">Github</a></p>
+<h3 id="ptsa-python-time-series-analysis">PTSA - Python Time Series Analysis<a class="headerlink" href="#ptsa-python-time-series-analysis" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>PTSA</code> is package for time series analysis in Python, focused on analyzing electrophysiological data.</p>
+<p><a href="https://pennmem.github.io/ptsa_new/html/index.html">Homepage</a> -
+<a href="https://github.com/pennmem/ptsa_new">Github</a></p>
+<h3 id="ghostipy-general-hub-of-spectral-techniques-in-python">GhostiPy - General Hub Of Spectral Techniques In Python<a class="headerlink" href="#ghostipy-general-hub-of-spectral-techniques-in-python" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>Ghostipy</code> is a toolbox for signal processing and spectral analyses.</p>
+<p><a href="https://github.com/kemerelab/ghostipy">Github</a> -
+<a href="https://doi.org/10.1523/ENEURO.0202-21.2021">Paper</a></p>
+<h3 id="spectral-connectivity">Spectral Connectivity<a class="headerlink" href="#spectral-connectivity" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>Spectral Connectivity</code> is a package for functional connectivity and coherence related measures.</p>
+<p><a href="https://spectral-connectivity.readthedocs.io/en/latest/index.html">HomePage</a> -
+<a href="https://github.com/Eden-Kramer-Lab/spectral_connectivity">Github</a></p>
+<h3 id="brain-connectivity-toolbox-for-python">Brain Connectivity Toolbox for Python<a class="headerlink" href="#brain-connectivity-toolbox-for-python" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p>The <code>Brain Connectivity Toolbox</code> is a package for brain connectivity measures.</p>
+<p><a href="https://github.com/aestrivex/bctpy">Github</a></p>
+<h3 id="tensor-pac">Tensor PAC<a class="headerlink" href="#tensor-pac" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>TensorPAC</code> is a tool for calculating phase-amplitude coupling measures, using tensors and parallel computing.</p>
+<p><a href="https://etiennecmb.github.io/tensorpac/">HomePage</a> -
+<a href="https://github.com/EtienneCmb/tensorpac">Github</a> -
+<a href="https://doi.org/10.1371/journal.pcbi.1008302">Paper</a></p>
+<h3 id="pactools">PACTools<a class="headerlink" href="#pactools" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>PACTools</code> is a package for calculating phase-amplitude coupling measures in neural time series.</p>
+<p><a href="https://pactools.github.io">HomePage</a> -
+<a href="https://github.com/pactools/pactools">Github</a></p>
+<h3 id="pyeeg">PyEEG<a class="headerlink" href="#pyeeg" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>PyEEG</code> includes some implementations of information theoretic and complexity related measures for neural time series.</p>
+<p><a href="https://github.com/forrestbao/pyeeg">Github</a> -
+<a href="https://doi.org/10.1155/2011/406391">Paper</a></p>
+<h3 id="ecogtools">ECoGTools<a class="headerlink" href="#ecogtools" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>ECoGTools</code> is a collection of tools for analyzing ECoG data.</p>
+<p><a href="https://github.com/choldgraf/ecogtools">Github</a></p>
+<h3 id="eelbrain">EELBrain<a class="headerlink" href="#eelbrain" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>EELBrain</code> is a tool for statistical analysis of M/EEG data.</p>
+<p><a href="https://eelbrain.readthedocs.io/en/stable/index.html">HomePage</a> -
+<a href="https://github.com/christianbrodbeck/Eelbrain">Github</a> -
+<a href="https://www.biorxiv.org/content/10.1101/2021.08.01.454687v1">Paper</a></p>
+<h3 id="yasa-yet-another-spindle-algorithm">YASA - Yet another spindle algorithm<a class="headerlink" href="#yasa-yet-another-spindle-algorithm" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>YASA</code> is a package for analyzing polysomnograghy recordings.</p>
+<p><a href="https://raphaelvallat.com/yasa/build/html/index.html">HomePage</a> -
+<a href="https://github.com/raphaelvallat/yasa">Github</a></p>
+<h3 id="kcsd-kernel-current-source-density">kCSD - kernel Current Source Density<a class="headerlink" href="#kcsd-kernel-current-source-density" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p>The <code>kCSD</code> tool implements kernel Current Source Density.</p>
+<p><a href="https://kcsd-python.readthedocs.io/en/latest/">HomePage</a> -
+<a href="https://github.com/Neuroinflab/kCSD-python">Github</a> -
+<a href="https://www.biorxiv.org/content/10.1101/708511v1.abstract">Paper</a></p>
+<h3 id="emd-empirical-mode-decomposition">EMD - Empirical Mode Decomposition<a class="headerlink" href="#emd-empirical-mode-decomposition" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p>The <code>EMD</code> toolbox implements empirical mode decomposition and Hilbert-Huang spectral analyses.</p>
+<p><a href="https://emd.readthedocs.io/">HomePage</a> -
+<a href="https://gitlab.com/emd-dev/emd">Code</a> -
+<a href="http://doi.org/10.21105/joss.02977">Paper</a></p>
+<h3 id="ebosc-extended-better-oscillation-detector">eBOSC - extended Better OSCillation detector<a class="headerlink" href="#ebosc-extended-better-oscillation-detector" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>eBOSC</code> is a tool for oscillation detection and measurement.</p>
+<p><a href="https://github.com/jkosciessa/eBOSC">Github</a> -
+<a href="http://doi.org/10.1016/j.neuroimage.2019.116331">Paper</a></p>
+<h3 id="best-brain-electrophysiological-recording-stimulation">BEST - Brain Electrophysiological recording &amp; STimulation<a class="headerlink" href="#best-brain-electrophysiological-recording-stimulation" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>BEST</code> is a tool for designing and running non-invasive brain stimulation experiments.</p>
+<p><a href="https://www.best-toolbox.org/">Homepage</a> -
+<a href="https://github.com/umair-hassan/best-toolbox">Github</a> -
+<a href="https://doi.org/10.1016/j.brs.2021.11.017">Paper</a></p>
+<h3 id="restingiaf">restingIAF<a class="headerlink" href="#restingiaf" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>RestingIAF</code> is a tool for estimating the peak individual alpha frequency.</p>
+<p><a href="https://github.com/corcorana/restingIAF">Github</a> -
+<a href="https://doi.org/10.1111/psyp.13064">Paper</a></p>
+<h3 id="phase-opposition-code">Phase Opposition Code<a class="headerlink" href="#phase-opposition-code" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p>Phase Opposition is a collection of functions for calculating phase opposition measures.</p>
+<p><a href="http://www.cerco.ups-tlse.fr/~rufin/PhaseOppositionCode/">HomePage</a> -
+<a href="https://doi.org/10.3389/fnins.2016.00426">Paper</a></p>
+<h3 id="adam-amsterdam-decoding-and-modeling-toolbox">ADAM - Amsterdam Decoding and Modeling Toolbox<a class="headerlink" href="#adam-amsterdam-decoding-and-modeling-toolbox" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>ADAM</code> is a tool for encoding and decoding model analysis on M/EEG data.</p>
+<p><a href="https://github.com/fahrenfort/ADAM">Github</a> -
+<a href="https://doi.org/10.1007/s12021-013-9186-1">Paper</a></p>
+<h3 id="hermes">HERMES<a class="headerlink" href="#hermes" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>HERMES</code> is tool for estimating connectivity measures between M/EEG signals.</p>
+<p><a href="http://hermes.ctb.upm.es">HomePage</a> -
+<a href="https://github.com/guiomar/HERMES">Github</a> -
+<a href="https://doi.org/10.3389/fnins.2018.00368">Paper</a></p>
+<h3 id="sereega-simulating-event-related-eeg-activity">SEREEGA - Simulating Event-Related EEG Activity<a class="headerlink" href="#sereega-simulating-event-related-eeg-activity" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>SEREEGA</code> is a package for simulating synthetic data that mimic event-related EEG activity.</p>
+<p><a href="https://github.com/lrkrol/SEREEGA">Github</a> -
+<a href="https://doi.org/10.1101/326066">Paper</a></p>
+<h3 id="unfold">UNFOLD<a class="headerlink" href="#unfold" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>Unfold</code> is a tool for deconvolving overlapping EEG signals and for non-linear modeling.</p>
+<p><a href="https://www.unfoldtoolbox.org">HomePage</a> -
+<a href="https://github.com/unfoldtoolbox/unfold">Github</a> -
+<a href="https://doi.org/10.7717/peerj.7838">Paper</a></p>
+<h3 id="ept-tfce">ept-TFCE<a class="headerlink" href="#ept-tfce" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>ept-TFCE</code> is a tool for statistical analysis of already preprocessed M/EEG data, focused mainly around the 'threshold-free cluster enhancement' method.</p>
+<p><a href="https://github.com/Mensen/ept_TFCE-matlab">Github</a> -
+<a href="https://doi.org/10.1016/j.neuroimage.2012.10.027">Paper</a></p>
+<h3 id="era-erp-reliability-analysis">ERA - ERP Reliability Analysis<a class="headerlink" href="#era-erp-reliability-analysis" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>ERA</code> is a tool for calculating reliability estimates for ERP data.</p>
+<p><a href="http://peterclayson.com/era-toolbox/">HomePage</a> -
+<a href="https://github.com/peclayson/ERA_Toolbox">Github</a> -
+<a href="https://doi.org/10.1016/j.ijpsycho.2016.10.012">Paper</a></p>
+<h3 id="synchsqueezing">SynchSqueezing<a class="headerlink" href="#synchsqueezing" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>SynchroSqueezing</code> is a tool for time-frequency and time-scale analyses.</p>
+<p><a href="https://github.com/ebrevdo/synchrosqueezing">Github</a></p>
+<h3 id="automagic">AutoMagic<a class="headerlink" href="#automagic" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p><code>AutoMagic</code> is a standardized toolbox for preprocessing EEG datasets.</p>
+<p><a href="https://github.com/methlabUZH/automagic">Github</a> -
+<a href="https://doi.org/10.1101/460469">Paper</a></p>
+<h3 id="mvgc-multivariate-granger-causality-toolbox">MVGC - Multivariate Granger Causality Toolbox<a class="headerlink" href="#mvgc-multivariate-granger-causality-toolbox" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" /></p>
+<p>The <code>MVGC</code> toolbox is designed to run Granger-causal analysis on multivariate time-series data.</p>
+<p><a href="https://users.sussex.ac.uk/~lionelb/MVGC/html/mvgchelp.html#3">HomePage</a> -
+<a href="https://www.sussex.ac.uk/sackler/mvgc/">Code</a> -
+<a href="https://doi.org/10.1016/j.jneumeth.2013.10.018">Paper</a></p>
+<h3 id="openmeeg">OpenMEEG<a class="headerlink" href="#openmeeg" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-C++-yellowgreen.svg" /></p>
+<p><code>OpemMEEG</code> is a package for solving forward problems for EEG &amp; MEG data.</p>
+<p><a href="https://openmeeg.github.io">HomePage</a> -
+<a href="https://github.com/openmeeg/openmeeg">Github</a> -
+<a href="https://doi.org/10.1186/1475-925X-9-45">Paper</a></p>
+<h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h2>
+<p>The following are plugins, designed primary for use with one of the aforementioned general purpose tools.</p>
+<h3 id="autoreject">AutoReject<a class="headerlink" href="#autoreject" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" />
+<img alt="PlugIn" src="https://img.shields.io/badge/PlugIn-MNE-blue.svg" /></p>
+<p><code>AutoReject</code> is a tool for preprocessing M/EEG data, but algorithmically determining and applying rejection thresholds, with MNE.</p>
+<p><a href="https://autoreject.github.io">HomePage</a> -
+<a href="https://github.com/autoreject/autoreject">Github</a> -
+<a href="https://doi.org/10.1016/j.neuroimage.2017.06.030">Paper</a></p>
+<h3 id="mne-bids">MNE-BIDS<a class="headerlink" href="#mne-bids" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" />
+<img alt="PlugIn" src="https://img.shields.io/badge/PlugIn-MNE-blue.svg" /></p>
+<p><code>MNE-BIDS</code> is a tool for creating <a href="https://bids.neuroimaging.io/">BIDS</a> compatible datasets with MNE.</p>
+<p><a href="https://mne.tools/mne-bids/">HomePage</a> -
+<a href="https://github.com/mne-tools/mne-bids">Github</a> -
+<a href="https://doi.org/10.21105/joss.01896">Paper</a></p>
+<h3 id="pyprep">PyPREP<a class="headerlink" href="#pyprep" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>PrPREP</code> is an implementation of the 'Preprocessing Pipeline' (PREP) for EEG data, in Python and using MNE.</p>
+<p><a href="https://pyprep.readthedocs.io/en/latest/">Homepage</a> -
+<a href="https://github.com/sappelhoff/pyprep">Github</a></p>
+<h3 id="prep-pipeline">PREP Pipeline<a class="headerlink" href="#prep-pipeline" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" />
+<img alt="PlugIn" src="https://img.shields.io/badge/PlugIn-EEGLab-orange.svg" /></p>
+<p>The <code>PREP</code> pipeline is a standardized pre-processing tool for EEG data, using EEGLab.</p>
+<p><a href="https://vislab.github.io/EEG-Clean-Tools/">HomePage</a> -
+<a href="https://github.com/VisLab/EEG-Clean-Tools">Github</a> -
+<a href="https://doi.org/10.3389/fninf.2015.00016">Paper</a></p>
+<h3 id="relax">RELAX<a class="headerlink" href="#relax" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" />
+<img alt="PlugIn" src="https://img.shields.io/badge/PlugIn-EEGLab-orange.svg" /></p>
+<p><code>RELAX</code> (Reduction of Electroencephalographic Artifacts) provides a fully automated method to clean EEG data.</p>
+<p><a href="https://github.com/NeilwBailey/RELAX">Github</a> - 
+<a href="https://doi.org/10.1101/2022.03.08.483548">Paper1</a> - 
+<a href="https://doi.org/10.1101/2022.03.08.483554">Paper2</a></p>
+<h3 id="adjust">ADJUST<a class="headerlink" href="#adjust" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" />
+<img alt="PlugIn" src="https://img.shields.io/badge/PlugIn-EEGLab-orange.svg" /></p>
+<p><code>ADJUST</code> is an automatic artifact identification and removal tool, using EEGLab.</p>
+<p><a href="https://www.nitrc.org/projects/adjust/">HomePage</a> -
+<a href="https://doi.org/10.1111/j.1469-8986.2010.01061.x">Paper</a></p>
+<h3 id="erplab">ERPlab<a class="headerlink" href="#erplab" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" />
+<img alt="PlugIn" src="https://img.shields.io/badge/PlugIn-EEGLab-orange.svg" /></p>
+<p><code>ERPLab</code> is a tool for event-related potential (ERP) analysis of EEG data, with EEGLab.</p>
+<p><a href="https://erpinfo.org/erplab">HomePage</a> -
+<a href="https://github.com/lucklab/erplab">Github</a> -
+<a href="https://doi.org/10.3389/fnhum.2014.00213">Paper</a></p>
+<h3 id="limo-linear-modeling">LIMO - Linear Modeling<a class="headerlink" href="#limo-linear-modeling" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" />
+<img alt="PlugIn" src="https://img.shields.io/badge/PlugIn-EEGLab-orange.svg" /></p>
+<p><code>LIMO</code> is a tool for Linear Modeling of EEG data, with EEGLab.</p>
+<p><a href="https://github.com/LIMO-EEG-Toolbox/limo_eeg/wiki">HomePage</a> -
+<a href="https://github.com/LIMO-EEG-Toolbox/limo_eeg">Github</a> -
+<a href="https://doi.org/10.1155/2011/831409">Paper</a></p>
+<h3 id="sift-source-information-flow-toolbox">SIFT - Source Information Flow Toolbox<a class="headerlink" href="#sift-source-information-flow-toolbox" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" />
+<img alt="PlugIn" src="https://img.shields.io/badge/PlugIn-EEGLab-orange.svg" /></p>
+<p><code>SIFT</code> is a tool for causality and information flow measures, with EEGLab.</p>
+<p><a href="https://sccn.ucsd.edu/wiki/SIFT">HomePage</a></p>
+<h3 id="mpt-measure-projection-toolbox">MPT - Measure Projection Toolbox<a class="headerlink" href="#mpt-measure-projection-toolbox" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Matlab-orange.svg" />
+<img alt="PlugIn" src="https://img.shields.io/badge/PlugIn-EEGLab-orange.svg" /></p>
+<p><code>MPT</code> is a tool for probabilistic multi-subject EEG independent component analysis, with EEGLab.</p>
+<p><a href="https://sccn.ucsd.edu/wiki/MPT">HomePage</a></p>
+<h2 id="neuro-tools">Neuro Tools<a class="headerlink" href="#neuro-tools" title="Permanent link">&para;</a></h2>
+<p>The following are broader purpose neuro-tools that could be used with electrophysiology data.</p>
+<h3 id="nibabel">nibabel<a class="headerlink" href="#nibabel" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>nibabel</code> is a tool for read/write access to common neuroimaging file formats.</p>
+<p><a href="https://nipy.org/nibabel/">HomePage</a> -
+<a href="https://github.com/nipy/nibabel">Github</a></p>
+<h3 id="nilearn">nilearn<a class="headerlink" href="#nilearn" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>nilearn</code> is a tool for applying machine learning to neuroimaging data.</p>
+<p><a href="https://nilearn.github.io/">HomePage</a> -
+<a href="https://github.com/nilearn/nilearn">Github</a></p>
+<h3 id="visbrain">Visbrain<a class="headerlink" href="#visbrain" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>Visbrain</code> is a tool for brain data visualization.</p>
+<p><a href="http://visbrain.org/">Homepage</a> -
+<a href="https://github.com/EtienneCmb/visbrain">Github</a></p>
+<h3 id="pycortex">PyCortex<a class="headerlink" href="#pycortex" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-javascript-yellow.svg" /></p>
+<p><code>PyCortex</code> is a tool for visualizing cortical surfaces.</p>
+<p><a href="https://gallantlab.github.io/pycortex/">Homepage</a> -
+<a href="https://github.com/gallantlab/pycortex">Github</a></p>
+<h3 id="brainspace">BrainSpace<a class="headerlink" href="#brainspace" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>BrainSpace</code> is a tool for analyzing gradients in neuroimaging datasets.</p>
+<p><a href="https://brainspace.readthedocs.io/en/latest/">HomePage</a> -
+<a href="https://github.com/MICA-MNI/BrainSpace">Github</a> -
+<a href="https://doi.org/10.1038/s42003-020-0794-7">Paper</a></p>
+<h3 id="neuromaps">neuromaps<a class="headerlink" href="#neuromaps" title="Permanent link">&para;</a></h3>
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue.svg" /></p>
+<p><code>neuromaps</code> is a tool for comparing between brain maps.</p>
+<p><a href="https://netneurolab.github.io/neuromaps/">HomePage</a> -
+<a href="https://github.com/netneurolab/neuromaps">Github</a> -
+<a href="https://www.biorxiv.org/content/10.1101/2022.01.06.475081v1">Paper</a></p>
+<p><br>
+<br>
+<br></p>
+  
+    
+  
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+  <!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    <div class="md-footer-nav">
+      <nav
+        class="md-footer-nav__inner md-grid"
+        aria-label=""
+      >
+
+        <!-- Link to previous page -->
+        
+          <a
+            href="manuals.html"
+            title="Product Manuals"
+            class="md-footer-nav__link md-footer-nav__link--prev"
+            rel="prev"
+          >
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Product Manuals
+              </div>
+            </div>
+          </a>
+        
+
+        <!-- Link to next page -->
+        
+          <a
+            href="open_datasets.html"
+            title="Open Datasets"
+            class="md-footer-nav__link md-footer-nav__link--next"
+            rel="next"
+          >
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Open Datasets
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Greydon Gilmore
+          </div>
+        
+      </div>
+
+      <!-- Social links -->
+      <div class="md-social">
+  
+</div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js"></script>
+        
+      
+        
+          <script src="javascripts/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
+</html>
