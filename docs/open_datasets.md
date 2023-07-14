@@ -1,5 +1,5 @@
 ---
-template: main_noedit.html
+template: overrides/main_noedit.html
 title: Open Datasets
 ---
 

@@ -1,14 +1,63 @@
-{#-
-  This file was automatically generated - do not edit
--#}
 {% extends "base.html" %}
-{% block extrahead %}
-  <link rel="stylesheet" href="{{ 'assets/stylesheets/main.82a244a8.min.css' | url }}">
-{% endblock %}
+
 {% block content %}
-  {% include "partials/content.html" %}
+  {% if page.edit_url%}
+    <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
+      {% include ".icons/material/pencil.svg" %} <p style="margin-top:2px;">Edit this page</p>
+    </a>
+    <a href="https://github.com/greydongilmore/trajectoryGuide-site/issues/new/choose" title="Open an issue" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
+      {% include ".icons/fontawesome/brands/github.svg" %} <p style="margin-top:2px;">Open an issue</p>
+    </a>
+  {% endif %}
+  {% block source %}
+    {% if page and page.meta and page.meta.source %}
+      {% include "partials/source-link.html" %}
+    {% endif %}
+  {% endblock %}
+  {% if not "\x3ch1" in page.content %}
+    <h1>{{ page.title | default(config.site_name, true)}}</h1>
+  {% endif %}
+  {{ page.content }}
+  {% if page and page.meta %}
+    {% if page.meta.git_revision_date_localized or
+          page.meta.revision_date
+    %}
+      {% include "partials/source-date.html" %}
+    {% endif %}
+  {% endif %}
 {% endblock %}
-{% block scripts %}
+
+{% block footer %}
+  {% include "overrides/footer.html" %}
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   {{ super() }}
-  <script src="{{ 'assets/javascripts/bundle.39654835.min.js' | url }}"></script>
-{% endblock %}
+  <link rel="stylesheet" href="{{ base_url }}/css/bstreeview.min.css">
+  <link rel="stylesheet" href="{{ base_url }}/css/lightgallery.min.css">
+{% endblock styles %}
+
+{% block libs %}
+  {{ super() }}
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+<!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/7e31cfd31d.js" crossorigin="anonymous"></script>
+  <script src="{{ base_url }}/js/bstreeview.min.js"></script>
+  <script src="{{ base_url }}/js/lightgallery.min.js"></script>
+{% endblock libs %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+{% endblock scripts %}

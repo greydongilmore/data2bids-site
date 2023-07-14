@@ -1,5 +1,5 @@
 ---
-template: main.html
+template: overrides/main.html
 title: SPReD Upload [EpLink]
 ---
 
