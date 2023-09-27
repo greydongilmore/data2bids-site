@@ -3,7 +3,7 @@ template: overrides/main.html
 title: Output directory structure
 ---
 
-## BIDS directory structure
+# BIDS directory structure
 
 The output directory will look like the following (each subject having their own directory):
 
@@ -13,20 +13,20 @@ The output directory will look like the following (each subject having their own
 * **dataset_description.json:** this file will contain the Json Metadata previously defined in the **Settings** menu. This is overall information about the dataset
 * **participants.tsv:** this file contains a list of all the subjects in the dataset and their general demographics (i.e. age, sex etc.). This file can also be used to store additional subject information that is not variable over the different visits and sessions. 
 
-### Electrodes vs. channels
+## Electrodes vs. channels
 
 It is important to understand the difference between the terms `electrode` and `channel`. An iEEG electrode is placed on or in the brain, whereas a channel is the combination of the analog differential amplifier and analog-to-digital converter that result in a potential (voltage) difference that is stored in the EEG/iEEG dataset.
 
 * **Electrode:** a single point of contact between the acquisition system and the recording site. Multiple electrodes can be organized as arrays, grids, leads, strips, probes, shafts, caps (for EEG) etc.
 * **Channel:** a single analog-to-digital converter in the recording system that regularly samples the value of a transducer, which results in the signal being represented as a time series in the digitized data. This can be connected to two electrodes (to measure the potential difference between them), a magnetic field or magnetic gradient sensor, temperature sensor, accelerometer etc.
 
-### Subject directory
+## Subject directory
 
 Within each subject directory there will be a different session sub-directory for each day of recording.
   
 <center><img src="../img/sub_dir_structure_01.png" alt="drawing" width="40%"/></center>
 
-#### *_scans.tsv
+### \*\_scans.tsv
 
 The `*_scans.tsv` file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF+ type etc.).
 
@@ -42,13 +42,13 @@ The `*_scans.tsv` file contains general information about each EDF file for the 
 * **duration:** the total duration of the EDF/EDF+ file in decimal hours
 * **edf_type:** indicates the EDF type for the file, either continuous (EDF+C) or discontinuous (EDF+D) 
 
-### Session directory
+## Session directory
 
 Within each session sub-directory there will be a modality sub-directory (either eeg/ieeg). Within the modality sub-directory there will be five files, containing different information associated with the specific EDF/EDF+ file.
 
 <center><img src="../img/ses_dir_structure_01.png" alt="drawing" width="50%"/></center>
 
-#### *_electrodes.tsv
+### \*\_electrodes.tsv
 
 The `*_electrodes.tsv` file contains information associated with the electrodes used to collect the data.
 
@@ -66,7 +66,7 @@ The `*_electrodes.tsv` file contains information associated with the electrodes 
 * **material:** the electrode material.
 * **manufacturer:** the manufacturer of the electrode.
 
-#### *_channels.tsv
+### \*\_channels.tsv
 
 The `*_channels.tsv` file contains information about each channel that was used in the recording.
 
@@ -87,7 +87,7 @@ The `*_channels.tsv` file contains information about each channel that was used 
 * **reference:** label for the reference (i.e. 'mastoid', 'ElectrodeName01', 'intracranial' etc.). If the channel is not known then `n/a` is used.
 * **group:** which group of channels (grid/strip/seeg/depth) this channel belongs to. This is relevant because one group has one cable-bundle and noise can be shared.
 
-#### *_annotations.tsv
+### \*\_annotations.tsv
 
 The `*_annotations.tsv` file contains all annotations present in the EDF+ file, identifiers have been scrubbed.
 
@@ -104,9 +104,9 @@ The `*_annotations.tsv` file contains all annotations present in the EDF+ file, 
 * **time_rel:** the relative time for the event (time elapsed since the beginning of the recording).
 * **event:** the event marker text.
 
-#### \*_eeg.json or \*_ieeg.json
+### \*\_eeg.json or \*\_ieeg.json
 
-The `*_eeg.json/*_ieeg.json` file contains metadata information about the EDF/EDF+ file.
+The `*_eeg.json`/`*_ieeg.json` file contains metadata information about the EDF/EDF+ file.
 
 <center>
 <figure>
@@ -134,13 +134,13 @@ The `*_eeg.json/*_ieeg.json` file contains metadata information about the EDF/ED
 * **ElectrodeManufacturer:** manufacturer for the electrodes used during the recording (i.e. AD-TECH, DIXI)
 * **ElectricalStimulationParameters:** free form description of stimulation parameters, such as frequency or shape.
 
-#### \*_eeg.edf or \*_ieeg.edf
+### \*\_eeg.edf or \*\_ieeg.edf
 
-The `*_eeg.edf/*_ieeg.edf` contains the raw electrophysiology data.
+The `*_eeg.edf`/`*_ieeg.edf` contains the raw electrophysiology data.
 
-### Example Structure
+## Example Structure
 
-#### Interactive
+### Interactive
 
 <div id="tree"></div>
 <script>
