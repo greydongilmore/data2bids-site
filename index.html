@@ -13,7 +13,7 @@
         <meta name="author" content="Greydon Gilmore">
       
       <link rel="shortcut icon" href="img/edf2bids_icon.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-5.3.2">
     
     
       
@@ -634,76 +634,76 @@
 <thead>
 <tr>
 <th>Field</th>
-<th align="center">Size</th>
-<th align="center">Position</th>
+<th style="text-align: center;">Size</th>
+<th style="text-align: center;">Position</th>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>version</td>
-<td align="center">8</td>
-<td align="center">0</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0</td>
 <td><code>version</code> is always <strong>0</strong></td>
 </tr>
 <tr>
 <td>patient id</td>
-<td align="center">80</td>
-<td align="center">8</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">8</td>
 <td>Code Sex DOB Name<sup>1</sup></td>
 </tr>
 <tr>
 <td>recording id</td>
-<td align="center">80</td>
-<td align="center">88</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">88</td>
 <td>Startdate start_date ExpID InvestigID Equipment<sup>2</sup></td>
 </tr>
 <tr>
 <td>startdate</td>
-<td align="center">8</td>
-<td align="center">168</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">168</td>
 <td>dd.mm.yy</td>
 </tr>
 <tr>
 <td>starttime</td>
-<td align="center">8</td>
-<td align="center">176</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">176</td>
 <td>hh.mm.ss</td>
 </tr>
 <tr>
 <td>number of bytes in header</td>
-<td align="center">8</td>
-<td align="center">184</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">184</td>
 <td></td>
 </tr>
 <tr>
 <td>reserved</td>
-<td align="center">44</td>
-<td align="center">192</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">192</td>
 <td><ul><li><strong>EDF</strong>: empty</li><li><strong>EDF+</strong>: <code>EDF+C</code> for continuous;<code>EDF+D</code> for discontinuous</li></ul></td>
 </tr>
 <tr>
 <td>number of data records</td>
-<td align="center">8</td>
-<td align="center">236</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">236</td>
 <td><code>nr</code></td>
 </tr>
 <tr>
 <td>duration of data record</td>
-<td align="center">8</td>
-<td align="center">244</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">244</td>
 <td>in seconds</td>
 </tr>
 <tr>
 <td>number of signals</td>
-<td align="center">4</td>
-<td align="center">252</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">252</td>
 <td><code>ns</code></td>
 </tr>
 <tr>
 <td><div style="text-align:right;"><strong>total</strong></div></td>
-<td align="center">256</td>
-<td align="center"></td>
+<td style="text-align: center;">256</td>
+<td style="text-align: center;"></td>
 <td></td>
 </tr>
 </tbody>
@@ -736,76 +736,76 @@
 <thead>
 <tr>
 <th>Field</th>
-<th align="center">Size</th>
-<th align="center">Position</th>
+<th style="text-align: center;">Size</th>
+<th style="text-align: center;">Position</th>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>label</td>
-<td align="center">16</td>
-<td align="center">0</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">0</td>
 <td></td>
 </tr>
 <tr>
 <td>transducer</td>
-<td align="center">80</td>
-<td align="center">16</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">16</td>
 <td><code>transducer</code> type (i.e AgAgCl electrode)</td>
 </tr>
 <tr>
 <td>physical dim</td>
-<td align="center">8</td>
-<td align="center">96</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">96</td>
 <td>physical dimension of channel data (i.e. μV)</td>
 </tr>
 <tr>
 <td>physical min</td>
-<td align="center">8</td>
-<td align="center">104</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">104</td>
 <td></td>
 </tr>
 <tr>
 <td>physical max</td>
-<td align="center">8</td>
-<td align="center">112</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">112</td>
 <td></td>
 </tr>
 <tr>
 <td>digital min</td>
-<td align="center">8</td>
-<td align="center">120</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">120</td>
 <td><sup>1</sup></td>
 </tr>
 <tr>
 <td>digital max</td>
-<td align="center">8</td>
-<td align="center">128</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">128</td>
 <td><sup>1</sup></td>
 </tr>
 <tr>
 <td>prefiltering</td>
-<td align="center">80</td>
-<td align="center">136</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">136</td>
 <td>high-pass, low-pass and notch filters<sup>2</sup></td>
 </tr>
 <tr>
 <td>number of samples</td>
-<td align="center">8</td>
-<td align="center">216</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">216</td>
 <td></td>
 </tr>
 <tr>
 <td>reserved</td>
-<td align="center">32</td>
-<td align="center">224</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">224</td>
 <td></td>
 </tr>
 <tr>
 <td><div style="text-align:right;"><strong>total</strong></div></td>
-<td align="center">256</td>
-<td align="center"></td>
+<td style="text-align: center;">256</td>
+<td style="text-align: center;"></td>
 <td></td>
 </tr>
 </tbody>

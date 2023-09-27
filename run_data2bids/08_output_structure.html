@@ -13,7 +13,7 @@
         <meta name="author" content="Greydon Gilmore">
       
       <link rel="shortcut icon" href="../img/edf2bids_icon.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-5.3.2">
     
     
       
@@ -327,6 +327,8 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Output Directory Structure
@@ -343,6 +345,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -353,21 +357,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bids-directory-structure" class="md-nav__link">
-    BIDS directory structure
-  </a>
-  
-    <nav class="md-nav" aria-label="BIDS directory structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#electrodes-vs-channels" class="md-nav__link">
     Electrodes vs. channels
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#subject-directory" class="md-nav__link">
     Subject directory
   </a>
@@ -386,8 +382,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#session-directory" class="md-nav__link">
     Session directory
   </a>
@@ -434,8 +430,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-structure" class="md-nav__link">
     Example Structure
   </a>
@@ -447,11 +443,6 @@
   <a href="#interactive" class="md-nav__link">
     Interactive
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -607,6 +598,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -617,21 +610,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bids-directory-structure" class="md-nav__link">
-    BIDS directory structure
-  </a>
-  
-    <nav class="md-nav" aria-label="BIDS directory structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#electrodes-vs-channels" class="md-nav__link">
     Electrodes vs. channels
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#subject-directory" class="md-nav__link">
     Subject directory
   </a>
@@ -650,8 +635,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#session-directory" class="md-nav__link">
     Session directory
   </a>
@@ -698,8 +683,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-structure" class="md-nav__link">
     Example Structure
   </a>
@@ -711,11 +696,6 @@
   <a href="#interactive" class="md-nav__link">
     Interactive
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -754,9 +734,7 @@
     
   
   
-    <h1>Output Directory Structure</h1>
-  
-  <h2 id="bids-directory-structure">BIDS directory structure<a class="headerlink" href="#bids-directory-structure" title="Permanent link">&para;</a></h2>
+  <h1 id="bids-directory-structure">BIDS directory structure<a class="headerlink" href="#bids-directory-structure" title="Permanent link">&para;</a></h1>
 <p>The output directory will look like the following (each subject having their own directory):</p>
 <p><center><img src="../img/dir_structure_01.png" alt="drawing" width="30%"/></center></p>
 <ul>
@@ -764,16 +742,16 @@
 <li><strong>dataset_description.json:</strong> this file will contain the Json Metadata previously defined in the <strong>Settings</strong> menu. This is overall information about the dataset</li>
 <li><strong>participants.tsv:</strong> this file contains a list of all the subjects in the dataset and their general demographics (i.e. age, sex etc.). This file can also be used to store additional subject information that is not variable over the different visits and sessions. </li>
 </ul>
-<h3 id="electrodes-vs-channels">Electrodes vs. channels<a class="headerlink" href="#electrodes-vs-channels" title="Permanent link">&para;</a></h3>
+<h2 id="electrodes-vs-channels">Electrodes vs. channels<a class="headerlink" href="#electrodes-vs-channels" title="Permanent link">&para;</a></h2>
 <p>It is important to understand the difference between the terms <code>electrode</code> and <code>channel</code>. An iEEG electrode is placed on or in the brain, whereas a channel is the combination of the analog differential amplifier and analog-to-digital converter that result in a potential (voltage) difference that is stored in the EEG/iEEG dataset.</p>
 <ul>
 <li><strong>Electrode:</strong> a single point of contact between the acquisition system and the recording site. Multiple electrodes can be organized as arrays, grids, leads, strips, probes, shafts, caps (for EEG) etc.</li>
 <li><strong>Channel:</strong> a single analog-to-digital converter in the recording system that regularly samples the value of a transducer, which results in the signal being represented as a time series in the digitized data. This can be connected to two electrodes (to measure the potential difference between them), a magnetic field or magnetic gradient sensor, temperature sensor, accelerometer etc.</li>
 </ul>
-<h3 id="subject-directory">Subject directory<a class="headerlink" href="#subject-directory" title="Permanent link">&para;</a></h3>
+<h2 id="subject-directory">Subject directory<a class="headerlink" href="#subject-directory" title="Permanent link">&para;</a></h2>
 <p>Within each subject directory there will be a different session sub-directory for each day of recording.</p>
 <p><center><img src="../img/sub_dir_structure_01.png" alt="drawing" width="40%"/></center></p>
-<h4 id="_scanstsv">*_scans.tsv<a class="headerlink" href="#_scanstsv" title="Permanent link">&para;</a></h4>
+<h3 id="_scanstsv">*_scans.tsv<a class="headerlink" href="#_scanstsv" title="Permanent link">&para;</a></h3>
 <p>The <code>*_scans.tsv</code> file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF+ type etc.).</p>
 <p><center></p>
 <figure>
@@ -787,10 +765,10 @@
 <li><strong>duration:</strong> the total duration of the EDF/EDF+ file in decimal hours</li>
 <li><strong>edf_type:</strong> indicates the EDF type for the file, either continuous (EDF+C) or discontinuous (EDF+D) </li>
 </ul>
-<h3 id="session-directory">Session directory<a class="headerlink" href="#session-directory" title="Permanent link">&para;</a></h3>
+<h2 id="session-directory">Session directory<a class="headerlink" href="#session-directory" title="Permanent link">&para;</a></h2>
 <p>Within each session sub-directory there will be a modality sub-directory (either eeg/ieeg). Within the modality sub-directory there will be five files, containing different information associated with the specific EDF/EDF+ file.</p>
 <p><center><img src="../img/ses_dir_structure_01.png" alt="drawing" width="50%"/></center></p>
-<h4 id="_electrodestsv">*_electrodes.tsv<a class="headerlink" href="#_electrodestsv" title="Permanent link">&para;</a></h4>
+<h3 id="_electrodestsv">*_electrodes.tsv<a class="headerlink" href="#_electrodestsv" title="Permanent link">&para;</a></h3>
 <p>The <code>*_electrodes.tsv</code> file contains information associated with the electrodes used to collect the data.</p>
 <p><center></p>
 <figure>
@@ -806,7 +784,7 @@
 <li><strong>material:</strong> the electrode material.</li>
 <li><strong>manufacturer:</strong> the manufacturer of the electrode.</li>
 </ul>
-<h4 id="_channelstsv">*_channels.tsv<a class="headerlink" href="#_channelstsv" title="Permanent link">&para;</a></h4>
+<h3 id="_channelstsv">*_channels.tsv<a class="headerlink" href="#_channelstsv" title="Permanent link">&para;</a></h3>
 <p>The <code>*_channels.tsv</code> file contains information about each channel that was used in the recording.</p>
 <p><center></p>
 <figure>
@@ -825,7 +803,7 @@
 <li><strong>reference:</strong> label for the reference (i.e. 'mastoid', 'ElectrodeName01', 'intracranial' etc.). If the channel is not known then <code>n/a</code> is used.</li>
 <li><strong>group:</strong> which group of channels (grid/strip/seeg/depth) this channel belongs to. This is relevant because one group has one cable-bundle and noise can be shared.</li>
 </ul>
-<h4 id="_annotationstsv">*_annotations.tsv<a class="headerlink" href="#_annotationstsv" title="Permanent link">&para;</a></h4>
+<h3 id="_annotationstsv">*_annotations.tsv<a class="headerlink" href="#_annotationstsv" title="Permanent link">&para;</a></h3>
 <p>The <code>*_annotations.tsv</code> file contains all annotations present in the EDF+ file, identifiers have been scrubbed.</p>
 <p><center></p>
 <figure>
@@ -840,8 +818,8 @@
 <li><strong>time_rel:</strong> the relative time for the event (time elapsed since the beginning of the recording).</li>
 <li><strong>event:</strong> the event marker text.</li>
 </ul>
-<h4 id="_eegjson-or-_ieegjson">*_eeg.json or *_ieeg.json<a class="headerlink" href="#_eegjson-or-_ieegjson" title="Permanent link">&para;</a></h4>
-<p>The <code>*_eeg.json/*_ieeg.json</code> file contains metadata information about the EDF/EDF+ file.</p>
+<h3 id="_eegjson-or-_ieegjson">*_eeg.json or *_ieeg.json<a class="headerlink" href="#_eegjson-or-_ieegjson" title="Permanent link">&para;</a></h3>
+<p>The <code>*_eeg.json</code>/<code>*_ieeg.json</code> file contains metadata information about the EDF/EDF+ file.</p>
 <p><center></p>
 <figure>
   <img src="../img/json_sidecar_file.png" alt="drawing" width="50%" />
@@ -868,10 +846,10 @@
 <li><strong>ElectrodeManufacturer:</strong> manufacturer for the electrodes used during the recording (i.e. AD-TECH, DIXI)</li>
 <li><strong>ElectricalStimulationParameters:</strong> free form description of stimulation parameters, such as frequency or shape.</li>
 </ul>
-<h4 id="_eegedf-or-_ieegedf">*_eeg.edf or *_ieeg.edf<a class="headerlink" href="#_eegedf-or-_ieegedf" title="Permanent link">&para;</a></h4>
-<p>The <code>*_eeg.edf/*_ieeg.edf</code> contains the raw electrophysiology data.</p>
-<h3 id="example-structure">Example Structure<a class="headerlink" href="#example-structure" title="Permanent link">&para;</a></h3>
-<h4 id="interactive">Interactive<a class="headerlink" href="#interactive" title="Permanent link">&para;</a></h4>
+<h3 id="_eegedf-or-_ieegedf">*_eeg.edf or *_ieeg.edf<a class="headerlink" href="#_eegedf-or-_ieegedf" title="Permanent link">&para;</a></h3>
+<p>The <code>*_eeg.edf</code>/<code>*_ieeg.edf</code> contains the raw electrophysiology data.</p>
+<h2 id="example-structure">Example Structure<a class="headerlink" href="#example-structure" title="Permanent link">&para;</a></h2>
+<h3 id="interactive">Interactive<a class="headerlink" href="#interactive" title="Permanent link">&para;</a></h3>
 <div id="tree"></div>
 <script>
     $(document).ready(function() {
