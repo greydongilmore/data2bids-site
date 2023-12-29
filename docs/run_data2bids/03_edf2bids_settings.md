@@ -45,6 +45,7 @@ title: data2bids Settings
 	* **De-identify input directory**: if this is selected the input EDF/EDF+ files will be de-identified first prior to being copied. If left unchecked, then only the output directory EDF/EDF+ files will be de-identified. Default is unchecked.
 	* **Offset dates**: if selected all dates in the EDF/EDF+ files will be offset by a random number of days (~1000 days). The offset value can be determined but is securely stored.
 	* **Dry run**: this should be selected when running a new conversion. This option will not copy the EDF/EDF+ files to the output directory but will check to ensure the input directory is set-up correctly. Since copying the EDF/EDF+ files is a time-intensive process, this dry-run will be much faster then a full conversion and will notify you if any files are formated incorrectly within the input directory.
+    * **Compress EDFs (EDFZ)**: if selected the EDF+ output files will be further compressed using GZIP (with final extension `.edfz`). For more information, see the documentation from <a href="https://zzz.bwh.harvard.edu/luna/vignettes/edfz/" target="_blank">Dr. Shaun Purcell's lab</a>  at Harvard.
 
 <br>
 <br>
