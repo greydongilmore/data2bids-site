@@ -38,10 +38,6 @@ title: Product Manuals
 
 * <a href="static/alcis_neuro_product_catalog_2021.pdf" target="_blank">Product catalog 2021</a>
 
-### Neuropace
-
-* <a href="static/neuropace_rns_manual_2019.pdf" target="_blank">Product catalog 2019</a>
-
 ## MRI
 
 ### Clinical
