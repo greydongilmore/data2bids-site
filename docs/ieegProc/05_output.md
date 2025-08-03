@@ -18,7 +18,7 @@ The _ieegProc_ output directory has the following structure:
 derivatives/
 	├── atlasreg/
 	│		├── dataset_description.json
-	│		└── sub-<subject_label>/
+	│		└── sub-<sub_label>/
 	│				├── qc/...
 	│				└── <processed_files>...
 	│
@@ -28,7 +28,7 @@ derivatives/
 					└── <processed_files>...
 ```
 
-For each participant in the dataset, a subject specific directory (`sub-<subject_label>`) will be generated in two locations:
+For each participant in the dataset, a subject specific directory (`sub-<sub_label>`) will be generated in two locations:
 
 1. `atlasreg`: this directory contains processed data files from the imaging analysis pipelines.
 2. `seeg_coordinates`: this directory will store the electrode contact coordinates in several coordinate spaces (see ). 
@@ -43,7 +43,7 @@ The `dataset_description.json` is a metadata file in which ieegProc records meta
 ```java
 derivatives/
 	└── atlasreg/
-		└── sub-<subject_label>/
+		└── sub-<sub_label>/
 				└── qc/...
 ```
 
@@ -60,22 +60,25 @@ derivatives/
 
 After copying, each volume is renamed accordinly:
 
-- `sub-<subject_label>_acq-contrast_T1w.nii.gz`: **T1w** gad-enhanced
-- `sub-<subject_label>_acq-noncontrast_T1w.nii.gz`: **T1w** non-enhanced
-- `sub-<subject_label>_ct.nii.gz`: post-op **CT** containing electrodes/grids/strips
-- `sub-<subject_label>_pet.nii.gz`: **PET**
+- `sub-<sub_label>_acq-contrast_T1w.nii.gz`: **T1w** gad-enhanced
+- `sub-<sub_label>_acq-noncontrast_T1w.nii.gz`: **T1w** non-enhanced
+- `sub-<sub_label>_ct.nii.gz`: post-op **CT** containing electrodes/grids/strips
+- `sub-<sub_label>_pet.nii.gz`: **PET**
 
 Execpt for the filename, these volumes will remain an identical copy to the ones found in the `bids` directory.
 
 ```java
 derivatives/
 	└── atlasreg/
-		└── sub-<subject_label>/
+		└── sub-<sub_label>/
 				├── qc/...
-				├── sub-<subject_label>_acq-contrast_T1w.nii.gz
-				├── sub-<subject_label>_acq-noncontrast_T1w.nii.gz
-				├── sub-<subject_label>_ct.nii.gz
-				└── sub-<subject_label>_pet.nii.gz
+				├── sub-<sub_label>_acq-contrast_T1w.nii.gz
+				├── sub-<sub_label>_acq-noncontrast_T1w.nii.gz
+				├── sub-<sub_label>_ses-post_ct.nii.gz
+				├── sub-<sub_label>_acq-nac_pet.nii.gz
+				├── sub-<sub_label>_acq-ac_pet.nii.gz
+				├── tpl-MNI152NLin2009cSym_desc-masked_T1w.nii.gz
+				└── tpl-MNI152NLin2009cSym_T1w.nii.gz
 ```
 
 ### Step 2: rigid registration
@@ -89,15 +92,48 @@ Currently, two registration algorithms are included:
 
 For each floating volume (`<volume_type>`), the rigid registration step will generate the following files:
 
-* `sub-<subject_label>_space-T1w_desc-rigid_<volume_type>.nii.gz`: floating volume with the rigid transform applied without interpolation.
-* `sub-<subject_label>_space-T1w_desc-rigidInterp_<volume_type>.nii.gz`: floating volume with the rigid transform applied with linear interpolation.
-* `sub-<subject_label>_desc-rigid_from-<volume_type>_to-T1w_type-ras_xfm.txt`: rigid transform matrix from floating to fixed image space in RAS `.txt` format.
-* `sub-<subject_label>_desc-rigid_to-<volume_type>_from-T1w_type-ras_xfm.txt`: rigid transform matrix to floating from fixed image space in RAS `.txt` format.
-* `sub-<subject_label>_desc-rigid_from-<volume_type>_to-T1w_type-ras_xfm.tfm`: rigid transform matrix from floating to fixed image space in 3D Slicer `.tfm` format.
+* `sub-<sub_label>_acq-<acq_type>_space-T1w_desc-rigid_<volume_type>.nii.gz`: floating volume with the rigid transform applied without interpolation.
+* `sub-<sub_label>_acq-<acq_type>_space-T1w_desc-rigidInterp_<volume_type>.nii.gz`: floating volume with the rigid transform applied with linear interpolation.
+* `sub-<sub_label>_desc-rigid_to-<volume_type>_from-contrast_type-ras_xfm[.txt,.mat]`: rigid transform matrix to floating from fixed image space in RAS `.txt` and `.mat` format.
+* `sub-<sub_label>_desc-rigid_from-<volume_type>_to-contrast_type-ras_xfm[.txt,.tfm]`: rigid transform matrix from floating to fixed image space in RAS `.txt` and 3D Slicer `.tfm` format.
 
+
+```java
+derivatives/
+	└── atlasreg/
+		└── sub-<sub_label>/
+				├── qc/...
+				├── sub-<sub_label>_acq-noncontrast_space-T1w_desc-rigid_T1w.nii.gz
+				├── sub-<sub_label>_space-T1w_desc-rigidInterp_T1w.nii.gz
+				├── sub-<sub_label>_desc-rigid_from-noncontrast_to-contrast_type-ras_xfm.tfm
+				├── sub-<sub_label>_desc-rigid_to-noncontrast_from-contrast_type-ras_0GenericAffine.mat
+				├── sub-<sub_label>_desc-rigid_from-noncontrast_to-contrast_type-ras_xfm.txt
+				├── sub-<sub_label>_desc-rigid_to-noncontrast_from-contrast_type-ras_xfm.txt
+				├── ...
+				├── sub-<sub_label>_space-T1w_desc-rigid_ses-post_ct.nii.gz
+				├── sub-<sub_label>_space-T1w_desc-rigidInterp_ses-post_ct.nii.gz
+				├── sub-<sub_label>_desc-rigid_from-ct_to-T1w_type-ras_ses-post_xfm.tfm
+				├── sub-<sub_label>_desc-rigid_to-ct_from-T1w_type-ras_ses-post_0GenericAffine.mat
+				├── sub-<sub_label>_desc-rigid_from-ct_to-T1w_type-ras_ses-post_xfm.txt
+				├── sub-<sub_label>_desc-rigid_to-ct_from-T1w_type-ras_ses-post_xfm.txt
+				├── ...
+				├── sub-<sub_label>_acq-nac_space-T1w_desc-rigid_pet.nii.gz
+				├── sub-<sub_label>_acq-nac_desc-rigid_from-pet_to-T1w_type-ras_xfm.tfm
+				├── sub-<sub_label>_acq-nac_space-T1w_desc-rigidInterp_pet.nii.gz
+				├── sub-<sub_label>_acq-nac_desc-rigid_to-pet_from-T1w_type-ras_0GenericAffine.mat
+				├── sub-<sub_label>_acq-nac_desc-rigid_from-pet_to-T1w_type-ras_xfm.txt
+				├── sub-<sub_label>_acq-nac_desc-rigid_to-pet_from-T1w_type-ras_xfm.txt
+				├── ...
+				├── sub-<sub_label>_acq-ac_space-T1w_desc-rigid_pet.nii.gz
+				├── sub-<sub_label>_acq-ac_space-T1w_desc-rigidInterp_pet.nii.gz
+				├── sub-<sub_label>_acq-ac_desc-rigid_to-pet_from-T1w_type-ras_0GenericAffine.mat
+				├── sub-<sub_label>_acq-ac_desc-rigid_from-pet_to-T1w_type-ras_xfm.txt
+				├── sub-<sub_label>_acq-ac_desc-rigid_from-pet_to-T1w_type-ras_xfm.tfm
+				└── sub-<sub_label>_acq-ac_desc-rigid_to-pet_from-T1w_type-ras_xfm.txt
+```
 
 !!! Note
-	Since there can be up to two T1w volumes, *ieegProc* will copy one of the volumes to a new file labelled `sub-<subject_label>_T1w.nii.gz`. From this point onward, any step requiring a T1w volume as input will link to this new volume. If only one T1w volume exists, then `sub-<subject_label>_T1w.nii.gz` will be an identical copy. If both gad-enhanced and non-enhanced T1w volumes exist then the non-enhanced volume will be copied to `sub-<subject_label>_T1w.nii.gz`.
+	Since there can be up to two T1w volumes, *ieegProc* will copy one of the volumes to a new file labelled `sub-<sub_label>_T1w.nii.gz`. From this point onward, any step requiring a T1w volume as input will link to this new volume. If only one T1w volume exists, then `sub-<sub_label>_T1w.nii.gz` will be an identical copy. If both gad-enhanced and non-enhanced T1w volumes exist then the non-enhanced volume will be copied to `sub-<sub_label>_T1w.nii.gz`.
 
 ### Step 3: affine/non-linear registration
 
@@ -105,23 +141,23 @@ For each floating volume (`<volume_type>`), the rigid registration step will gen
 
 After both registration steps, the following files will be generated:
 
-* `sub-<subject_label>_desc-n4_T1w.nii.gz`: T1w volume with `N4BiasFieldCorrection` performed.
-* `sub-<subject_label>_space-<template_space>_desc-affine_T1w.nii.gz`: T1w volume with affine transform applied to template space with linear interpolation.
-* `sub-<subject_label>_desc-affine_from-subject_to-<template_space>_type-ras_xfm.txt`: affine transform matrix from subject space to template space in RAS `.txt` format.
-* `sub-<subject_label>_desc-affine_to-subject_from-<template_space>_type-ras_xfm.txt`: affine transform matrix from template space to subject space in RAS `.txt` format.
-* `sub-<subject_label>_desc-affine_from-subject_to-<template_space>_type-itk_xfm.txt`: affine transform matrix from subject space to template space in ITK `.txt` format.
-* `sub-<subject_label>_desc-affine_from-subject_to-<template_space>_type-itk_xfm.tfm`: affine transform matrix from subject space to template space in 3D Slicer `.tfm` format.
+* `sub-<sub_label>_desc-n4_T1w.nii.gz`: T1w volume with `N4BiasFieldCorrection` performed.
+* `sub-<sub_label>_space-<template_space>_desc-affine_T1w.nii.gz`: T1w volume with affine transform applied to template space with linear interpolation.
+* `sub-<sub_label>_desc-affine_from-subject_to-<template_space>_type-ras_xfm.txt`: affine transform matrix from subject space to template space in RAS `.txt` format.
+* `sub-<sub_label>_desc-affine_to-subject_from-<template_space>_type-ras_xfm.txt`: affine transform matrix from template space to subject space in RAS `.txt` format.
+* `sub-<sub_label>_desc-affine_from-subject_to-<template_space>_type-itk_xfm.txt`: affine transform matrix from subject space to template space in ITK `.txt` format.
+* `sub-<sub_label>_desc-affine_from-subject_to-<template_space>_type-itk_xfm.tfm`: affine transform matrix from subject space to template space in 3D Slicer `.tfm` format.
 
 ### Step 4: tissue segmentation
 
 *ieegProc* will perform image segmentation of three structures within the T1w volume: white matter, gray matter, and CSF. To improve segmenation outcomes, the chosen template space brain mask and WM/GM/CSF probabilistic tissue segmentations are warped to T1w volume space. This helps to highlight the areas that are brain and not skull/dura/etc.
 
-* `sub-<subject_label>_label-brain_desc-affine_from-<template_space>_mask.nii.gz`: template space brain mask with the affine transform applied to T1w volume space.
-* `sub-<subject_label>_label-<CSF/WM/GM>_desc-affine_from-<template_space>_probseg.nii.gz`: template space probabilistic segmentations with the affine transform applied to T1w volume space.
+* `sub-<sub_label>_label-brain_desc-affine_from-<template_space>_mask.nii.gz`: template space brain mask with the affine transform applied to T1w volume space.
+* `sub-<sub_label>_label-<CSF/WM/GM>_desc-affine_from-<template_space>_probseg.nii.gz`: template space probabilistic segmentations with the affine transform applied to T1w volume space.
 
 After the segmentation step, the following files will be generated:
 
-* `sub-<subject_label>_desc-atropos3seg_mapping.json`: 
+* `sub-<sub_label>_desc-atropos3seg_mapping.json`: 
 * `sub-P033_desc-atroposKseg_dseg.nii.gz`: 
 * `sub-P033_desc-atroposKseg_probseg.nii.gz`:
 
@@ -129,32 +165,34 @@ After the segmentation step, the following files will be generated:
 ```java
 derivatives/
 	└── atlasreg/
-		└── sub-<subject_label>/
+		└── sub-<sub_label>/
 				├── qc/...
-				├── sub-<subject_label>_acq-contrast_T1w.nii.gz
-				├── sub-<subject_label>_acq-noncontrast_T1w.nii.gz
-				├── sub-<subject_label>_ct.nii.gz
-				├── sub-<subject_label>_acq-noncontrast_space-T1w_desc-affine_T1w.nii.gz
-				├── sub-<subject_label>_T1w.nii.gz
-				├── sub-<subject_label>_space-MNI152NLin2009cSym_desc-affine_T1w.nii.gz
-				├── sub-<subject_label>_desc-brain_from-MNI152NLin2009cSym_reg-affine_mask.nii.gz
-				├── sub-<subject_label>_label-CSF_from-MNI152NLin2009cSym_reg-affine_probseg.nii.gz
-				├── sub-<subject_label>_label-GM_from-MNI152NLin2009cSym_reg-affine_probseg.nii.gz
-				├── sub-<subject_label>_label-WM_from-MNI152NLin2009cSym_reg-affine_probseg.nii.gz
-				├── sub-<subject_label>_space-T1w_desc-affine_ct.nii.gz
-				├── sub-<subject_label>_space-ct_desc-mask_contacts.nii.gz
-				├── sub-<subject_label>_desc-n4_T1w.nii.gz
-				├── sub-<subject_label>_desc-atroposKseg_dseg.nii.gz
-				├── sub-<subject_label>_desc-atroposKseg_probseg.nii.gz
-				├── sub-<subject_label>_label-CSF_desc-atropos3seg_probseg.nii.gz
-				├── sub-<subject_label>_label-GM_desc-atropos3seg_probseg.nii.gz
-				├── sub-<subject_label>_label-WM_desc-atropos3seg_probseg.nii.gz
-				├── sub-<subject_label>_desc-atropos3seg_probseg.nii.gz
-				├── sub-<subject_label>_desc-brain_from-atropos3seg_mask.nii.gz
-				├── sub-<subject_label>_desc-masked_from-atropos3seg_T1w.nii.gz
-				├── sub-<subject_label>_space-MNI152NLin2009cSym_desc-SyN_T1w.nii.gz
-				├── sub-<subject_label>_atlas-CerebrA_from-MNI152NLin2009cSym_reg-SyN_dseg.nii.gz
-				└── sub-<subject_label>_desc-dilated_atlas-CerebrA_from-MNI152NLin2009cSym_reg-SyN_dseg.nii.gz
+				├── sub-<sub_label>_acq-contrast_T1w.nii.gz
+				├── sub-<sub_label>_acq-noncontrast_T1w.nii.gz
+				├── sub-<sub_label>_ses-post_ct.nii.gz
+				├── sub-<sub_label>_acq-noncontrast_space-T1w_desc-affine_T1w.nii.gz
+				├── sub-<sub_label>_T1w.nii.gz
+				├── sub-<sub_label>_space-MNI152NLin2009cSym_desc-affine_T1w.nii.gz
+				├── sub-<sub_label>_desc-brain_from-MNI152NLin2009cSym_reg-affine_mask.nii.gz
+				├── sub-<sub_label>_label-CSF_from-MNI152NLin2009cSym_reg-affine_probseg.nii.gz
+				├── sub-<sub_label>_label-GM_from-MNI152NLin2009cSym_reg-affine_probseg.nii.gz
+				├── sub-<sub_label>_label-WM_from-MNI152NLin2009cSym_reg-affine_probseg.nii.gz
+				├── sub-<sub_label>_space-T1w_desc-affine_ct.nii.gz
+				├── sub-<sub_label>_space-ct_desc-mask_contacts.nii.gz
+				├── sub-<sub_label>_desc-n4_T1w.nii.gz
+				├── sub-<sub_label>_desc-atroposKseg_dseg.nii.gz
+				├── sub-<sub_label>_desc-atroposKseg_probseg.nii.gz
+				├── sub-<sub_label>_label-CSF_desc-atropos3seg_probseg.nii.gz
+				├── sub-<sub_label>_label-GM_desc-atropos3seg_probseg.nii.gz
+				├── sub-<sub_label>_label-WM_desc-atropos3seg_probseg.nii.gz
+				├── sub-<sub_label>_desc-atropos3seg_probseg.nii.gz
+				├── sub-<sub_label>_desc-brain_from-atropos3seg_mask.nii.gz
+				├── sub-<sub_label>_desc-masked_from-atropos3seg_T1w.nii.gz
+				├── sub-<sub_label>_space-MNI152NLin2009cSym_desc-SyN_T1w.nii.gz
+				├── sub-<sub_label>_desc-nonlin_atlas-CerebrAThomasMiddle_from-MNI152NLin2009cSym_dseg.seg.nrrd
+				├── sub-<sub_label>_desc-nonlin_atlas-CerebrAThomasMiddle_from-MNI152NLin2009cSym_dseg.nii.gz
+				├── sub-<sub_label>_label-dilated_desc-nonlin_atlas-CerebrAThomasMiddle_from-MNI152NLin2009cSym_dseg.seg.nrrd
+				└── sub-<sub_label>_label-dilated_desc-nonlin_atlas-CerebrAThomasMiddle_from-MNI152NLin2009cSym_dseg.nii.gz
 ```
 
 Spatially-standardized derivatives are denoted with a `space-` label. Within patient volumes are registered to the volumetric T1w so the space is denoated `space-T1w` for these volumes. Other derivatives will have been coregistered to a template space, such as `MNI152NLin2009cSym`.
@@ -164,14 +202,19 @@ The registration transform matricies are stored in `.txt` and `.tfm` files to al
 ```java
 derivatives/
 	└── atlasreg/
-		└── sub-<subject_label>/
+		└── sub-<sub_label>/
 				├── qc/...
-				├── sub-<subject_label>_acq-noncontrast_desc-affine_from-T1w_to-T1w_type-ras_xfm.txt
-				├── sub-<subject_label>_desc-affine_from-subject_to-MNI152NLin2009cSym_type-itk_xfm.txt
-				├── sub-<subject_label>_desc-affine_from-subject_to-MNI152NLin2009cSym_type-ras_xfm.txt
-				├── sub-<subject_label>_desc-affine_from-ct_to-T1w_type-ras_xfm.txt
-				├── sub-<subject_label>_from-subject_to-MNI152NLin2009cSym_Composite.h5
-				└── sub-<subject_label>_from-subject_to-MNI152NLin2009cSym_InverseComposite.h5
+				├── sub-<sub_label>_desc-rigid_from-noncontrast_to-contrast_type-ras_xfm.tfm
+				├── sub-<sub_label>_desc-rigid_from-noncontrast_to-contrast_type-ras_xfm.txt
+				├── sub-<sub_label>_desc-rigid_to-noncontrast_from-contrast_type-ras_xfm.txt
+				├── sub-<sub_label>_desc-rigid_to-noncontrast_from-contrast_type-ras_0GenericAffine.mat
+				├── sub-<sub_label>_space-T1w_desc-rigidInterp_T1w.nii.gz
+				├── sub-<sub_label>_acq-noncontrast_space-T1w_desc-rigid_T1w.nii.gz
+				├── sub-<sub_label>_desc-affine_from-subject_to-MNI152NLin2009cSym_type-itk_xfm.txt
+				├── sub-<sub_label>_desc-affine_from-subject_to-MNI152NLin2009cSym_type-ras_xfm.txt
+				├── sub-<sub_label>_desc-affine_from-ct_to-T1w_type-ras_xfm.txt
+				├── sub-<sub_label>_from-subject_to-MNI152NLin2009cSym_InverseComposite.h5
+				├── sub-<sub_label>_from-subject_to-MNI152NLin2009cSym_Composite.h5
 ```
 
 The remaining files provide information about the pipeline.
@@ -179,11 +222,11 @@ The remaining files provide information about the pipeline.
 ```java
 derivatives/
 	└── atlasreg/
-		└── sub-<subject_label>/
+		└── sub-<sub_label>/
 				├── qc/...
-				├── sub-<subject_label>_desc-atropos3seg_mapping.json
-				├── sub-<subject_label>_desc-dilated_atlas-CerebrA_from-MNI152NLin2009cSym_electrodes.tsv
-				└── sub-<subject_label>_desc-dilated_atlas-CerebrA_from-MNI152NLin2009cSym_electrodes.xlsx
+				├── sub-<sub_label>_desc-atropos3seg_mapping.json
+				├── sub-<sub_label>_desc-dilated_atlas-CerebrA_from-MNI152NLin2009cSym_electrodes.tsv
+				└── sub-<sub_label>_desc-dilated_atlas-CerebrA_from-MNI152NLin2009cSym_electrodes.xlsx
 ```
 
 The files within the `qc` derivatives directory are:
@@ -191,19 +234,19 @@ The files within the `qc` derivatives directory are:
 ```
 derivatives/
 	└── atlasreg/
-		└── sub-<subject_label>/
+		└── sub-<sub_label>/
 				└── qc/
-					├── sub-<subject_label>_acq-contrast_from-T1w_to-T1w_regqc.png
-					├── sub-<subject_label>_desc-masked_from-ct_to-T1w_regqc.png
-					├── sub-<subject_label>_desc-affine_from-subject_to-MNI152NLin2009cSym_regqc.html
-					├── sub-<subject_label>_desc-affine_from-subject_to-MNI152NLin2009cSym_regqc.png
-					├── sub-<subject_label>_desc-atropos3seg_probseg.png
-					├── sub-<subject_label>_atlas-CerebrA_from-MNI152NLin2009cSym_dseg.html
-					├── sub-<subject_label>_atlas-CerebrA_from-MNI152NLin2009cSym_dseg.png
-					├── sub-<subject_label>_desc-dilated_atlas-CerebrA_from-MNI152NLin2009cSym_dseg.png
-					├── sub-<subject_label>_space-ct_desc-mask_contacts.html
-					├── sub-<subject_label>_space-MNI152NLin2009cSym_desc-affine_electrodes.html
-					└── sub-<subject_label>_space-MNI152NLin2009cSym_desc-affine_electrodevis.png
+					├── sub-<sub_label>_acq-contrast_from-T1w_to-T1w_regqc.png
+					├── sub-<sub_label>_desc-masked_from-ct_to-T1w_regqc.png
+					├── sub-<sub_label>_desc-affine_from-subject_to-MNI152NLin2009cSym_regqc.html
+					├── sub-<sub_label>_desc-affine_from-subject_to-MNI152NLin2009cSym_regqc.png
+					├── sub-<sub_label>_desc-atropos3seg_probseg.png
+					├── sub-<sub_label>_atlas-CerebrA_from-MNI152NLin2009cSym_dseg.html
+					├── sub-<sub_label>_atlas-CerebrA_from-MNI152NLin2009cSym_dseg.png
+					├── sub-<sub_label>_desc-dilated_atlas-CerebrA_from-MNI152NLin2009cSym_dseg.png
+					├── sub-<sub_label>_space-ct_desc-mask_contacts.html
+					├── sub-<sub_label>_space-MNI152NLin2009cSym_desc-affine_electrodes.html
+					└── sub-<sub_label>_space-MNI152NLin2009cSym_desc-affine_electrodevis.png
 ```
 
 ## seeg_coordinates derivatives
@@ -213,19 +256,19 @@ The files within the `seeg_coordinates` derivatives directory are:
 ```
 derivatives/
 	└── seeg_coordinates/
-		└── sub-<subject_label>/
-				├── sub-<subject_label>_mapping.tsv
-				├── sub-<subject_label>_space-T1w_mcp.tfm
-				├── sub-<subject_label>_space-acpc_actual.fcsv
-				├── sub-<subject_label>_space-acpc_actual.tsv
-				├── sub-<subject_label>_space-acpc_planned.fcsv
-				├── sub-<subject_label>_space-acpc_planned.tsv
-				├── sub-<subject_label>_space-acpc_SEEGA.fcsv
-				├── sub-<subject_label>_space-acpc_SEEGA.tsv
-				├── sub-<subject_label>_space-native_actual.fcsv
-				├── sub-<subject_label>_space-native_actual.tsv
-				├── sub-<subject_label>_space-native_planned.fcsv
-				├── sub-<subject_label>_space-native_planned.tsv
-				├── sub-<subject_label>_space-native_SEEGA.fcsv
-				└── sub-<subject_label>_space-native_SEEGA.tsv
+		└── sub-<sub_label>/
+				├── sub-<sub_label>_mapping.tsv
+				├── sub-<sub_label>_space-T1w_mcp.tfm
+				├── sub-<sub_label>_space-acpc_actual.fcsv
+				├── sub-<sub_label>_space-acpc_actual.tsv
+				├── sub-<sub_label>_space-acpc_planned.fcsv
+				├── sub-<sub_label>_space-acpc_planned.tsv
+				├── sub-<sub_label>_space-acpc_SEEGA.fcsv
+				├── sub-<sub_label>_space-acpc_SEEGA.tsv
+				├── sub-<sub_label>_space-native_actual.fcsv
+				├── sub-<sub_label>_space-native_actual.tsv
+				├── sub-<sub_label>_space-native_planned.fcsv
+				├── sub-<sub_label>_space-native_planned.tsv
+				├── sub-<sub_label>_space-native_SEEGA.fcsv
+				└── sub-<sub_label>_space-native_SEEGA.tsv
 ```

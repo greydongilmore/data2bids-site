@@ -89,6 +89,7 @@ nav:
     - Overview: ieegProc/01_overview.md
     - Output: ieegProc/05_output.md
     - QC Figures: ieegProc/06_qc_figs.md
+    - Scene Generation: ieegProc/07_scene_gen.md
   - Product Manuals: manuals.md
   - Other Software: other_software.md
   - Open Datasets: open_datasets.md
