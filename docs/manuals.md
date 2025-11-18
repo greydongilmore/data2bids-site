@@ -48,6 +48,8 @@ title: Product Manuals
 
 ### CFMM Research
 
+* <a href="static/cfmm_preop_DBS_7tsiemens_2025.pdf" target="_blank">2025 CFMM DBS pre-op - Siemens 7T</a>
+* <a href="static/cfmm_preop_TLE_7tsiemens_2025.pdf" target="_blank">2025 CFMM TLE pre-op - Siemens 7T</a>
 * <a href="static/cfmm_preop_DBS_7tsiemens_2024.pdf" target="_blank">2024 CFMM DBS pre-op - Siemens 7T</a>
 * <a href="static/cfmm_dbs_preop_3Tsiemens_protocol_2023.pdf" target="_blank">2023 CFMM DBS pre-op - Siemens 3T</a>
 * <a href="static/cfmm_tle_7tsiemens_2021.pdf" target="_blank">2021 CFMM Epilepsy pre-op - Siemens 7T</a>
