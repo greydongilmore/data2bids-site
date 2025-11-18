@@ -568,42 +568,19 @@
   
   <h2 id="filename-terms">Filename terms<a class="headerlink" href="#filename-terms" title="Permanent link">&para;</a></h2>
 <p>Throughout this documentation the following filename terms will be used:</p>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th>term</th>
-<th>definition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>sub_num</code> <img width="100"></img></td>
-<td>specific subject number</td>
-</tr>
-<tr>
-<td><code>visit_num</code></td>
-<td>each stay within the hospital (2 digits)</td>
-</tr>
-<tr>
-<td><code>ses_num</code></td>
-<td>each day spent in hospital during the visit (2 digits starting with SE, ex. SE01)</td>
-</tr>
-<tr>
-<td><code>type</code></td>
-<td>type of data collected (should be _IEEG/_EEG)</td>
-</tr>
-<tr>
-<td><code>task</code></td>
-<td>format of the edf data (should be _CLIP/_FULL/_CS)</td>
-</tr>
-<tr>
-<td><code>RET</code></td>
-<td>if included, indicates the study is retrospective <sup>1</sup></td>
-</tr>
-</tbody>
-</table>
-<p></center></p>
+<center>
+
+| term           | definition |
+|---------------|------------------------------------------------------|
+| `sub_num` <img width="100"></img> | specific subject number |
+| `visit_num` | each stay within the hospital (2 digits) |
+| `ses_num` | each day spent in hospital during the visit (2 digits starting with SE, ex. SE01) |
+| `type` | type of data collected (should be _IEEG/_EEG) |
+| `task` | format of the edf data (should be _CLIP/_FULL/_CS) |
+| `RET`  | if included, indicates the study is retrospective <sup>1</sup> |
+
+</center>
+
 <p><sup>1</sup> if not present then study assumed to be prospective (PRO), so you do not need to include this flag for prospective sessions</p>
 <div class="admonition note">
 <p class="admonition-title">Note on Visit Numbers</p>
@@ -628,68 +605,26 @@ Notice that no folder is specified for the missing ses-002 but the number is sti
 </div>
 <h2 id="data2bids-terms">data2bids terms<a class="headerlink" href="#data2bids-terms" title="Permanent link">&para;</a></h2>
 <p>Within the data2bids software, the columns present within the input/output windows are:</p>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th>term</th>
-<th>definition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Name</code> <img width="250"></img></td>
-<td>this is the name of the subdirectory within the patient folder that contains the EDF/EDF+ file. If the EDF/EDF+ files are all in the same directory, then the name will be the name of the EDF/EDF+ files.</td>
-</tr>
-<tr>
-<td><code>Date</code></td>
-<td>the date the data was recorded</td>
-</tr>
-<tr>
-<td><code>Time</code></td>
-<td>the time the data was recorded</td>
-</tr>
-<tr>
-<td><code>Size</code></td>
-<td>the size of the EDF/EDF+ file in gigabytes</td>
-</tr>
-<tr>
-<td><code>Frequency</code>  <strong>[modifiable]</strong></td>
-<td>the frequency the data was recorded at. This is automatically calculated based on information extracted from the EDF/EDF+ file. However, if there is an error then the user can double click on the frequency box and manually change it</td>
-</tr>
-<tr>
-<td><code>Duration</code></td>
-<td>the total duration of the EDF/EDF+ file recording, which is automatically calculated</td>
-</tr>
-<tr>
-<td><code>EDF Type</code></td>
-<td>type of EDF+ file (EDF+D/EDF+C). This field should always show EDF+C, if EDF+D then the file should be <a href="05_check_edf_type.html#convert-edf-type">converted first</a></td>
-</tr>
-<tr>
-<td><code>Type</code>  <strong>[selectable]</strong></td>
-<td>the type of EEG data collected (Intracranial or Scalp). This value is automatically detected by the flags <code>_EEG/_IEEG</code> used in the directory name. This value can be changed by the user if there is an error</td>
-</tr>
-<tr>
-<td><code>Task</code>  <strong>[selectable]</strong></td>
-<td>the condition of the recorded file: Full, clip or cortical stimulation (CS). This value is automatically detected by the flags <code>_CLIP/_FULL/_CS</code> used in the directory name. This can be changed by the user if there is an error</td>
-</tr>
-<tr>
-<td><code>Ret/Pro</code>  <strong>[selectable]</strong></td>
-<td>whether the data file is retrospective or prospective. This value is automatically detected based on the RET flag used in the directory name. This value can be changed by the user if there is an error</td>
-</tr>
-<tr>
-<td><code>Channel File</code></td>
-<td>this indicates if a channel_labels.txt file was found. If you notice the labels changed in a specific session you can include a channel_label.txt file within each session folder. Yes indicates a channel label file was found, No otherwise</td>
-</tr>
-<tr>
-<td><code>Imaging Data</code></td>
-<td>this indicates if an <code>imaging</code> directory was found in the root of the subjects directory. Yes indicates the directory was found, No otherwise</td>
-</tr>
-</tbody>
-</table>
-<p><br>
+<center>
+
+|term           |definition |
+|---------------|------------------------------------------------------|
+| `Name` <img width="250"></img> | this is the name of the subdirectory within the patient folder that contains the EDF/EDF+ file. If the EDF/EDF+ files are all in the same directory, then the name will be the name of the EDF/EDF+ files. |
+| `Date` | the date the data was recorded |
+| `Time` | the time the data was recorded |
+| `Size` | the size of the EDF/EDF+ file in gigabytes |
+| `Frequency`  **[modifiable]** | the frequency the data was recorded at. This is automatically calculated based on information extracted from the EDF/EDF+ file. However, if there is an error then the user can double click on the frequency box and manually change it |
+| `Duration` | the total duration of the EDF/EDF+ file recording, which is automatically calculated |
+| `EDF Type` | type of EDF+ file (EDF+D/EDF+C). This field should always show EDF+C, if EDF+D then the file should be [converted first](05_check_edf_type.html#convert-edf-type) |
+| `Type`  **[selectable]** | the type of EEG data collected (Intracranial or Scalp). This value is automatically detected by the flags `_EEG/_IEEG` used in the directory name. This value can be changed by the user if there is an error |
+| `Task`  **[selectable]** | the condition of the recorded file: Full, clip or cortical stimulation (CS). This value is automatically detected by the flags `_CLIP/_FULL/_CS` used in the directory name. This can be changed by the user if there is an error |
+| `Ret/Pro`  **[selectable]** | whether the data file is retrospective or prospective. This value is automatically detected based on the RET flag used in the directory name. This value can be changed by the user if there is an error |
+| `Channel File` | this indicates if a channel_labels.txt file was found. If you notice the labels changed in a specific session you can include a channel_label.txt file within each session folder. Yes indicates a channel label file was found, No otherwise |
+| `Imaging Data` | this indicates if an `imaging` directory was found in the root of the subjects directory. Yes indicates the directory was found, No otherwise |
+
 <br>
-<br></p>
+<br>
+<br>
   
     
   

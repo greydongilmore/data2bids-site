@@ -748,7 +748,8 @@
   
   <h1 id="bids-directory-structure">BIDS directory structure<a class="headerlink" href="#bids-directory-structure" title="Permanent link">&para;</a></h1>
 <p>The output directory will look like the following (each subject having their own directory):</p>
-<p><center><img src="../img/dir_structure_01.png" alt="drawing" width="30%"/></center></p>
+<center><img src="../img/dir_structure_01.png" alt="drawing" width="30%"/></center>
+
 <ul>
 <li><strong>code:</strong> this directory will contain the code used to convert the EDF/EDF+ data for each EDF/EDF+ file for the subjects.</li>
 <li><strong>dataset_description.json:</strong> this file will contain the Json Metadata previously defined in the <strong>Settings</strong> menu. This is overall information about the dataset</li>
@@ -762,15 +763,17 @@
 </ul>
 <h2 id="subject-directory">Subject directory<a class="headerlink" href="#subject-directory" title="Permanent link">&para;</a></h2>
 <p>Within each subject directory there will be a different session sub-directory for each day of recording.</p>
-<p><center><img src="../img/sub_dir_structure_01.png" alt="drawing" width="40%"/></center></p>
+<center><img src="../img/sub_dir_structure_01.png" alt="drawing" width="40%"/></center>
+
 <h3 id="_scanstsv">*_scans.tsv<a class="headerlink" href="#_scanstsv" title="Permanent link">&para;</a></h3>
 <p>The <code>*_scans.tsv</code> file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF+ type etc.).</p>
-<p><center></p>
+<center>
 <figure>
   <img src="../img/scans_tsv.png" alt="drawing" />
   <figcaption>Example content of the <b>*_scans.tsv</b> file.</figcaption>
 </figure>
-<p></center></p>
+</center>
+
 <ul>
 <li><strong>filename:</strong> relative filename for each EDF/EDF+ file.</li>
 <li><strong>acq_time:</strong> the date and time the recording was started in the format YYYY-MM-DDTHH:MM:SS (note: the <code>T</code> is used to separate the date from time)</li>
@@ -779,15 +782,17 @@
 </ul>
 <h2 id="session-directory">Session directory<a class="headerlink" href="#session-directory" title="Permanent link">&para;</a></h2>
 <p>Within each session sub-directory there will be a modality sub-directory (either eeg/ieeg). Within the modality sub-directory there will be five files, containing different information associated with the specific EDF/EDF+ file.</p>
-<p><center><img src="../img/ses_dir_structure_01.png" alt="drawing" width="50%"/></center></p>
+<center><img src="../img/ses_dir_structure_01.png" alt="drawing" width="50%"/></center>
+
 <h3 id="_electrodestsv">*_electrodes.tsv<a class="headerlink" href="#_electrodestsv" title="Permanent link">&para;</a></h3>
 <p>The <code>*_electrodes.tsv</code> file contains information associated with the electrodes used to collect the data.</p>
-<p><center></p>
+<center>
 <figure>
   <img src="../img/electrodes_file.png" alt="drawing" width="80%"/>
   <figcaption>Example content of the <b>*_electrodes.tsv</b> file.</figcaption>
 </figure>
-<p></center></p>
+</center>
+
 <ul>
 <li><strong>name:</strong> label given to the specific channel during the recording.</li>
 <li><strong>x,y,z:</strong> the coordinates in MRI space for the specific electrode contact.</li>
@@ -798,12 +803,13 @@
 </ul>
 <h3 id="_channelstsv">*_channels.tsv<a class="headerlink" href="#_channelstsv" title="Permanent link">&para;</a></h3>
 <p>The <code>*_channels.tsv</code> file contains information about each channel that was used in the recording.</p>
-<p><center></p>
+<center>
 <figure>
   <img src="../img/channels_file.png" alt="drawing" width="80%"/>
   <figcaption>Example content of the <b>*_channels.tsv</b> file.</figcaption>
 </figure>
-<p></center></p>
+</center>
+
 <ul>
 <li><strong>name:</strong> label of the specific channel.</li>
 <li><strong>type:</strong> type of channel (i.e. SEEG,EEG, DBS, EOG, ECG etc.)</li>
@@ -817,12 +823,13 @@
 </ul>
 <h3 id="_annotationstsv">*_annotations.tsv<a class="headerlink" href="#_annotationstsv" title="Permanent link">&para;</a></h3>
 <p>The <code>*_annotations.tsv</code> file contains all annotations present in the EDF+ file, identifiers have been scrubbed.</p>
-<p><center></p>
+<center>
 <figure>
   <img src="../img/annotations_file.png" alt="drawing" />
   <figcaption>Example content of the <b>*_annotations.tsv</b> file.</figcaption>
 </figure>
-<p></center></p>
+</center>
+
 <ul>
 <li><strong>onset:</strong> the time the event occurred, relative to the time the recording began.</li>
 <li><strong>duration:</strong> the duration of the marked event (-1 indicates no duration, which is default for all events).</li>
@@ -832,12 +839,13 @@
 </ul>
 <h3 id="_eegjson-or-_ieegjson">*_eeg.json or *_ieeg.json<a class="headerlink" href="#_eegjson-or-_ieegjson" title="Permanent link">&para;</a></h3>
 <p>The <code>*_eeg.json</code>/<code>*_ieeg.json</code> file contains metadata information about the EDF/EDF+ file.</p>
-<p><center></p>
+<center>
 <figure>
   <img src="../img/json_sidecar_file.png" alt="drawing" width="50%" />
   <figcaption>Example content of the <b>*_eeg.json</b> or <b>*_ieeg.json</b> file.</figcaption>
 </figure>
-<p></center></p>
+</center>
+
 <ul>
 <li><strong>TaskName:</strong> name of the task, no two tasks should have the same name (i.e. <code>full</code> for a full 24hr recording, <code>clip</code> if the data has been clipped by the neurologist etc.)</li>
 <li><strong>InstitutionName:</strong> name of the institution in charge of the equipment that produced the composite instances.</li>

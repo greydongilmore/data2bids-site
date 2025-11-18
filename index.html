@@ -622,11 +622,14 @@
   
     
   
-  <p><center><img src="./img/edf2bids_full_icon.svg" alt="drawing" style="width:60%;"/></center></p>
-<p><center><em>An open-source software to sort clinical data into a BIDS compliant structure</em></center></p>
+  <center><img src="./img/edf2bids_full_icon.svg" alt="drawing" style="width:60%;"/></center>
+
+<center><em>An open-source software to sort clinical data into a BIDS compliant structure</em></center>
+
 <hr />
 <p>Currently, <strong>data2bids</strong> will convert EDF/EDF+ and DICOM file formats into a <a href="https://bids.neuroimaging.io/" target="_blank">Brain Imaging Data Structure</a> compliant format.</p>
-<p><center><img src="./img/main_gui.png" alt="drawing"/></center></p>
+<center><img src="./img/main_gui.png" alt="drawing"/></center>
+
 <h1 id="european-data-format-edf">European Data Format (EDF)<a class="headerlink" href="#european-data-format-edf" title="Permanent link">&para;</a></h1>
 <p>The European Data Format (EDF) is a simple and flexible format for exchange and storage of multichannel biological and physical signals. It was developed by a few European medical engineers who first met at the 1987 international Sleep Congress in Copenhagen. In March 1990, they agreed upon a very simple file format to exchange their sleep recordings. This format became known as the <strong>European Data Format</strong>.</p>
 <p>An extension of EDF, named EDF+, was developed in 2002 and is largely compatible to EDF. However, the EDF+ format provides a few advantages: the files can contain interrupted recordings, annotations can be stored within the file along with stimuli/events. Medical type recordings often contain annotations about patient events, stimulation responses and are often discontinuous as the patient may require breaks during recording time. EDF+ allows for these medical type recordings to be stored much easier. </p>
@@ -635,92 +638,33 @@
 <p>EDF/EDF+ files consist of a header (ascii) that describes the contents of the file and the experimental settings. The data (int16) are stored after the header.</p>
 <h3 id="the-header">The Header<a class="headerlink" href="#the-header" title="Permanent link">&para;</a></h3>
 <p>The EDF/EDF+ header is split into two parts: measurement info and channel info. The measurement info contains general information about the recording while the channel info contains specific information about each channel used to record. Thus, the length of the full header (the ‘header record’) equals:</p>
-<p><center></p>
-<p><code>measurement info (256) + channel info (number of channels * 256)</code></p>
-<p></center></p>
+<center>
+
+`measurement info (256) + channel info (number of channels * 256)`
+
+</center>
+
 <p>The header record is ascii only, and contains the following fields:</p>
 <h4 id="measurement-info">Measurement Info<a class="headerlink" href="#measurement-info" title="Permanent link">&para;</a></h4>
 <p>The first 256 bytes in an EDF/EDF+ file is allocated to the measurement info (i.e. patient info, date and time of data acquisition, etc.).</p>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th style="text-align: center;">Size</th>
-<th style="text-align: center;">Position</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>version</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">0</td>
-<td><code>version</code> is always <strong>0</strong></td>
-</tr>
-<tr>
-<td>patient id</td>
-<td style="text-align: center;">80</td>
-<td style="text-align: center;">8</td>
-<td>Code Sex DOB Name<sup>1</sup></td>
-</tr>
-<tr>
-<td>recording id</td>
-<td style="text-align: center;">80</td>
-<td style="text-align: center;">88</td>
-<td>Startdate start_date ExpID InvestigID Equipment<sup>2</sup></td>
-</tr>
-<tr>
-<td>startdate</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">168</td>
-<td>dd.mm.yy</td>
-</tr>
-<tr>
-<td>starttime</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">176</td>
-<td>hh.mm.ss</td>
-</tr>
-<tr>
-<td>number of bytes in header</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">184</td>
-<td></td>
-</tr>
-<tr>
-<td>reserved</td>
-<td style="text-align: center;">44</td>
-<td style="text-align: center;">192</td>
-<td><ul><li><strong>EDF</strong>: empty</li><li><strong>EDF+</strong>: <code>EDF+C</code> for continuous;<code>EDF+D</code> for discontinuous</li></ul></td>
-</tr>
-<tr>
-<td>number of data records</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">236</td>
-<td><code>nr</code></td>
-</tr>
-<tr>
-<td>duration of data record</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">244</td>
-<td>in seconds</td>
-</tr>
-<tr>
-<td>number of signals</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">252</td>
-<td><code>ns</code></td>
-</tr>
-<tr>
-<td><div style="text-align:right;"><strong>total</strong></div></td>
-<td style="text-align: center;">256</td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p></center></p>
+<center>
+
+| Field                      | Size | Position | Notes                                              |
+|----------------------------|:----:|:--------:|----------------------------------------------------|
+| version                    | 8    | 0        | `version` is always **0**                          |
+| patient id                 | 80   | 8        | Code Sex DOB Name<sup>1</sup>  |
+| recording id               | 80   | 88       | Startdate start_date ExpID InvestigID Equipment<sup>2</sup>   |
+| startdate                  | 8    | 168      | dd.mm.yy   |
+| starttime                  | 8    | 176      | hh.mm.ss   |
+| number of bytes in header  | 8    | 184      |            |
+| reserved                   | 44   | 192      | <ul><li>**EDF**: empty</li><li>**EDF+**: `EDF+C` for continuous;`EDF+D` for discontinuous</li></ul>|
+| number of data records     | 8    | 236      | `nr`       |
+| duration of data record    | 8    | 244      | in seconds |
+| number of signals          | 4    | 252      | `ns`       |
+| <div style="text-align:right;">**total**</div> | 256  |          |            |
+
+</center>
+
 <details class="note">
 <summary><sup>1</sup> patient id</summary>
 <ul>
@@ -743,86 +687,24 @@
 </details>
 <h4 id="channel-info">Channel Info<a class="headerlink" href="#channel-info" title="Permanent link">&para;</a></h4>
 <p>The channel info record is 256 bytes and each channel has its own channel info record. For instance, if 10 channels are used to record then there would be 10 * channel info records within the EDF/EDF+ header. For each channel, the following information is stored:</p>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th style="text-align: center;">Size</th>
-<th style="text-align: center;">Position</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>label</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">0</td>
-<td></td>
-</tr>
-<tr>
-<td>transducer</td>
-<td style="text-align: center;">80</td>
-<td style="text-align: center;">16</td>
-<td><code>transducer</code> type (i.e AgAgCl electrode)</td>
-</tr>
-<tr>
-<td>physical dim</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">96</td>
-<td>physical dimension of channel data (i.e. μV)</td>
-</tr>
-<tr>
-<td>physical min</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">104</td>
-<td></td>
-</tr>
-<tr>
-<td>physical max</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">112</td>
-<td></td>
-</tr>
-<tr>
-<td>digital min</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">120</td>
-<td><sup>1</sup></td>
-</tr>
-<tr>
-<td>digital max</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">128</td>
-<td><sup>1</sup></td>
-</tr>
-<tr>
-<td>prefiltering</td>
-<td style="text-align: center;">80</td>
-<td style="text-align: center;">136</td>
-<td>high-pass, low-pass and notch filters<sup>2</sup></td>
-</tr>
-<tr>
-<td>number of samples</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">216</td>
-<td></td>
-</tr>
-<tr>
-<td>reserved</td>
-<td style="text-align: center;">32</td>
-<td style="text-align: center;">224</td>
-<td></td>
-</tr>
-<tr>
-<td><div style="text-align:right;"><strong>total</strong></div></td>
-<td style="text-align: center;">256</td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p></center></p>
+<center>
+
+| Field             | Size | Position | Notes                                           |
+|-------------------|:----:|:--------:|----------------------------------------------------|
+| label             | 16   | 0        |       |
+| transducer        | 80   | 16       | `transducer` type (i.e AgAgCl electrode)   |
+| physical dim      | 8    | 96       | physical dimension of channel data (i.e. μV)   |
+| physical min      | 8    | 104      |       |
+| physical max      | 8    | 112      |       |
+| digital min       | 8    | 120      | <sup>1</sup>  |
+| digital max       | 8    | 128      | <sup>1</sup>   |
+| prefiltering      | 80   | 136      | high-pass, low-pass and notch filters<sup>2</sup>   |
+| number of samples | 8    | 216      |       |
+| reserved          | 32   | 224      |       |
+| <div style="text-align:right;">**total**</div> | 256  |          |            |
+
+</center>
+
 <details class="note">
 <summary><sup>1</sup> digital min/max</summary>
 <ul>
@@ -852,7 +734,8 @@
 <p>For example, two signals signal_A and signal_B are acquired at 100 Hz and 5 Hz respectively. The data are saved every 20 seconds (<code>duration of data record</code> = 20). Thus, one block of data (a data record)will consist of 2000 samples (<code>number of samples in data record</code> = 100 Hz * 20 secs = 2000) from signal_A followed by 100 samples (<code>number of samples in data record</code> = 5 Hz * 20 seconds = 100) from signal_B. If the header indicates that there are 70 such blocks (<code>number of data records = 70</code>), then the total duration of the recording would be 70 x 20 = 1400 seconds (<code>number of data records</code> *
 <code>duration of data record</code>).</p>
 <h2 id="edf-file-structure-diagram">EDF File Structure Diagram<a class="headerlink" href="#edf-file-structure-diagram" title="Permanent link">&para;</a></h2>
-<p><center><img src="./img/edf_specs.png" alt="drawing"/></center></p>
+<center><img src="./img/edf_specs.png" alt="drawing"/></center>
+
 <p><br><br></p>
   
     
